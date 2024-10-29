@@ -1,0 +1,12 @@
+.main {
+    text-align: center;
+    animation: both;
+}
+.images {
+    animation: fadeIn ease-in 1s both;
+    display: flex;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
