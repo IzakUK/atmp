@@ -1,12 +1,83 @@
-.main {
-    text-align: center;
-    animation: both;
+body {
+    margin: 0; /* Stops a weird white border around the page */
+    box-sizing: border-box; /* Fixes another bug with horizontal scrolling due to the banner */
+    background-color: #252525;
 }
-.images {
+
+/* Ensures everything is using the border-box sizing + universal font */
+*, *::before, *::after {
+    box-sizing: inherit;
+    font-family: Arial; /* Temporary Arial, it may change when we have decided on the font. Arial may remain a fallback. */
+}
+
+/* Style for the top banner */
+.terminusTopBanner {
+    display: flex;
+    justify-content: space-between; /* Keeps it centred correctly */
+    background-color: #333;
+    color: white; /*Changes the colour of the menu button, adding this just in case the colour scheme we pick changes */
+    align-items: center; /* Centres everything */
+    position: sticky; /* From here... */
+    top: 0;
+    z-index: 10000; /* Down to here, it allows for the sticky banner to follow the user along the page */
+    padding: 10px 20px; /* Adds more height and width of the banner and icons */
+}
+
+/* Menu icon on the left */
+.menuOption {
+    font-size: 24px;
+    cursor: not-allowed; /* Shows the user a crossed out cursor, reason is because we haven't added the implentation in as of yet. */
+    padding: 1%;
+}
+
+/* Centred banner content */
+.bannerFormat {
+    align-items: center; /* Centres hyperlinks */
+    display: flex; /* Holds everything together */
+    gap: 30px; /* Gap between the web pages and the centre logo. */
+}
+
+/* Links on both sides of the logo */
+.LBannerLinks, .RBannerLinks {
+    display: flex; /* Centres the text into the middle of the banner */
+    gap: 30px; /* spacing between hyperlinks */
+}
+
+/* Styling for individual links */
+.LBannerLinks a, .RBannerLinks a {
+    color: white; /* Looks cool in blue, but we can change the colour later depending on what colour scheme we choose. */
+    text-decoration: none; /*Part of the animation for hovering. Hides the initial underlining. */
+    font-weight: bold; /* BOLD text :D */
+}
+
+.LBannerLinks a:hover, .RBannerLinks a:hover {
+    text-decoration: underline; /* Small animation for when hovering over each other page choice on the banner */
+}
+
+/* Logo styling */
+.logo {
+    height: 40px; /* Restrains the logo from being crazy large. */
+}
+
+/* Basket icon on the right of the banner. Only a placeholder as the icon will be replaced in the near future with an image instead of an emoji */
+.userBasket {
+    font-size: 24px;
+    cursor: not-allowed; /* this will be changed once functionality is implemented.*/
+    padding: 1%;
+}
+
+/* Placeholder image */
+.placeholderImages {
     animation: fadeIn ease-in 1s both;
     display: flex;
 }
+.terminusFooter {
+    animation: fadeIn ease-in 5s both; /* Delayed fade in for dramatic, temporary effect. */
+    text-align: center;
+    color: #FFF;
+}
+/* The fading in animation, used by the placeholder footer and image. */
 @keyframes fadeIn {
     0% { opacity: 0; }
-    100% { opacity: 1; }
-    }
+    100% { opacity: 1; } /* Goes from 0 opacity to 100. */
+}
