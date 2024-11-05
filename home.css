@@ -8,6 +8,7 @@ body {
 *, *::before, *::after {
     box-sizing: inherit;
     font-family: Arial; /* Temporary Arial, it may change when we have decided on the font. Arial may remain a fallback. */
+    align-content: center;
 }
 
 /* Style for the top banner */
@@ -20,27 +21,29 @@ body {
     position: sticky; /* From here... */
     top: 0;
     z-index: 10000; /* Down to here, it allows for the sticky banner to follow the user along the page */
-    padding: 10px 20px; /* Adds more height and width of the banner and icons */
+    padding: 1vh; /* Adds more height and width of the banner and icons */
 }
 
 /* Menu icon on the left */
 .menuOption {
-    font-size: 24px;
+    font-size: 2vw;
     cursor: not-allowed; /* Shows the user a crossed out cursor, reason is because we haven't added the implentation in as of yet. */
-    padding: 1%;
+    padding: 1vw;
 }
 
 /* Centred banner content */
 .bannerFormat {
     align-items: center; /* Centres hyperlinks */
-    display: flex; /* Holds everything together */
-    gap: 30px; /* Gap between the web pages and the centre logo. */
+    display: inherit; /* Holds everything together */
+    gap: 3vw; /* Gap between the web pages and the centre logo. */
+    max-height: 1vw;
 }
 
 /* Links on both sides of the logo */
 .LBannerLinks, .RBannerLinks {
     display: flex; /* Centres the text into the middle of the banner */
-    gap: 30px; /* spacing between hyperlinks */
+    gap: 3vw; /* spacing between hyperlinks */
+    font-size: 1vw;
 }
 
 /* Styling for individual links */
@@ -48,6 +51,7 @@ body {
     color: white; /* Looks cool in blue, but we can change the colour later depending on what colour scheme we choose. */
     text-decoration: none; /*Part of the animation for hovering. Hides the initial underlining. */
     font-weight: bold; /* BOLD text :D */
+    display: block; /* Keeps it from moving around */
 }
 
 .LBannerLinks a:hover, .RBannerLinks a:hover {
@@ -56,20 +60,24 @@ body {
 
 /* Logo styling */
 .logo {
-    height: 40px; /* Restrains the logo from being crazy large. */
+    /* Restrains the logo from being crazy large. */
+    width: 5vw;
+    height: 5vw;
+    display: block; /* holds the logo in place and stops it moving around when changing the resolutions
 }
 
 /* Basket icon on the right of the banner. Only a placeholder as the icon will be replaced in the near future with an image instead of an emoji */
 .userBasket {
-    font-size: 24px;
+    font-size: 2vw;
     cursor: not-allowed; /* this will be changed once functionality is implemented.*/
-    padding: 1%;
+    padding: 1vw;
 }
 
 /* Placeholder image */
 .placeholderImages {
     animation: fadeIn ease-in 1s both;
     display: flex;
+    justify-content: center;
 }
 .terminusFooter {
     animation: fadeIn ease-in 5s both; /* Delayed fade in for dramatic, temporary effect. */
@@ -81,3 +89,14 @@ body {
     0% { opacity: 0; }
     100% { opacity: 1; } /* Goes from 0 opacity to 100. */
 }
+@media (max-width: 540px) or (max-height: 200px) { /* Mobile layout: Not implemented correctly yet, just for testing, probably going to add UserAgent to this too. */
+    .terminusTopBanner {
+        display: ruby-base;
+	padding: 20px 0px;
+}
+    .LBannerLinks, .RBannerLinks {
+	gap: 10px;
+	display: none;
+}
+    .logo {
+	height: 15px;
