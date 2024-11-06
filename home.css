@@ -51,7 +51,7 @@ body {
     color: white; /* Looks cool in blue, but we can change the colour later depending on what colour scheme we choose. */
     text-decoration: none; /*Part of the animation for hovering. Hides the initial underlining. */
     font-weight: bold; /* BOLD text :D */
-    display: block; /* Keeps it from moving around */
+    display: block;
 }
 
 .LBannerLinks a:hover, .RBannerLinks a:hover {
@@ -60,10 +60,10 @@ body {
 
 /* Logo styling */
 .logo {
-    /* Restrains the logo from being crazy large. */
+     /* Restrains the logo from being crazy large. */
     width: 5vw;
     height: 5vw;
-    display: block; /* holds the logo in place and stops it moving around when changing the resolutions
+    display: block;
 }
 
 /* Basket icon on the right of the banner. Only a placeholder as the icon will be replaced in the near future with an image instead of an emoji */
@@ -89,7 +89,7 @@ body {
     0% { opacity: 0; }
     100% { opacity: 1; } /* Goes from 0 opacity to 100. */
 }
-@media (max-width: 540px) or (max-height: 200px) { /* Mobile layout: Not implemented correctly yet, just for testing, probably going to add UserAgent to this too. */
+@media (max-width: 540px) or (max-height: 200px) {
     .terminusTopBanner {
         display: ruby-base;
 	padding: 20px 0px;
@@ -100,4 +100,3 @@ body {
 }
     .logo {
 	height: 15px;
-}
