@@ -37,10 +37,11 @@ body {
     display: inherit; /* Holds everything together */
     gap: 3vw; /* Gap between the web pages and the centre logo. */
     max-height: 1vw;
+    margin-left: 6vh; /* Centers the logo and text for the website, adjust as needed using vh or maybe vw */
 }
 
 /* Links on both sides of the logo */
-.LBannerLinks, .RBannerLinks {
+.LBannerLinks, .RBannerLinks, .right-logos { /* If you don't wish for things to move on the banner, add them here. */
     display: flex; /* Centres the text into the middle of the banner */
     gap: 3vw; /* spacing between hyperlinks */
     font-size: 1vw;
@@ -61,7 +62,7 @@ body {
 /* Logo styling */
 .logo {
      /* Restrains the logo from being crazy large. */
-    width: 5vw;
+    width: 5vw; /* May remove this line, unsure if it's changing anything */
     height: 5vw;
     display: block;
 }
@@ -112,11 +113,7 @@ body {
     .LBannerLinks, .RBannerLinks {
 	gap: 10px;
 	display: none;
-}
-    .logo {
-	height: 15px;
-
-    }
+	}
 }
 
 
@@ -209,13 +206,16 @@ input{
     color: #d40464;
 }
 
-a{
+.passColour a { /* Used to be 'a', changed it as it was destroying the banner's optimisation. */
     color: #d40464;
     font-size: 14px;
     text-decoration: none;
-    margin :15px 0;
+    margin: 15px 0;
     text-shadow: 1px  1px 0 #541ae0;   /*purple bottom-right shadow around text */;
+}
 
+.passColour a:hover {
+    text-decoration: underline; /* Adds the underline when hovering back */
 }
 
 button{
