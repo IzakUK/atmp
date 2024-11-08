@@ -100,3 +100,210 @@ body {
 }
     .logo {
 	height: 15px;
+
+    }
+}
+
+
+
+
+
+
+/* for log in and register page */
+
+/*to center the login and register form within the body*/
+.logInPage_body{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;     /*align the items vertically*/
+    min-height: 100vh;          /*makes the body fill the full viewport height */
+    background-color: #161616; /*bg match with the form to make it look like transparent*/
+}
+.logIncontainer{
+    position: relative;
+    width: 760px;
+    max-width: 100%;
+    min-height: 480px;
+    background: #161616;
+    border-radius: 40px;
+    overflow: hidden; /*hides overflow for cleaner look and help with border radius*/
+}
+
+/* styling for the login and signup sections */
+.log-in, .sign-up{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-up{   /*this section will be hidden by default and will only be shown when sldier is activated*/
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.log-in{
+    width: 50%;    /* to split the screen in half*/
+    z-index: 2;    /*this section will be in front of signup section*/
+}
+
+form{
+    background: #161616;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+
+.sign-up h1, .log-in h1{
+    font-weight: bold;
+    padding-bottom: 25px;
+    margin: 0;
+    color: #d40464;
+    text-shadow: 1px  1px 0 #541ae0;   /*adding the purple bottom-right shadow */
+}
+
+.overlay-effect h1{
+    font-weight: bold;
+    margin: 0;
+}
+
+.overlay-effect p{
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 15px 0 20px;
+    
+}
+
+input{
+    background: #272727;
+    padding: 12px 15px;
+    margin: 8px 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: #d40464;
+}
+
+a{
+    color: #d40464;
+    font-size: 14px;
+    text-decoration: none;
+    margin :15px 0;
+    text-shadow: 1px  1px 0 #541ae0;   /*purple bottom-right shadow around text */;
+
+}
+
+button{
+    color: #fff;
+    background: #541ae0;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 55px;
+    margin: 20px;
+    border-radius: 15px;
+    border: .5px solid #d40464;
+    outline: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+    box-shadow: 1.5px 1.5px 0 #d40464;
+}
+
+button:active{
+    transform: scale(0.90); /* reduce the button size slightly on click*/
+}
+
+/*this is to style the "log in" and "sign up" buttons*/
+#logIn, #signUp{
+    background-color: transparent; /*set the backgroudn to transparent*/
+    border: 2px solid #fff;
+}
+
+/* to adjust the position of the .sign-up form when button is clicked */
+.logIncontainer.right-panel-active .sign-up{
+    transform: translateX(100%); /* move .sign-up 100% to the right */
+    opacity: 1;             /*fully vidible*/
+    z-index: 5;
+}
+
+/* added a overlay container to apply the split screen effect*/ 
+.overlay-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+    color: #ccc;
+}
+
+/* adjust the overlay to the left when button is clicked */
+.logIncontainer.right-panel-active .overlay-container{
+    transform: translateX(-100%)
+}
+
+/* effect container that holds the background for the overlay sides */
+.overlay-effect{
+    position :relative;
+    color: #fff;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+    display: flex;    
+}
+
+.logIncontainer.right-panel-active .overlay-effect{
+    transform: translateX(50%)
+}
+
+.overlay-left, .overlay-right{
+    position: relative;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-size: cover;       /* to make the image covers the entire background */
+    background-position: center;  /* centers the image */
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease-in-out;
+}
+
+.overlay-left{
+    left: 0;
+    background-image: url('egPic.jpg'); 
+    transform: translateX(0);
+}
+
+.logIncontainer.right-panel-active .overlay-left{
+    transform: translateX(0%);
+}
+
+.overlay-right{
+    right: 0;
+    transform: translateX(0);
+    background-image: url('egPic.jpg'); 
+}
+
+
+.logIncontainer.right-panel-active .overlay-right{
+    transform: translateX(100%);
+}
