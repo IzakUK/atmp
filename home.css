@@ -66,11 +66,26 @@ body {
     display: block;
 }
 
+.right-logos {  /* added this to group the icons on the right side*/
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1vw;  /* space between basket and user icon */
+}
+
 /* Basket icon on the right of the banner. Only a placeholder as the icon will be replaced in the near future with an image instead of an emoji */
 .userBasket {
     font-size: 2vw;
     cursor: not-allowed; /* this will be changed once functionality is implemented.*/
     padding: 1vw;
+    padding-top: 3px; /*i added this to fix the alignment of two icons*/ 
+}
+
+.userIcon img {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 /* Placeholder image */
@@ -302,7 +317,6 @@ button:active{
     transform: translateX(0);
     background-image: url('egPic.jpg'); 
 }
-
 
 .logIncontainer.right-panel-active .overlay-right{
     transform: translateX(100%);
