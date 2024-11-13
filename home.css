@@ -321,3 +321,52 @@ button:active{
 .logIncontainer.right-panel-active .overlay-right{
     transform: translateX(100%);
 }
+
+/* styles for About Us page */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2vh 5vw;
+    color: #fff;
+}
+
+.container h1 {
+    font-size: 3rem;
+    color: #d40464;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 0 #541ae0; 
+}
+
+.container h2 {
+    font-size: 2rem;
+    color: #d40464;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 1px 1px 0 #541ae0;
+}
+
+.container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ccc;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    .container h1 {
+        font-size: 2.5rem;
+    }
+
+    .container h2 {
+        font-size: 1.8rem;
+    }
+
+    .container p {
+        font-size: 1rem;
+    }
+}
