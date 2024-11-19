@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminus</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <div class="terminusTopBanner"> <!-- All the elements for the top banner of the page, it's set to sticky for now. Does need optimisation to ensure everything is centred-->
+        <div class="menuOption">☰</div>
+        <div class="bannerFormat">
+            
+            <div class="LBannerLinks">
+                <a href="about.html">About</a>
+                <a href="keyboards.html">Keyboards</a> <!-- We probably need a better name, I'm thinking Products, but I will keep it as this just for now.-->
+            </div>
+
+            <a href="index.html"> <!-- Link for the logo -->
+                <img src="TerminusLogo.png" alt="Terminus Logo" class="logo">
+            </a>
+
+            <div class="RBannerLinks">
+                <a href="misc.html">Misc.</a> <!-- placeholder-->
+                <a href="contact.html">Contact</a>
+            </div>
+
+        </div>
+        <div class = "right-logos">
+            <div class="userIcon">
+                <a href="login.html">
+                    <img src="userIcon.png" alt="User Icon">
+                </a>
+            </div>
+            <div class="userBasket">🛒</div> <!-- This will be changed in future to have the green colour implemented-->
+        </div>
+    </div>
+    
+    
+    <div class= "logInPage_body">
+        <div class = "logIncontainer" id="main">
+            <div class ="sign-up">
+                <form action = "#">
+                    <h1> Create Account </h1>
+                    <input type="text" name="txt" placeholder="User Name" required="">
+                    <input type="email" name="email" placeholder="Email" required="">
+                    <input type="password" name="pswd" placeholder="Password" required="">
+                    <button>Sign Up</button>
+                </form>
+            </div>
+
+            <div class ="log-in">
+                <form action = "#">
+                    <h1> Log In</h1>
+                    <input type="email" name="email" placeholder="Email" required="">
+                    <input type="password" name="pswd" placeholder="Password" required="">
+                    <div class="passColour">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button>Log In</button>
+                </form>
+            </div>
+
+            <div class="overlay-container">
+                <div class="overlay-effect">
+                    <div class="overlay-left">
+                        <h1> Already a Member? </h1>
+                        <p> Click here to Log In!</p>
+                        <button id="logIn">Log In</button>
+                    </div>
+                    <div class="overlay-right">
+                        <h1>Welcome to Terminus!</h1>
+                        <p> Discover the best in mechanical keyboards.
+                            Sign up now to enjoy exclusive offers! </p>
+                        <button id="signUp">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="terminusFooter">
+        <p><b>I want a footer here! &gt;:(</b></p>
+    </div>
+
+    <script src="app.js"></script>
+
+</body></html>
