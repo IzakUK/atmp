@@ -1,7 +1,7 @@
 body {
     margin: 0; /* Stops a weird white border around the page */
     box-sizing: border-box; /* Fixes another bug with horizontal scrolling due to the banner */
-    background-color: #252525;
+    background-color: black;
 }
 
 /* Ensures everything is using the border-box sizing + universal font */
@@ -115,6 +115,103 @@ body {
 	display: none;
 	}
 }
+
+/* home page image slider section */
+
+/* General Section Styling */
+section {
+    padding: 5rem 9%;
+}
+
+/* Button Styling */
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    border: 1.5px solid black; 
+    border-radius: 14px; 
+    color: black; 
+    cursor: pointer;
+    background: none; 
+    font-size: 1.3rem; 
+    padding: 1rem 3rem; /* Padding around the text */
+    text-decoration: none; /* Removes underline for links */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+}
+
+.btn:hover {
+    background: #541ae0;
+    color: #d40464; 
+}
+
+/* Home Section style */
+.home {
+    padding: 0;
+}
+
+/* Box Styling */
+.box {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* align content to right, but it's not fully working yet*/
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 2rem 9%;
+}
+
+.box.second {
+    justify-content: flex-start; /* align content to the left for the second box */
+}
+
+
+.box .contents {
+    width: 50rem;
+}
+
+.box .contents span {
+    font-size: 2rem;
+    color: #541ae0;
+    text-shadow: 2px  12px 0 black; 
+
+}
+
+.box .contents h3 {
+    font-size: 2.5rem;
+    color: #d40464;
+    text-shadow: 2px  2px 0 black; 
+
+    padding-top: 0.5rem;
+    text-transform: uppercase;
+}
+
+.box .contents p {
+    line-height: 1;
+    color: #d40464;
+    text-shadow: 1px  1px 0 black; 
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+
+.swiper-button-next::after, 
+.swiper-button-prev::after{
+    font-size: 3rem;
+    color: white;
+
+
+}
+
+
+
+
+
+@media (max-width:1200px){
+
+    section{
+        padding: 3rem 2rem;
+    }
+}
+
+
 
 
 

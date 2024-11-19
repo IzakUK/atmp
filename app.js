@@ -9,3 +9,16 @@ signUpButton.addEventListener('click', () => {
 logInButton.addEventListener('click', () => {
     main.classList.remove("right-panel-active")
 });
+
+
+/* js code for swiper class */
+
+var swiper = new Swiper(".image-slider", {
+    loop: true,
+    grabCursor:true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  

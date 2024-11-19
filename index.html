@@ -6,6 +6,9 @@
     <title>Terminus</title>
     <link rel="stylesheet" href="home.css">
     <link rel="icon" href="favicon.png" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
 </head>
 <body>
     <div class="terminusTopBanner"> <!-- All the elements for the top banner of the page, it's set to sticky for now. Does need optimisation to ensure everything is centred-->
@@ -37,12 +40,63 @@
         </div>
     </div>
     
-    <div class="placeholderImages">
-        <img src="terminusPlaceholder.png" alt="Terminus Logo" style="flex: auto;">
-    </div>
+    <!--images slider section-->
+
+    <section class="home" id="home">
+        <div class="swiper image-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="box" style="background: url(image_slider1.jpg) no-repeat;">
+                        <div class="contents">
+                            <span>For Gamers</span>
+                            <h3>Power Up Your Gaming Setup</h3>
+                            <p>Experience the speed and precision of top-tier mechanical keyboards</p>
+                            <a href="#" class="btn">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="swiper-slide">
+                    <div class="box second" style="background: url(image_slider2.jpg) no-repeat;">
+                        <div class="contents">
+                            <span>Looking for something more compact?</span>
+                            <h3>Compact Designs, Maximum Impact</h3>
+                            <p> Perfect for students and professionals—small, stylish, and powerful. </p>
+                            <a href="#" class="btn">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="swiper-slide">
+                    <div class="box" style="background: url(image_slider3.jpg) no-repeat;">
+                        <div class="contents">
+                            <span>Something Customisable?</span>
+                            <h3>Your Keyboard, Your Way</h3>
+                            <p>Explore hot-swappable keyboards and build your dream setup.</p>
+                            <a href="#" class="btn">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>        
+        </div>
+
+    </section>
+
+      
+
+
     <div class="terminusFooter">
         <p><b>I want a footer here! &gt;:(</b></p>
     </div>
 
+    <!-- link for js swiper class-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
+    <script src="app.js"></script>
 
 </body></html>
