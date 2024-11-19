@@ -129,16 +129,15 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;     /*align the items vertically*/
-    min-height: 100vh;          /*makes the body fill the full viewport height */
+    height: 100vh;          /*makes the body fill the full viewport height */
     background-color: #161616; /*bg match with the form to make it look like transparent*/
 }
 .logIncontainer{
     position: relative;
-    width: 760px;
+    width: 100%;
+    height: 100vh;
     max-width: 100%;
-    min-height: 480px;
     background: #161616;
-    border-radius: 40px;
     overflow: hidden; /*hides overflow for cleaner look and help with border radius*/
 }
 
@@ -159,7 +158,7 @@ body {
 
 .log-in{
     width: 50%;    /* to split the screen in half*/
-    z-index: 2;    /*this section will be in front of signup section*/
+    z-index: 3;    /*this section will be in front of signup section*/
 }
 
 form{
