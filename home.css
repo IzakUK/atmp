@@ -203,7 +203,7 @@ section {
 /* Why Choose Us Section */
 .why-choose-us .reasons {
     display: flex;
-    gap: 1rem;
+    gap: .9rem;
     justify-content: space-between;
   }
   
@@ -213,13 +213,12 @@ section {
   }
  
   .reason h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 0.5rem 0;
   }
   
-  .reason p {
-    font-size: 5px;
-    color: #aaa;
+  .reasons .reason p {
+    font-size: .9rem;
   }
 
 
