@@ -374,21 +374,39 @@ body {
 .why-choose-us .reasons {
     display: flex;
     gap: .9rem;
-    justify-content: space-between;
-  }
+}
   
   .reason {
     text-align: center;
     padding: 4rem;
+    color: #d40464;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 1px #541ae0;
   }
+
+  .section-title{
+    text-align: center;
+    font-size: 2.1rem;
+    justify-content: space-between;
+    color: #d40464;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 1px #541ae0;
+  }
+
+
  
   .reason h3 {
     font-size: 1.3rem;
     margin: 0.5rem 0;
+    color: #d40464;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 1px #541ae0;
   }
   
   .reasons .reason p {
     font-size: .9rem;
+    color: white;
+    line-height: 2rem;
   }
 
 
@@ -710,49 +728,194 @@ button:active{
 
 /* styles for About Us page */
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2vh 5vw;
-    color: #fff;
+.about-us {
+  width: 100%;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 25px;
 }
 
-.container h1 {
-    font-size: 3rem;
-    color: #d40464;
-    text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 0 #541ae0; 
+/* Section Layout */
+.section {
+  display: flex;
+  align-items: start; 
+  justify-content: space-between;
+  margin-bottom: 3rem;
 }
 
-.container h2 {
-    font-size: 2rem;
-    color: #d40464;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    text-align: center;
-    text-shadow: 1px 1px 0 #541ae0;
+/* Headings */
+.section h2 {
+  font-size: 2rem;
+  color: #d40464;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 1px #541ae0;
+  text-align: left; /* Left-align text */
 }
 
-.container p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #ccc;
-    text-align: center;
-    margin-bottom: 20px;
+/* Paragraph Text */
+.section p {
+  font-size: 1.2rem;
+  line-height: 1;
+  color: white;
+  margin-bottom: 2rem;
+  text-align: left; /* Left-align text */
 }
 
-/* For mobile responsiveness */
+/* alternate Layout */
+.aboutus-row {
+  display: flex;
+  align-items: start;
+}
+
+.aboutus-col {
+  flex-basis: 45%; 
+  margin: auto;
+}
+
+.aboutus-col img {
+  width: 100%;
+  display: block; /* Ensures the image does not have extra space below it */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+}
+
+.aboutus-col h1 {
+  margin: 10px 0 10px;
+  text-align: justify;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.aboutus-col p {
+  font-size: 15px;
+  line-height: 2rem;
+  text-align: justify;
+}
+
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
-    .container h1 {
-        font-size: 2.5rem;
-    }
+  .content {
+      flex-direction: column; /* Stack content vertically */
+  }
 
-    .container h2 {
-        font-size: 1.8rem;
-    }
+  .text {
+      text-align: center; /* Center text for small screens */
+  }
 
-    .container p {
-        font-size: 1rem;
-    }
+  .image img {
+      max-width: 90%; /* Restrict image size */
+      margin-bottom: 1rem;
+  }
+
+  .section h2 {
+      font-size: 2rem; /* Scaled down for smaller devices */
+  }
+
+  .section p {
+      font-size: 1rem;
+      line-height: 1.6; /* Adjust line height for smaller font sizes */
+  }
+
+  /* Blog section styling for smaller screens */
+  .aboutus-row {
+    flex-direction: column;
+  }
+
+  .aboutus-col img {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .aboutus-col h1 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .aboutus-col p {
+    font-size: 13px;
+    line-height: 18px;
+  }
 }
+
+
+/* meet our team styling */
+
+.team {
+  padding: 2rem 7%; /* Add padding around the section */
+}
+
+.team h2 {
+  font-size: 2.3rem;
+  color: #d40464;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px #541ae0;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap; /* ensure the cards wrap onto the next row */
+  gap: 2.2rem; /* add space between team member cards */
+  justify-content: center; 
+
+}
+
+.team-member {
+  border: 0.5px solid #541ae0;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 22%; /* 4 cards per row (each card takes up 22% of the width) */
+  text-align: center;
+  margin-bottom: 1.5rem; /* space below each card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.team-member:hover {
+  transform: scale(1.01); /* Slightly enlarge the card on hover */
+}
+
+.team-member-img img {
+  width: 90%;
+  height: auto; /* Ensure the image scales properly */
+  max-width: 200px; /* Set a max-width for the image */
+  margin: 0 auto 1rem; /* Center the image and add space below */
+}
+
+.team-member-info h4 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #d40464;
+}
+
+.team-member-info p {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .team-container {
+    justify-content: center;
+    gap: 1rem; /* Less gap between cards */
+  }
+
+  .team-member {
+    width: 48%; /* 2 cards per row on smaller screens */
+  }
+
+  .team-member-info h4 {
+    font-size: 1.2rem;
+  }
+
+  .team-member-info p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member {
+    width: 100%; /* 1 card per row on very small screens */
+  }
+}
+
