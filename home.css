@@ -285,101 +285,90 @@ body {
 	}
 }
 
-/* home page image slider section */
-
-/* General Section Styling */
-section {
-    padding: 5rem 9%;
-    background: #252525;
+/* Home Banner Section */
+.home-banner {
+  width: 100%;
+  height: 100vh;
 }
 
-section2 {
-    position: relative;
-    left: 0;
-    bottom: -5vh;
-    width: 100%;
-    background: #000000;
-    /*! box-shadow: 0px 0px 10px black; */
-    /*! padding-top: 40px; */
-    overflow-block: revert;
+.banner-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-starts; /* Align content to the left */
+  padding: 0 7%; /* Adjust horizontal padding */
+  position: relative;
 }
 
-/* Button Styling */
-.btn {
-    margin-top: 1rem;
-    display: inline-block;
-    border: 1.5px solid black; 
-    border-radius: 14px; 
-    color: black; 
-    cursor: pointer;
-    background: none; 
-    font-size: 1.3rem; 
-    padding: 1rem 3rem; /* Padding around the text */
-    text-decoration: none; /* Removes underline for links */
-    transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+.contents {
+  max-width: 35rem;
+  color: #ffffff;
+  z-index: 1;
+  text-align: left;
 }
 
-.btn:hover {
-    background: #541ae0;
-    color: #d40464; 
+.contents span {
+  font-size: 1.5rem;
+  color: #541ae0;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
-/* Home Section style */
-.home {
-    padding: 0;
+.contents h3 {
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
-/* Box Styling */
-.box {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* align content to right, but it's not fully working yet*/
-    background-size: cover !important;
-    background-position: center !important;
-    padding: 2rem 9%;
+.contents p {
+  font-size: 1rem;
+  color: #d40464;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
 
-.box.second {
-    justify-content: flex-start; /* align content to the left for the second box */
+/* shop now Buttons */
+.shop-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #d40464;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.4s ease;
+}
+
+.shop-btn:hover {
+  background: #541ae0;
+  color: #d40464; 
+}
+
+/* Learn More Button */
+.learnmore-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #541ae0;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.s ease;
+}
+
+.learnmore-btn:hover {
+  background: #d40464;
+  color: #541ae0; 
 }
 
 
-.box .contents {
-    width: 50rem;
-}
-
-.box .contents span {
-    font-size: 2rem;
-    color: #541ae0;
-    text-shadow: 2px  12px 0 black; 
-
-}
-
-.box .contents h3 {
-    font-size: 2.5rem;
-    color: #d40464;
-    text-shadow: 2px  2px 0 black; 
-
-    padding-top: 0.5rem;
-    text-transform: uppercase;
-}
-
-.box .contents p {
-    line-height: 1;
-    color: #d40464;
-    text-shadow: 1px  1px 0 black; 
-    font-size: 1rem;
-    padding: 1rem 0;
-}
-
-.swiper-button-next::after, 
-.swiper-button-prev::after{
-    font-size: 3rem;
-    color: white;
-
-
-}
 
 /* Why Choose Us Section */
 .why-choose-us .reasons {
@@ -401,6 +390,107 @@ section2 {
   .reasons .reason p {
     font-size: .9rem;
   }
+
+
+/* Featured Categories section style css*/ 
+
+.categories h1 {
+  line-height: 1.2;
+  margin-bottom: 3rem;
+  font-size: 1.7rem; 
+  color: #d40464;
+}
+
+.categories-container {
+  display: grid;
+  grid-template-columns: 25% 75%; /* Left column 25%, right column 75% */
+  gap: 1rem;
+}
+
+.categories-left p {
+  margin: 0.5rem 0 2rem;
+  font-size: 0.9rem;
+  line-height: 1.6; 
+  color: white;
+}
+
+.categories-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #d40464;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.categories-btn:hover {
+  background: #541ae0;
+  color: #d40464; 
+}
+
+/* Right grid container for categories */
+.categories-right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  gap: 1rem;
+}
+
+.categories-right h5 {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
+  text-shadow: 1px  1px 0 black; 
+}
+
+/* style for category boxes */
+.featured-category {
+  background-size: cover; /* to make image covers the entire area */
+  background-position: center; 
+  height: 250px; 
+  border-radius: 10px; 
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+  padding: 20px;  /*padding of text and box*/
+  position: relative; 
+  overflow: hidden; /* ensures no content overflows */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for zooming */
+.featured-category:hover {
+  transform: scale(1.01); /* slightly zoom in the entire box */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); 
+}
+
+/* Inner image zoom effect */
+.featured-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 110%; /* Slightly larger for zoom effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  transition: transform 0.3s ease; 
+  background-image: inherit; 
+}
+
+/* Zoom effect on hover */
+.featured-category:hover::before {
+  transform: scale(1.2); /* Zoom in on the background image */
+}
+
+/* Ensure text stays on top of the image */
+.featured-category h5, .featured-category p {
+  position: relative; /* Ensure text layers above the image */
+  z-index: 2;
+}
 
 
 
