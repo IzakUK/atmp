@@ -1,0 +1,408 @@
+:root {
+    --primary-color: #FF00FF;
+    --secondary-color: #9D00FF;
+    --background-color: #1E1E1E;
+    --card-background: #2A2A2A;
+    --border-color: #333333;
+    --text-color: #FFFFFF;
+    --secondary-text: #AAAAAA;
+    --success-color: #00FF00;
+    --input-background: #333333;
+    --button-gradient: linear-gradient(135deg, #FF00FF, #9D00FF);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--card-background);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Main Container */
+.checkout-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 2rem;
+}
+
+/* Form Styles */
+.checkout-form {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--input-background);
+    color: var(--text-color);
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(255, 0, 255, 0.1);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    color: var(--secondary-text);
+}
+
+/* Shipping Option */
+.shipping-option {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1rem;
+    background-color: var(--input-background);
+}
+
+.shipping-option-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.free-text {
+    color: var(--success-color);
+    font-weight: 500;
+}
+
+/* Payment Section */
+.secure-text {
+    color: var(--secondary-text);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+.d-none{
+    display: none;
+}
+.payment-option {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.payment-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--input-background);
+    transition: background-color 0.3s ease;
+}
+
+.payment-header:hover {
+    background-color: var(--hover-background);
+}
+
+.payment-radio {
+    display: none; /* Hide the actual radio button */
+}
+
+.payment-header input[type="radio"]:checked + span {
+    font-weight: bold;
+    color: var(--primary-color); /* Optional: Highlight the selected option */
+}
+
+.payment-form {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--card-background);
+}
+
+.d-none {
+    display: none;
+}
+
+
+.payment-form {
+    padding: 1rem;
+}
+
+.pay-button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--button-gradient);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.pay-button:hover {
+    opacity: 0.9;
+}
+
+/* Order Summary */
+.order-summary {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    align-self: start;
+    position: sticky;
+    top: 2rem;
+}
+
+.product-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.product-image {
+    position: relative;
+}
+.product-image img{
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+}
+.quantity {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+}
+
+.product-info h3 {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.product-info p {
+    color: var(--secondary-text);
+    font-size: 0.875rem;
+}
+
+.product-price {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.summary-details {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.total {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.total-amount {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.currency {
+    color: var(--secondary-text);
+    font-size: 0.875rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    animation: fadeIn ease-in 5s both;
+    padding: 1rem;
+    color: var(--input-background);
+    font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .checkout-container {
+        grid-template-columns: 1fr 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .checkout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .order-summary {
+        position: static;
+        margin-bottom: 2rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.terminusTopBanner {
+    display: flex;
+    justify-content: space-between; /* Keeps it centred correctly */
+    background-color: #333;
+    color: white; /*Changes the colour of the menu button, adding this just in case the colour scheme we pick changes */
+    align-items: center; /* Centres everything */
+    position: sticky; /* From here... */
+    top: 0;
+    z-index: 10000; /* Down to here, it allows for the sticky banner to follow the user along the page */
+    padding: 1vh; /* Adds more height and width of the banner and icons */
+}
+
+/* Menu icon on the left */
+.menuOption {
+    font-size: 2vw;
+    cursor: not-allowed; /* Shows the user a crossed out cursor, reason is because we haven't added the implentation in as of yet. */
+    padding: 1vw;
+}
+
+/* Centred banner content */
+.bannerFormat {
+    align-items: center; /* Centres hyperlinks */
+    display: inherit; /* Holds everything together */
+    gap: 3vw; /* Gap between the web pages and the centre logo. */
+    max-height: 1vw;
+    margin-left: 6vh; /* Centers the logo and text for the website, adjust as needed using vh or maybe vw */
+}
+
+/* Links on both sides of the logo */
+.LBannerLinks, .RBannerLinks, .right-logos { /* If you don't wish for things to move on the banner, add them here. */
+    display: flex; /* Centres the text into the middle of the banner */
+    gap: 3vw; /* spacing between hyperlinks */
+    font-size: 1vw;
+}
+
+/* Styling for individual links */
+.LBannerLinks a, .RBannerLinks a {
+    color: white; /* Looks cool in blue, but we can change the colour later depending on what colour scheme we choose. */
+    text-decoration: none; /*Part of the animation for hovering. Hides the initial underlining. */
+    font-weight: bold; /* BOLD text :D */
+    display: block;
+}
+
+.LBannerLinks a:hover, .RBannerLinks a:hover {
+    text-decoration: underline; /* Small animation for when hovering over each other page choice on the banner */
+}
+
+/* Logo styling */
+.logo {
+     /* Restrains the logo from being crazy large. */
+    width: 5vw; /* May remove this line, unsure if it's changing anything */
+    height: 5vw;
+    display: block;
+}
+
+.right-logos {  /* added this to group the icons on the right side*/
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1vw;  /* space between basket and user icon */
+}
+
+/* Basket icon on the right of the banner. Only a placeholder as the icon will be replaced in the near future with an image instead of an emoji */
+.userBasket {
+    font-size: 2vw;
+    cursor: not-allowed; /* this will be changed once functionality is implemented.*/
+    padding: 1vw;
+    padding-top: 3px; /*i added this to fix the alignment of two icons*/ 
+}
+
+.userIcon img {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.terminusFooter {
+    animation: fadeIn ease-in 5s both; /* Delayed fade in for dramatic, temporary effect. */
+    text-align: center;
+    color: #FFF;
+    background-color: #2A2A2A;
+}
