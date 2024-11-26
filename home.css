@@ -1,7 +1,7 @@
 body {
     margin: 0; /* Stops a weird white border around the page */
     box-sizing: border-box; /* Fixes another bug with horizontal scrolling due to the banner */
-    background-color: black;
+    background-color: rgb(19, 19, 19);;
 }
 
 /* Ensures everything is using the border-box sizing + universal font */
@@ -285,6 +285,58 @@ body {
 	}
 }
 
+
+
+/* Styling for Search Bar Section */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  padding: 8px 0;
+  background-color: #333; 
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 0.5px solid #d40464; 
+  border-radius: 20px;
+  background-color: #333; /* Slightly darker than the section */
+  padding: 1px 10px;
+  width: 100%; /* Responsive width */
+  height: 7vh;
+  max-width: 500px; /* Limit the max width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-container:hover {
+  transform: scale(1.01); /* Subtle hover effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.search-input {
+  flex: 1;
+  background: none;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  padding: 5px;
+}
+
+.search-input::placeholder {
+  color: #b1b1b1; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-container {
+    width: 90%; 
+  }
+}
+
+
+
+
 /* Home Banner Section */
 .home-banner {
   width: 100%;
@@ -299,6 +351,8 @@ body {
   justify-content: flex-starts; /* Align content to the left */
   padding: 0 7%; /* Adjust horizontal padding */
   position: relative;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
 }
 
 .contents {
@@ -918,4 +972,6 @@ button:active{
     width: 100%; /* 1 card per row on very small screens */
   }
 }
+
+
 
