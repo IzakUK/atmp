@@ -388,8 +388,7 @@ footer {
 
 /* Basket icon on the right of the banner. Only a placeholder as the icon will be replaced in the near future with an image instead of an emoji */
 .userBasket {
-    font-size: 2vw;
-    cursor: not-allowed; /* this will be changed once functionality is implemented.*/
+    font-size: 2.25vw;
     padding: 1vw;
     padding-top: 3px; /*i added this to fix the alignment of two icons*/ 
 }
