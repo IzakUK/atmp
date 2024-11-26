@@ -665,10 +665,10 @@ input{
 }
 
 .passColour a { /* Used to be 'a', changed it as it was destroying the banner's optimisation. */
-    color: #d40464;
     font-size: 14px;
     text-decoration: none;
     margin: 15px 0;
+    color: #d40464;
     text-shadow: 1px  1px 0 #541ae0;   /*purple bottom-right shadow around text */;
 }
 
@@ -975,3 +975,146 @@ button:active{
 
 
 
+/* Styling for contact us page */
+.contact-container {
+  padding: 2rem 4rem;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 3rem;
+  max-width: 1000px; 
+  margin: auto;
+  border-radius: 20px;
+}
+
+/* Contact Left (Information Section) */
+.contact-left {
+  padding: 2rem;
+  border: 2px solid #d40464; /* Neon pink border */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-left-image img {
+  width: 6rem; /* Adjust image size */
+  height: auto;
+  margin: auto; /* Center image */
+  display: block;
+  border: 1px solid #541ae0; 
+}
+
+.contact-left h2 {
+  text-align: center;
+  color: #d40464;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 5px #541ae0; /* Neon text effect */
+  margin-bottom: 15px;
+}
+
+.contact-left p {
+  font-size: 0.9rem;
+  text-align: center;
+  color: rgb(206, 206, 206);
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+
+.contact-left .contact-details li {
+  font-size: 0.9rem;
+  color: rgb(206, 206, 206);
+  margin-bottom: 0.8rem;
+  list-style: none;
+}
+
+/* Contact Form Section */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border: 1px solid #541ae0; /* Neon purple border */
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background: transparent;
+}
+
+.contact-form .form-name {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form .form-name input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #d40464; 
+  background: #161616; 
+  color: white;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #d40464; /* Neon pink */
+  background: #161616;
+  color: white;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #541ae0; /* Brighter neon effect on focus */
+  box-shadow: 0 0 8px #541ae0;
+}
+
+.contact-form .btn {
+  align-self: center;
+  background: #d40464;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 15px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.contact-form .btn:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive Design for smaller screen */
+@media screen and (max-width: 768px) {
+  .contact-container {
+      grid-template-columns: 1fr; /* Stack sections on small screens */
+      gap: 1rem;
+  }
+
+  .contact-left {
+      bottom: 0; /* Remove overlap for better stacking */
+  }
+
+  .contact-form .form-name {
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+      font-size: 0.8rem;
+  }
+
+  .contact-form .btn {
+      font-size: 0.9rem;
+      padding: 0.6rem 1.5rem;
+  }
+}
