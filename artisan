@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
 
+<<<<<<< HEAD
 define('LARAVEL_START', microtime(true));
 
 /*
@@ -49,5 +50,17 @@ $status = $kernel->handle(
 */
 
 $kernel->terminate($input, $status);
+=======
+use Symfony\Component\Console\Input\ArgvInput;
+
+define('LARAVEL_START', microtime(true));
+
+// Register the Composer autoloader...
+require __DIR__.'/vendor/autoload.php';
+
+// Bootstrap Laravel and handle the command...
+$status = (require_once __DIR__.'/bootstrap/app.php')
+    ->handleCommand(new ArgvInput);
+>>>>>>> 3f4af34f8a759de5f645cd36f6761d9412f06a50
 
 exit($status);

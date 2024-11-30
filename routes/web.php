@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -84,3 +85,22 @@ Route::post('doul','LoginController@dologin');
 Route::post('doureg','LoginController@doreg');
 Route::post('doureg','LoginController@doreg');
 
+=======
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/product', [ProductController:: class, 'index'])->name('product.index');
+Route::get('/product/create', [ProductController:: class, 'create'])->name('product.create');
+Route::post('/product', [ProductController:: class, 'store'])->name('product.store');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+>>>>>>> 3f4af34f8a759de5f645cd36f6761d9412f06a50
