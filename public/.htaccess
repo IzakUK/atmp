@@ -1,4 +1,13 @@
 <IfModule mod_rewrite.c>
+<<<<<<< HEAD
+Options +FollowSymlinks -Multiviews
+RewriteEngine on
+ 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]
+</IfModule>
+=======
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
@@ -19,3 +28,4 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+>>>>>>> 3f4af34f8a759de5f645cd36f6761d9412f06a50
