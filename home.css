@@ -1158,3 +1158,305 @@ transform: scale(1.03);
     .menuOption {
         color: white; /* compatability*/
     }
+
+
+
+    /*styling for shopping cart page*/
+
+.shopping-cart {
+  position: relative;
+  padding: 50px;
+  background-color: rgba(30, 30, 30, 0.6); /* Darker semi-transparent background */
+  overflow: hidden;
+  border-radius: 15px; 
+}
+
+/* Blurred background image using pseudo-element */
+.shopping-cart::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('featured1.jpg'); /* Add your image URL */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px); /* Subtle blur effect */
+  z-index: -1;
+}
+
+/* Container for the cart items */
+.cart-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(42, 42, 42, 0.9); 
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /*shadow to make it look like floating 3d box*/
+}
+
+/* Header */
+h1 {
+  color: #d40464; /* Neon pink color */
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Cart item sections */
+.cart-header, .cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #424242;
+  padding: 10px 0;
+}
+
+/* Item header (like Name, Price, Quantity) */
+.header-item {
+  flex-basis: 13%;
+  text-align: center;
+  color: #8d5ff8; /* Neon purple */
+  font-weight: bold;
+}
+
+/* Product image style */
+.product-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Item name, price, and total price */
+.item-name, .item-price, .item-total-price {
+  flex-basis: 16%;
+  text-align: center;
+  font-size: 14px;
+  color: #e4e4e4;
+}
+
+/* Quantity container */
+.item-quantity {
+  flex-basis: 16%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons for quantity */
+.qty-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 20%;
+  border: 1px solid #d40464;
+  box-shadow: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Input field for quantity */
+.quantity-input {
+  width: 65px;
+  text-align: center;
+  margin: 0 5px;
+  background-color: #333;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Delete button style */
+.delete-btn {
+  background-color: #d40464;
+  box-shadow: none;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Order summary styling */
+.order-summary {
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  color: #e4e4e4;
+}
+
+/* Summary details, flexed for layout */
+.summary-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+/* Checkout button */
+.checkout-btn {
+  color: white;
+  background-color: #d40464; 
+  box-shadow: none;
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 35%;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.checkout-btn:hover {
+  background-color: #541ae0;
+  border: none; /* Subtle purple hover effect */
+}
+
+/* Media query for devices with a width of 768px or less (tablets and small devices) */
+@media (max-width: 768px) {
+
+  /* Adjust the shopping cart container padding */
+  .shopping-cart {
+      padding: 30px;
+  }
+
+  /* Adjust the cart container to take more width and padding for smaller devices */
+  .cart-container {
+      width: 95%;
+      padding: 15px;
+  }
+
+  /* Adjust header font size and alignment */
+  h1 {
+      font-size: 1.5rem;
+      padding: 10px 0;
+  }
+
+  /* Stack cart items vertically */
+  .cart-header, .cart-item {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start; /* Align to the left */
+  }
+
+  .header-item {
+      flex-basis: 100%;
+      text-align: left;
+      margin-bottom: 5px; /* Add spacing between header items */
+  }
+
+  .product-img {
+      width: 80px;
+      height: 80px;
+  }
+
+  .item-name, .item-price, .item-total-price {
+      flex-basis: 100%;
+      text-align: left;
+      font-size: 13px;
+      margin: 5px 0; /* Add spacing for readability */
+  }
+
+  .item-quantity {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .qty-btn {
+      padding: 5px 8px;
+      font-size: 12px;
+  }
+
+  .quantity-input {
+      width: 50px;
+  }
+
+  .delete-btn {
+      padding: 8px 15px;
+      font-size: 13px;
+  }
+
+  /* Order summary section */
+  .order-summary {
+      padding: 10px;
+      margin: 20px 0;
+  }
+
+  /* Checkout button */
+  .checkout-btn {
+      width: 100%; /* Full width button on smaller screens */
+      padding: 12px;
+      font-size: 16px;
+  }
+}
+
+/* Media query for mobile screens with a width of 480px or less (phones) */
+@media (max-width: 480px) {
+
+  /* Adjust the cart container padding */
+  .cart-container {
+      padding: 10px;
+  }
+
+  /* Adjust the font size of the header */
+  h1 {
+      font-size: 1.2rem;
+  }
+
+  /* Stack items vertically */
+  .cart-header, .cart-item {
+      flex-direction: column; /* Stack items vertically */
+  }
+
+  .header-item {
+      flex-basis: 100%;
+      text-align: left;
+  }
+
+  .product-img {
+      width: 70px;
+      height: 70px;
+  }
+
+  .item-name, .item-price, .item-total-price {
+      font-size: 12px;
+  }
+
+  .item-quantity {
+      flex-basis: 100%;
+      justify-content: space-between;
+  }
+
+  /* Adjust button sizes */
+  .qty-btn {
+      padding: 5px 7px;
+      font-size: 12px;
+  }
+
+  .quantity-input {
+      width: 45px;
+  }
+
+  .delete-btn {
+      padding: 8px 12px;
+      font-size: 12px;
+  }
+
+  /* Order summary section */
+  .order-summary {
+      margin-top: 10px;
+      padding: 8px;
+  }
+
+  /* Checkout button */
+  .checkout-btn {
+      width: 100%; /* Full width button on phones */
+      padding: 12px;
+      font-size: 14px;
+  }
+}
