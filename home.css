@@ -1,120 +1,590 @@
 body {
-    margin: 0; /* Stops a weird white border around the page */
-    box-sizing: border-box; /* Fixes another bug with horizontal scrolling due to the banner */
-    background-color: #252525;
+  margin: 0; /* Stops a weird white border around the page */
+  box-sizing: border-box; /* Fixes another bug with horizontal scrolling due to the banner */
+  background-color: rgb(19, 19, 19);;
 }
 
 /* Ensures everything is using the border-box sizing + universal font */
 *, *::before, *::after {
-    box-sizing: inherit;
-    font-family: Arial; /* Temporary Arial, it may change when we have decided on the font. Arial may remain a fallback. */
-    align-content: center;
+  box-sizing: inherit;
+  font-family: Arial; /* Temporary Arial, it may change when we have decided on the font. Arial may remain a fallback. */
+  align-content: center;
+  text-align: center;
 }
 
 /* Style for the top banner */
 .terminusTopBanner {
-    display: flex;
-    justify-content: space-between; /* Keeps it centred correctly */
-    background-color: #333;
-    color: white; /*Changes the colour of the menu button, adding this just in case the colour scheme we pick changes */
-    align-items: center; /* Centres everything */
-    position: sticky; /* From here... */
-    top: 0;
-    z-index: 10000; /* Down to here, it allows for the sticky banner to follow the user along the page */
-    padding: 1vh; /* Adds more height and width of the banner and icons */
+  display: flex;
+  justify-content: space-between; /* Keeps it centred correctly */
+  background-color: #333;
+  color: white; /*Changes the colour of the menu button, adding this just in case the colour scheme we pick changes */
+  align-items: center; /* Centres everything */
+  position: sticky; /* From here... */
+  top: 0;
+  z-index: 10000; /* Down to here, it allows for the sticky banner to follow the user along the page */
+  padding: 1vh; /* Adds more height and width of the banner and icons */
 }
 
 /* Menu icon on the left */
 .menuOption {
-    font-size: 2vw;
-    cursor: not-allowed; /* Shows the user a crossed out cursor, reason is because we haven't added the implentation in as of yet. */
-    padding: 1vw;
+  font-size: 2vw;
+  cursor: pointer; /* Shows the user a crossed out cursor, reason is because we haven't added the implentation in as of yet. */
+  padding: 1vw;
 }
 
 /* Centred banner content */
 .bannerFormat {
-    align-items: center; /* Centres hyperlinks */
-    display: inherit; /* Holds everything together */
-    gap: 3vw; /* Gap between the web pages and the centre logo. */
-    max-height: 1vw;
-    margin-left: 6vh; /* Centers the logo and text for the website, adjust as needed using vh or maybe vw */
+  align-items: center; /* Centres hyperlinks */
+  display: inherit; /* Holds everything together */
+  gap: 3vw; /* Gap between the web pages and the centre logo. */
+  max-height: 1vw;
+  margin-left: 6.325vh; /* Centers the logo and text for the website, adjust as needed using vh or maybe vw */
 }
 
 /* Links on both sides of the logo */
 .LBannerLinks, .RBannerLinks, .right-logos { /* If you don't wish for things to move on the banner, add them here. */
-    display: flex; /* Centres the text into the middle of the banner */
-    gap: 3vw; /* spacing between hyperlinks */
-    font-size: 1vw;
+  display: flex; /* Centres the text into the middle of the banner */
+  gap: 3vw; /* spacing between hyperlinks */
+  font-size: 1vw;
 }
 
 /* Styling for individual links */
 .LBannerLinks a, .RBannerLinks a {
-    color: white; /* Looks cool in blue, but we can change the colour later depending on what colour scheme we choose. */
-    text-decoration: none; /*Part of the animation for hovering. Hides the initial underlining. */
-    font-weight: bold; /* BOLD text :D */
-    display: block;
+  color: white; /* Looks cool in blue, but we can change the colour later depending on what colour scheme we choose. */
+  text-decoration: none; /*Part of the animation for hovering. Hides the initial underlining. */
+  font-weight: bold; /* BOLD text :D */
+  display: block;
 }
 
 .LBannerLinks a:hover, .RBannerLinks a:hover {
-    text-decoration: underline; /* Small animation for when hovering over each other page choice on the banner */
+  text-decoration: underline; /* Small animation for when hovering over each other page choice on the banner */
 }
 
 /* Logo styling */
 .logo {
-     /* Restrains the logo from being crazy large. */
-    width: 5vw; /* May remove this line, unsure if it's changing anything */
-    height: 5vw;
-    display: block;
+   /* Restrains the logo from being crazy large. */
+  width: 5vw; /* May remove this line, unsure if it's changing anything */
+  height: 5vw;
+  display: block;
 }
 
 .right-logos {  /* added this to group the icons on the right side*/
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 1vw;  /* space between basket and user icon */
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1vw;  /* space between basket and user icon */
 }
 
 /* Basket icon on the right of the banner. Only a placeholder as the icon will be replaced in the near future with an image instead of an emoji */
 .userBasket {
-    font-size: 2vw;
-    cursor: not-allowed; /* this will be changed once functionality is implemented.*/
-    padding: 1vw;
-    padding-top: 3px; /*i added this to fix the alignment of two icons*/ 
+  font-size: 2vw;
+   /* this will be changed once functionality is implemented.*/
+  padding: 1vw;
+  padding-top: 3px; /*i added this to fix the alignment of two icons*/ 
 }
 
 .userIcon img {
-    width: 2.5vw;
-    height: 2.5vw;
-    border-radius: 50%;
-    cursor: pointer;
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 /* Placeholder image */
 .placeholderImages {
-    animation: fadeIn ease-in 1s both;
-    display: flex;
-    justify-content: center;
+  animation: fadeIn ease-in 1s both;
+  display: flex;
+  justify-content: center;
 }
-.terminusFooter {
-    animation: fadeIn ease-in 5s both; /* Delayed fade in for dramatic, temporary effect. */
-    text-align: center;
-    color: #FFF;
+
+footer.top > img {
+  height: 50px;
+  margin: 0 auto 50px;
+}
+
+footer {
+  position: relative;
+  padding: 0px 50px 0px 0px;
+  color: rgb(255 255 255 / 50%);
+}
+
+footer.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  gap: 8px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.links-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 8rem;
+}
+
+footer h2 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(255 255 255 / 96%);
+}
+
+footer p {
+  margin: 0;
+}
+
+.legal > a {
+  margin: 0 0 0 4px;
+}
+
+.legal,
+.copyright {
+  font-size: 12px;
+}
+
+.legal > span {
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #aaa8a8;
+}
+
+a:hover {
+  color: purple;
+}
+
+footer.top .socials {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  translate: -50% 0;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 56px;
+}
+
+footer.top .socials > a {
+  font-size: 24px;
+}
+
+.socials a:hover {
+  color: blue;
+}
+
+.socials-column :is(h2, p) {
+  display: none;
+}
+
+#play-store {
+  width: 180px;
+  height: 70px;
+}
+
+#apple-store {
+  width: 180px;
+  height: 60px;
+}
+
+.store-logos {
+  display: flex;
+}
+
+.second-row, .first-row {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.second-row {
+  align-items: center;
+}
+
+.first-row {
+  gap: 4rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  margin-right: auto;
+}
+
+@media (width > 400px) {
+  .links-column {
+    text-align: left;
+  }
+
+  footer.top .links {
+    grid-template-columns: repeat(2, 1fr);
+    margin-right: 50px;
+  }
+
+  footer.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20px;
+    text-align: left;
+  }
+
+  footer.top .socials {
+    left: 0;
+    translate: 0;
+  }
+
+  footer.top > img {
+    margin: 0 0 50px;
+  }
+}
+
+@media (width >= 640px) {
+  footer {
+    margin: 0 auto;
+    max-width: 580px;
+    padding: 0;
+  }
+
+  footer.top .links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  footer.top .socials {
+    position: static;
+  }
+
+  footer.bottom {
+    justify-content: flex-start;
+  }
+
+  .socials-column :is(h2, p) {
+    display: block;
+  }
 }
 /* The fading in animation, used by the placeholder footer and image. */
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; } /* Goes from 0 opacity to 100. */
+  0% { opacity: 0; }
+  100% { opacity: 1; } /* Goes from 0 opacity to 100. */
 }
 @media (max-width: 540px) or (max-height: 200px) {
-    .terminusTopBanner {
-        display: ruby-base;
-	padding: 20px 0px;
+  .terminusTopBanner {
+      display: ruby-base;
+padding: 20px 0px;
 }
-    .LBannerLinks, .RBannerLinks {
-	gap: 10px;
-	display: none;
-	}
+  .LBannerLinks, .RBannerLinks {
+gap: 10px;
+display: none;
 }
+}
+
+
+
+/* Styling for Search Bar Section */
+.search-bar {
+display: flex;
+justify-content: center;
+padding: 8px 0;
+background-color: #333; 
+}
+
+.search-container {
+display: flex;
+align-items: center;
+border: 0.5px solid #d40464; 
+border-radius: 20vw;
+ /* Slightly darker than the section */
+width: 32vw; /* Responsive width */
+height: 7vh;
+ /* Limit the max width */
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-container:hover {
+transform: scale(1.01); /* Subtle hover effect */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.search-input {
+flex: 1;
+background: none;
+color: white;
+font-size: 1.5vw;
+outline: none;
+text-align: center;
+}
+
+.search-input::placeholder {
+color: #b1b1b1; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.search-container {
+  width: 90%; 
+}
+}
+
+
+
+
+/* Home Banner Section */
+.home-banner {
+width: 100%;
+height: 100vh;
+}
+
+.banner-box {
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: flex-starts; /* Align content to the left */
+padding: 0 7%; /* Adjust horizontal padding */
+position: relative;
+border-radius: 20px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+}
+
+.contents {
+max-width: 35rem;
+color: #ffffff;
+z-index: 1;
+text-align: left;
+}
+
+.contents span {
+font-size: 1.5rem;
+color: #541ae0;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 1px;
+display: block;
+margin-bottom: 0.5rem;
+}
+
+.contents h3 {
+font-size: 2rem;
+color: #ffffff;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+margin-bottom: 1rem;
+line-height: 1.2;
+text-transform: uppercase;
+}
+
+.contents p {
+font-size: 1rem;
+color: #d40464;
+margin-bottom: 1.5rem;
+line-height: 1.5;
+}
+
+/* shop now Buttons */
+.shop-btn {
+display: inline-block;
+padding: 0.8rem 1.5rem;
+background: #d40464;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+font-size: 0.9rem;
+transition: background-color 0.4s ease;
+}
+
+.shop-btn:hover {
+background: #541ae0;
+color: #d40464; 
+}
+
+/* Learn More Button */
+.learnmore-btn {
+display: inline-block;
+padding: 0.8rem 1.5rem;
+background: #541ae0;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+font-size: 0.9rem;
+transition: background-color 0.s ease;
+}
+
+.learnmore-btn:hover {
+background: #d40464;
+color: #541ae0; 
+}
+
+
+
+/* Why Choose Us Section */
+.why-choose-us .reasons {
+  display: flex;
+  gap: .9rem;
+}
+
+.reason {
+  text-align: center;
+  padding: 4rem;
+  color: #d40464;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 1px #541ae0;
+}
+
+.reasons {
+  padding: 0px 3.5vw 0px 0px;
+  overflow: hidden
+} /*Centres the text, please do not adjust this unless essential */
+
+.section-title{
+  text-align: center;
+  font-size: 2.1rem;
+  justify-content: space-between;
+  color: #d40464;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 1px #541ae0;
+}
+
+
+
+.reason h3 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  color: #d40464;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 1px #541ae0;
+}
+
+.reasons .reason p {
+  font-size: .9rem;
+  color: white;
+  line-height: 2rem;
+}
+
+
+/* Featured Categories section style css*/ 
+
+.categories h1 {
+line-height: 1.2;
+margin-bottom: 3rem;
+font-size: 1.7rem; 
+color: #d40464;
+}
+
+.categories-container {
+display: grid;
+ /* Left column 25%, right column 75% */
+}
+
+.categories-left p {
+margin: 0.5rem 0 2rem;
+font-size: 0.9rem;
+line-height: 1.6;
+color: white;
+}
+
+.categories-btn {
+display: inline-block;
+padding: 0.8rem 1.5rem;
+background: #d40464;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+font-size: 0.9rem;
+transition: background-color 0.3s ease;
+}
+
+.categories-btn:hover {
+background: #541ae0;
+color: #d40464; 
+}
+
+
+br { /* space between the shop button and keyboards */
+  display: block;
+  margin: 0.5vw auto;
+  overflow: hidden; /*not needed, but here just in case for browser compatability */
+}
+
+/* Right grid container for categories */
+.categories-right {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+gap: 1vw;
+}
+
+.categories-right h5 {
+color: white;
+font-size: 1.1rem;
+line-height: 1.5;
+margin: 0;
+text-shadow: 1px  1px 0 black; 
+}
+
+/* style for category boxes */
+.featured-category {
+background-size: cover; /* to make image covers the entire area */
+background-position: center; 
+height: 13vw;
+width: 100%;
+border-radius: 10px; 
+text-align: center;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+padding: 20px;  /*padding of text and box*/
+position: relative; 
+overflow: hidden; /* ensures no content overflows */
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for zooming */
+.featured-category:hover {
+transform: scale(1.01); /* slightly zoom in the entire box */
+box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); 
+}
+
+/* Inner image zoom effect */
+.featured-category::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-size: 110%; /* Slightly larger for zoom effect */
+background-position: center;
+background-repeat: no-repeat;
+z-index: 1;
+transition: transform 0.3s ease; 
+background-image: inherit; 
+}
+
+/* Zoom effect on hover */
+.featured-category:hover::before {
+transform: scale(1.2); /* Zoom in on the background image */
+}
+
+/* Ensure text stays on top of the image */
+.featured-category h5, .featured-category p {
+position: relative; /* Ensure text layers above the image */
+z-index: 2;
+}
+
+
+
+@media (max-width:1200px){
+
+  section{
+      padding: 3rem 2rem;
+  }
+}
+
+
 
 
 
@@ -125,73 +595,73 @@ body {
 
 /*to center the login and register form within the body*/
 .logInPage_body{
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;     /*align the items vertically*/
-    height: 100vh;          /*makes the body fill the full viewport height */
-    background-color: #161616; /*bg match with the form to make it look like transparent*/
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;     /*align the items vertically*/
+  height: 100vh;          /*makes the body fill the full viewport height */
+  background-color: #161616; /*bg match with the form to make it look like transparent*/
 }
 .logIncontainer{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    max-width: 100%;
-    background: #161616;
-    overflow: hidden; /*hides overflow for cleaner look and help with border radius*/
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-width: 100%;
+  background: #161616;
+  overflow: hidden; /*hides overflow for cleaner look and help with border radius*/
 }
 
 /* styling for the login and signup sections */
 .log-in, .sign-up{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    transition: all 0.6s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
 }
 
 .sign-up{   /*this section will be hidden by default and will only be shown when sldier is activated*/
-    width: 50%;
-    opacity: 0;
-    z-index: 1;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
 }
 
 .log-in{
-    width: 50%;    /* to split the screen in half*/
-    z-index: 3;    /*this section will be in front of signup section*/
+  width: 50%;    /* to split the screen in half*/
+  z-index: 3;    /*this section will be in front of signup section*/
 }
 
 form{
-    background: #161616;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 50px;
-    height: 100%;
-    text-align: center;
+  background: #161616;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
 }
 
 .sign-up h1, .log-in h1{
-    font-weight: bold;
-    padding-bottom: 25px;
-    margin: 0;
-    color: #d40464;
-    text-shadow: 1px  1px 0 #541ae0;   /*adding the purple bottom-right shadow */
+  font-weight: bold;
+  padding-bottom: 25px;
+  margin: 0;
+  color: #d40464;
+  text-shadow: 1px  1px 0 #541ae0;   /*adding the purple bottom-right shadow */
 }
 
 .overlay-effect h1{
-    font-weight: bold;
-    margin: 0;
+  font-weight: bold;
+  margin: 0;
 }
 
 .overlay-effect p{
-    font-size: 14px;
-    font-weight: 100;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-    margin: 15px 0 20px;
-    
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 15px 0 20px;
+  
 }
 
 input{
@@ -206,166 +676,485 @@ input{
 }
 
 .passColour a { /* Used to be 'a', changed it as it was destroying the banner's optimisation. */
-    color: #d40464;
-    font-size: 14px;
-    text-decoration: none;
-    margin: 15px 0;
-    text-shadow: 1px  1px 0 #541ae0;   /*purple bottom-right shadow around text */;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+  color: #d40464;
+  text-shadow: 1px  1px 0 #541ae0;   /*purple bottom-right shadow around text */;
 }
 
 .passColour a:hover {
-    text-decoration: underline; /* Adds the underline when hovering back */
+  text-decoration: underline; /* Adds the underline when hovering back */
 }
 
 button{
-    color: #fff;
-    background: #541ae0;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 55px;
-    margin: 20px;
-    border-radius: 15px;
-    border: .5px solid #d40464;
-    outline: none;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
-    cursor: pointer;
-    box-shadow: 1.5px 1.5px 0 #d40464;
+  color: #fff;
+  background: #541ae0;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 55px;
+  margin: 20px;
+  border-radius: 15px;
+  border: .5px solid #d40464;
+  outline: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+  box-shadow: 1.5px 1.5px 0 #d40464;
 }
 
 button:active{
-    transform: scale(0.90); /* reduce the button size slightly on click*/
+  transform: scale(0.90); /* reduce the button size slightly on click*/
 }
 
 /*this is to style the "log in" and "sign up" buttons*/
 #logIn, #signUp{
-    background-color: transparent; /*set the backgroudn to transparent*/
-    border: 2px solid #fff;
+  background-color: transparent; /*set the backgroudn to transparent*/
+  border: 2px solid #fff;
 }
 
 /* to adjust the position of the .sign-up form when button is clicked */
 .logIncontainer.right-panel-active .sign-up{
-    transform: translateX(100%); /* move .sign-up 100% to the right */
-    opacity: 1;             /*fully vidible*/
-    z-index: 5;
+  transform: translateX(100%); /* move .sign-up 100% to the right */
+  opacity: 1;             /*fully vidible*/
+  z-index: 5;
 }
 
 /* added a overlay container to apply the split screen effect*/ 
 .overlay-container{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    transition: transform 0.6s ease-in-out;
-    z-index: 100;
-    color: #ccc;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+  color: #ccc;
 }
 
 /* adjust the overlay to the left when button is clicked */
 .logIncontainer.right-panel-active .overlay-container{
-    transform: translateX(-100%)
+  transform: translateX(-100%)
 }
 
 /* effect container that holds the background for the overlay sides */
 .overlay-effect{
-    position :relative;
-    color: #fff;
-    left: -100%;
-    height: 100%;
-    width: 200%;
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
-    display: flex;    
+  position :relative;
+  color: #fff;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+  display: flex;    
 }
 
 .logIncontainer.right-panel-active .overlay-effect{
-    transform: translateX(50%)
+  transform: translateX(50%)
 }
 
 .overlay-left, .overlay-right{
-    position: relative;
-    display : flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    background-size: cover;       /* to make the image covers the entire background */
-    background-position: center;  /* centers the image */
-    background-repeat: no-repeat;
-    transition: transform 0.5s ease-in-out;
+  position: relative;
+  display : flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-size: cover;       /* to make the image covers the entire background */
+  background-position: center;  /* centers the image */
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease-in-out;
 }
 
 .overlay-left{
-    left: 0;
-    background-image: url('egPic.jpg'); 
-    transform: translateX(0);
+  left: 0;
+  background-image: url('egPic.jpg'); 
+  transform: translateX(0);
 }
 
 .logIncontainer.right-panel-active .overlay-left{
-    transform: translateX(0%);
+  transform: translateX(0%);
 }
 
 .overlay-right{
-    right: 0;
-    transform: translateX(0);
-    background-image: url('egPic.jpg'); 
+  right: 0;
+  transform: translateX(0);
+  background-image: url('egPic.jpg'); 
 }
 
 .logIncontainer.right-panel-active .overlay-right{
-    transform: translateX(100%);
+  transform: translateX(100%);
 }
 
 /* styles for About Us page */
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2vh 5vw;
-    color: #fff;
+.about-us {
+width: 100%;
+margin: auto;
+padding-top: 40px;
+padding-bottom: 25px;
 }
 
-.container h1 {
-    font-size: 3rem;
-    color: #d40464;
-    text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 0 #541ae0; 
+/* Section Layout */
+.section {
+display: flex;
+align-items: start; 
+justify-content: space-between;
+margin-bottom: 3rem;
 }
 
-.container h2 {
-    font-size: 2rem;
-    color: #d40464;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    text-align: center;
-    text-shadow: 1px 1px 0 #541ae0;
+/* Headings */
+.section h2 {
+font-size: 2rem;
+color: #d40464;
+margin-bottom: 1.5rem;
+text-shadow: 1px 1px 1px #541ae0;
+text-align: left; /* Left-align text */
 }
 
-.container p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #ccc;
-    text-align: center;
-    margin-bottom: 20px;
+/* Paragraph Text */
+.section p {
+font-size: 1.2rem;
+line-height: 1;
+color: white;
+margin-bottom: 2rem;
+text-align: left; /* Left-align text */
 }
 
-/* For mobile responsiveness */
+/* alternate Layout */
+.aboutus-row {
+display: flex;
+align-items: start;
+}
+
+.aboutus-col {
+flex-basis: 45%; 
+margin: auto;
+}
+
+.aboutus-col img {
+width: 100%;
+display: block; /* Ensures the image does not have extra space below it */
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+}
+
+.aboutus-col h1 {
+margin: 10px 0 10px;
+text-align: justify;
+font-size: 20px;
+line-height: 25px;
+}
+
+.aboutus-col p {
+font-size: 15px;
+line-height: 2rem;
+text-align: justify;
+}
+
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
-    .container h1 {
-        font-size: 2.5rem;
-    }
-
-    .container h2 {
-        font-size: 1.8rem;
-    }
-
-    .container p {
-        font-size: 1rem;
-    }
+.content {
+    flex-direction: column; /* Stack content vertically */
 }
+
+.text {
+    text-align: center; /* Center text for small screens */
+}
+
+.image img {
+    max-width: 90%; /* Restrict image size */
+    margin-bottom: 1rem;
+}
+
+.section h2 {
+    font-size: 2rem; /* Scaled down for smaller devices */
+}
+
+.section p {
+    font-size: 1rem;
+    line-height: 1.6; /* Adjust line height for smaller font sizes */
+}
+
+/* Blog section styling for smaller screens */
+.aboutus-row {
+  flex-direction: column;
+}
+
+.aboutus-col img {
+  width: 100%;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.aboutus-col h1 {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.aboutus-col p {
+  font-size: 13px;
+  line-height: 18px;
+}
+}
+
+
+/* meet our team styling */
+
+.team {
+padding: 2rem 7%; /* Add padding around the section */
+}
+
+.team h2 {
+font-size: 2.3rem;
+color: #d40464;
+margin-bottom: 2rem;
+text-align: center;
+text-shadow: 1px 1px 2px #541ae0;
+}
+
+.team-container {
+display: flex;
+flex-wrap: wrap; /* ensure the cards wrap onto the next row */
+gap: 2.2rem; /* add space between team member cards */
+justify-content: center; 
+
+}
+
+.team-member {
+border: 0.5px solid #541ae0;
+padding: 1rem;
+border-radius: 10px;
+width: 22%; /* 4 cards per row (each card takes up 22% of the width) */
+text-align: center;
+margin-bottom: 1.5rem; /* space below each card */
+transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.team-member:hover {
+transform: scale(1.01); /* Slightly enlarge the card on hover */
+}
+
+.team-member-img img {
+width: 90%;
+height: auto; /* Ensure the image scales properly */
+max-width: 200px; /* Set a max-width for the image */
+margin: 0 auto 1rem; /* Center the image and add space below */
+}
+
+.team-member-info h4 {
+margin-top: 1rem;
+font-size: 1.1rem;
+color: #d40464;
+}
+
+.team-member-info p {
+font-size: 0.8rem;
+color: #ccc;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+.team-container {
+  justify-content: center;
+  gap: 1rem; /* Less gap between cards */
+}
+
+.team-member {
+  width: 48%; /* 2 cards per row on smaller screens */
+}
+
+.team-member-info h4 {
+  font-size: 1.2rem;
+}
+
+.team-member-info p {
+  font-size: 0.9rem;
+}
+}
+
+@media (max-width: 480px) {
+.team-member {
+  width: 100%; /* 1 card per row on very small screens */
+}
+}
+
+
+
+/* Styling for contact us page */
+.contact-container {
+padding: 2rem 4rem;
+display: grid;
+grid-template-columns: 40% 60%;
+gap: 3rem;
+max-width: 1000px; 
+margin: auto;
+border-radius: 20px;
+}
+
+/* Contact Left (Information Section) */
+.contact-left {
+padding: 2rem;
+border: 2px solid #d40464; /* Neon pink border */
+border-radius: 15px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-left-image img {
+width: 6rem; /* Adjust image size */
+height: auto;
+margin: auto; /* Center image */
+display: block;
+border: 1px solid #541ae0; 
+}
+
+.contact-left h2 {
+text-align: center;
+color: #d40464;
+font-size: 1.5rem;
+text-shadow: 1px 1px 5px #541ae0; /* Neon text effect */
+margin-bottom: 15px;
+}
+
+.contact-left p {
+font-size: 0.9rem;
+text-align: center;
+color: rgb(206, 206, 206);
+line-height: 1.3;
+margin-bottom: 1.5rem;
+}
+
+.contact-left .contact-details li {
+font-size: 0.9rem;
+color: rgb(206, 206, 206);
+margin-bottom: 0.8rem;
+list-style: none;
+}
+
+/* Contact Form Section */
+.contact-form {
+display: flex;
+flex-direction: column;
+padding: 2rem;
+border: 1px solid #541ae0; /* Neon purple border */
+border-radius: 1rem;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+background: transparent;
+}
+
+.contact-form .form-name {
+display: flex;
+gap: 1rem;
+margin-bottom: 1rem;
+}
+
+.contact-form .form-name input {
+flex: 1;
+padding: 0.8rem;
+border: 1px solid #d40464; 
+background: #161616; 
+color: white;
+border-radius: 7px;
+font-size: 0.9rem;
+outline: none;
+}
+
+.contact-form input[type="email"],
+.contact-form textarea {
+width: 100%;
+padding: 0.8rem;
+border: 1px solid #d40464; /* Neon pink */
+background: #161616;
+color: white;
+border-radius: 7px;
+font-size: 0.9rem;
+margin-bottom: 10px;
+outline: none;
+}
+
+.contact-form textarea {
+resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+border-color: #541ae0; /* Brighter neon effect on focus */
+box-shadow: 0 0 8px #541ae0;
+}
+
+.contact-form .btn {
+align-self: center;
+background: #d40464;
+color: white;
+padding: 0.8rem 1rem;
+border-radius: 15px;
+font-size: 1rem;
+border: none;
+cursor: pointer;
+transition: transform 0.2s ease, background 0.3s;
+}
+
+.contact-form .btn:hover {
+transform: scale(1.03);
+}
+
+/* Responsive Design for smaller screen */
+@media screen and (max-width: 768px) {
+.contact-container {
+    grid-template-columns: 1fr; /* Stack sections on small screens */
+    gap: 1rem;
+}
+
+.contact-left {
+    bottom: 0; /* Remove overlap for better stacking */
+}
+
+.contact-form .form-name {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-size: 0.8rem;
+}
+
+.contact-form .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+}
+}
+.sidebar { /* I FORGOT TO SAVE THE GOOD COMPATABILITY :(*/
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden; /* stops the text going over the sidebar */
+    transition: 0.5s;
+    padding-top: 60px;
+    }
+    .sidebar a {
+        padding: 1vw 1vw;
+        text-decoration: none;
+        font-size: 1.5vw;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+    .sidebar .close-btn {
+        font-size: 2vw;
+    }
+    .menuOption {
+        color: white; /* compatability*/
+    }
