@@ -585,10 +585,124 @@ z-index: 2;
 }
 
 
+/*styling for blog banner section on home page*/
+
+.blog-banner {
+  margin-top: -200px; /*fixing the banner to move upward because it was too downward*/ 
+  height: 100vh;
+  padding-top: 10vh;
+}
+
+.blog-banner-container {
+  height: 80%;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  padding: 20px;
+}
+
+.blog-banner-container h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 5px; /* Increased letter spacing for minimalist look */
+  margin-bottom: 15px; 
+  text-transform: uppercase;
+}
+
+.blog-banner-container p {
+  color: white;
+  font-size: .8rem;
+  padding: 10px 20px;
+  line-height: 1.5;
+  max-width: 700px; 
+  margin-bottom: 30px; 
+  text-transform: uppercase;
+}
+
+#blog-banner-btn {
+  border: 1px solid white;
+  padding: 12px 30px;
+  border-radius: 15px; 
+  color: white;
+  font-size: .8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none; 
+  transition: all 0.3s ease; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+#blog-banner-btn:hover {
+  background-color: white;
+  color: #333; /* Change color on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
 
 
+/* media queries for blog banner section*/ 
+@media (max-width: 1024px) {
+  .blog-banner {
+    padding-top: 5vh;
+    height: 80vh; /* Adjust section height */
+  }
 
+  .blog-banner-container h2 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
 
+  .blog-banner-container p {
+    font-size: .7rem;
+  }
+
+  #blog-banner-btn {
+    padding: 10px 20px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-banner {
+    height: auto;
+    padding-top: 3vh;
+  }
+
+  .blog-banner-container h2 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .blog-banner-container p {
+    font-size: 0.6rem;
+  }
+
+  #blog-banner-btn {
+    padding: 8px 15px;
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-banner-container h2 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .blog-banner-container p {
+    font-size: 0.5rem;
+  }
+
+  #blog-banner-btn {
+    padding: 6px 12px;
+    font-size: 0.5rem;
+  }
+}
 
 
 /* for log in and register page */
@@ -1507,4 +1621,6 @@ h1 {
       font-size: 14px;
   }
 }
+
+
 
