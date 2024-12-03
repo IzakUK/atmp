@@ -723,6 +723,7 @@ z-index: 2;
   max-width: 100%;
   background: #161616;
   overflow: hidden; /*hides overflow for cleaner look and help with border radius*/
+  margin-bottom: 5vh;
 }
 
 /* styling for the login and signup sections */
