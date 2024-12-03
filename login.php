@@ -13,17 +13,17 @@
         <div class="bannerFormat">
             
             <div class="LBannerLinks">
-                <a href="about.html">About</a>
-                <a href="keyboards.html">Keyboards</a> <!-- We probably need a better name, I'm thinking Products, but I will keep it as this just for now.-->
+                <a href="about.php">About</a>
+                <a href="keyboards.php">Keyboards</a> <!-- We probably need a better name, I'm thinking Products, but I will keep it as this just for now.-->
             </div>
 
-            <a href="index.html"> <!-- Link for the logo -->
+            <a href="index.php"> <!-- Link for the logo -->
                 <img src="TerminusLogo.png" alt="Terminus Logo" class="logo">
             </a>
 
             <div class="RBannerLinks">
-                <a href="misc.html">Misc.</a> <!-- placeholder-->
-                <a href="contact.html">Contact</a>
+                <a href="misc.php">Misc.</a> <!-- placeholder-->
+                <a href="contactus.php">Contact</a>
             </div>
 
         </div>
