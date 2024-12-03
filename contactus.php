@@ -61,14 +61,23 @@
             </div>
     
             <!-- Right Section (Form) -->
-            <form class="contact-form">
+            <?php
+            $Message = "";
+            if(isset($_GET['error']))
+            {
+            $Message = " Please Fill in the Blanks ";
+            echo '<div class="alert alert-danger">'.$Message.'</div>';
+            }
+            ?>
+            
+            <form class="contact-form" action="process-contactform.php" method="post">
                 <div class="form-name">
-                    <input type="text" name="First Name" placeholder="First Name" required>
-                    <input type="text" name="Last Name" placeholder="Last Name" required>
+                <input type="text" name="FirstName" placeholder="First Name" required>
+                <input type="text" name="LastName" placeholder="Last Name" required>
                 </div>
-                <input type="email" name="Email Address" placeholder="Email Address" required>
+                <input type="email" name="EmailAddress" placeholder="Email Address" required>
                 <textarea name="Message" rows="7" placeholder="Message" required></textarea>
-                <button type="submit" class="btn btn-primary">Send Message</button>
+                <button type="submit" name ="submit"class="btn btn-primary">Send Message</button>
             </form>
         </div>
     </section>
