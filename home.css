@@ -38,7 +38,7 @@ body {
   display: inherit; /* Holds everything together */
   gap: 3vw; /* Gap between the web pages and the centre logo. */
   max-height: 1vw;
-  margin-left: 6.325vh; /* Centers the logo and text for the website, adjust as needed using vh or maybe vw */
+  margin-left: -5vh; /* Centers the logo and text for the website, adjust as needed using vh or maybe vw */
 }
 
 /* Links on both sides of the logo */
@@ -80,7 +80,7 @@ body {
   font-size: 2vw;
    /* this will be changed once functionality is implemented.*/
   padding: 1vw;
-  padding-top: 3px; /*i added this to fix the alignment of two icons*/ 
+  padding-top: 0.5vw; /*i added this to fix the alignment of two icons*/ 
 }
 
 .userIcon img {
@@ -277,8 +277,6 @@ footer.top .socials > a {
 }
 @media (max-width: 540px) or (max-height: 200px) {
   .terminusTopBanner {
-      display: ruby-base;
-padding: 20px 0px;
 }
   .LBannerLinks, .RBannerLinks {
 gap: 10px;
@@ -286,6 +284,17 @@ display: none;
 }
 }
 
+#search-icon {
+  font-size: 2vw;
+  cursor: pointer;
+  padding: 1vw;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+#search-icon:hover {
+  color: #d40464; /* Optional hover effect */
+}
 
 
 /* Styling for Search Bar Section */
@@ -1244,6 +1253,7 @@ transform: scale(1.03);
     padding: 0.6rem 1.5rem;
 }
 }
+
 .sidebar {
     height: 100%;
     width: 0; /* just in case */

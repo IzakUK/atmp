@@ -12,7 +12,10 @@
 </head>
 <body> <!-- Top Banner PLEASE BE CAUTIOUS WITH THIS AND THE CSS IF EDITING. -->
     <div class="terminusTopBanner">
-        <div class="menuOption" onclick="openNav()">☰</div>
+        <div class="right-logos">
+            <div class="menuOption" onclick="openNav()">☰</div>
+            <div id="search-icon" onclick="toggleSearch()">🔍</div>
+        </div>
         <div class="bannerFormat">
             <div class="LBannerLinks">
                 <a href="about.html">About</a>
@@ -40,12 +43,12 @@
         </div>
     </div>
     <!-- Search Bar -->
-    <section class="search-bar">
+    <section id="search-bar" class="search-bar" style="display: none;">
         <div class="search-container">
             <input type="text" class="search-input" placeholder="Search">
         </div>
     </section>
-    
+
     <!-- Sidebar -->
     <div id="terminusSide" class="sidebar">
         <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
@@ -194,13 +197,21 @@
             <a> Privacy </a>
         </div>
     </footer>
-
+<!-- We'll put this into a seperate folder before publishing, just for my sanity sakes. -->
     <script>
         function openNav() {
             document.getElementById("terminusSide").style.width = "20vh";
         }
         function closeNav() {
             document.getElementById("terminusSide").style.width = "0";
+        }
+        function toggleSearch() {
+            const searchBar = document.getElementById('search-bar');
+            if (searchBar.style.display === 'none') {
+                searchBar.style.display = 'flex';
+            } else {
+                searchBar.style.display = 'none';
+            }
         }
     </script>
 </body>
