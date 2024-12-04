@@ -15,17 +15,17 @@
         <div class="menuOption" onclick="openNav()">☰</div>
         <div class="bannerFormat">
             <div class="LBannerLinks">
-                <a href="about.html">About</a>
-                <a href="keyboards.html">Keyboards</a>
+                <a href="about.php">About</a>
+                <a href="keyboards.php">Keyboards</a>
             </div>
 
-            <a href="index.html">
+            <a href="index.php">
                 <img src="TerminusLogo.png" alt="Terminus Logo" class="logo">
             </a>
 
             <div class="RBannerLinks">
-                <a href="misc.html">Misc.</a>
-                <a href="contactus.html">Contact</a>
+                <a href="misc.php">Misc.</a>
+                <a href="contactus.php">Contact</a>
             </div>
         </div>
         <div class="right-logos">
@@ -35,7 +35,7 @@
                 </a>
             </div>
             <div class="userBasket">
-                <a href="checkout.html">🛒</a>
+                <a href="checkout.php">🛒</a>
             </div>
         </div>
     </div>
@@ -49,10 +49,10 @@
     <!-- Sidebar -->
     <div id="terminusSide" class="sidebar">
         <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
-        <a href="about.html">About</a>
-        <a href="keyboards.html">Keyboards</a>
-        <a href="misc.html">Our Mission</a>
-        <a href="contactus.html">Contact</a>
+        <a href="about.php">About</a>
+        <a href="keyboards.php">Keyboards</a>
+        <a href="misc.php">Our Mission</a>
+        <a href="contactus.php">Contact</a>
     </div>
 
     <!-- Homepage Banner Section -->
@@ -138,16 +138,16 @@
             <div class="first-row">
                 <div class="links-column">
                     <h2>Get Started</h2>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
+                    <a href="index.php">Home</a>
+                    <a href="about.php">About</a>
                     <a href="login.php">Login</a>
                 </div>
                 <div class="links-column">
                     <h2>News</h2>
-                    <a href="shop.html">Keyboards</a>
+                    <a href="shop.php">Keyboards</a>
                     <a href="#">Accessories</a>
                     <a href="configurator">Configurator</a>
-                    <a href="faq.html">FAQs</a>
+                    <a href="faq.php">FAQs</a>
                 </div>
                 <div class="links-column">
                     <h2>Overview</h2>
