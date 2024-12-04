@@ -295,7 +295,6 @@ justify-content: center;
 padding: 8px 0;
 background-color: #333; 
 }
-
 .search-container {
 display: flex;
 align-items: center;
@@ -306,8 +305,8 @@ width: 32vw; /* Responsive width */
 height: 7vh;
  /* Limit the max width */
 transition: transform 0.3s ease, box-shadow 0.3s ease;
+background-color: #333;
 }
-
 .search-container:hover {
 transform: scale(1.01); /* Subtle hover effect */
 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -632,7 +631,7 @@ z-index: 2;
 }
 
 form{
-  background: #161616;
+  background: #0000;
   display: flex;
   align-items: center;
   justify-content: center;

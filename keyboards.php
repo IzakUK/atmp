@@ -48,10 +48,12 @@
       </div>
     </div>
  <!--  Search Bar Draft -->
-    <section class="search-bar">
-      <div class="search-container">
-        <input type="text" class="search-input" placeholder="Search">
-      </div>
+ <section class="search-bar">
+        <form action="search.php" method="GET">
+            <div class="search-container">
+                <input type="text" name="query"class="search-input" placeholder="Search" required>
+                <button type="submit">search</button>
+            </div>
     </section>
 
     <!-- Swiper -->
