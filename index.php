@@ -12,7 +12,10 @@
 </head>
 <body> <!-- Top Banner PLEASE BE CAUTIOUS WITH THIS AND THE CSS IF EDITING. -->
     <div class="terminusTopBanner">
-        <div class="menuOption" onclick="openNav()">☰</div>
+        <div class="right-logos">
+            <div class="menuOption" onclick="openNav()">☰</div>
+            <div id="search-icon" onclick="toggleSearch()">🔍</div>
+        </div>
         <div class="bannerFormat">
             <div class="LBannerLinks">
                 <a href="about.php">About</a>
@@ -24,7 +27,7 @@
             </a>
 
             <div class="RBannerLinks">
-                <a href="misc.php">Misc.</a>
+                <a href="blog.php">Blog</a>
                 <a href="contactus.php">Contact</a>
             </div>
         </div>
@@ -35,19 +38,17 @@
                 </a>
             </div>
             <div class="userBasket">
-                <a href="checkout.php">🛒</a>
+                <a href="cart.php">🛒</a>
             </div>
         </div>
     </div>
     <!-- Search Bar -->
-    <section class="search-bar">
-        <form action="search.php" method="GET">
-            <div class="search-container">
-                <input type="text" name="query"class="search-input" placeholder="Search" required>
-                <button type="submit">search</button>
-            </div>
+    <section id="search-bar" class="search-bar" style="display: none;">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search">
+        </div>
     </section>
-    
+
     <!-- Sidebar -->
     <div id="terminusSide" class="sidebar">
         <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
@@ -58,19 +59,17 @@
     </div>
 
     <!-- Homepage Banner Section -->
-    <section class="home-banner" id="home">
         <div class="banner-box" style="background: url('homebanner.jpg') no-repeat; background-size: cover; background-position: center;">
             <div class="contents">
-                <span>For Gamers & Enthusiasts</span>
                 <h3>Find Your Perfect Click</h3>
                 <p>Mechanical keyboards for precision, style, and unmatched performance.</p>
                 <div class="button-group">
                     <a href="#" class="shop-btn">Shop Now</a>
-                    <a href="#" class="l">Learn More</a>
+                    <a href="#" class="learn-more-btn">Learn More</a>
                 </div>
             </div>
         </div>
-    </section>
+
     <!-- Featured Categories Section -->
     <section class="categories">
         <div class="categories-container">
@@ -107,6 +106,7 @@
         </div>
     </section>
     <br>
+
     <!-- Why Choose Us Section -->
     <section class="why-choose-us" id="why-choose-us">
         <div class="container">
@@ -131,6 +131,14 @@
                     <p>Build a keyboard that's as unique as you are, with endless customization options for style, function, and comfort.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="blog-banner">
+        <div class="blog-banner-container" style="background: url('blog_banner.jpg') no-repeat; background-size: cover; background-position: center;">
+            <h2> Mechanical Keyboard 101</h2>
+            <p> Everything you need to know before buying a mechanical keyboard</p>
+            <a href="blog.php" id="blog-banner-btn">Read More</a>
         </div>
     </section>
 
@@ -186,13 +194,21 @@
             <a> Privacy </a>
         </div>
     </footer>
-
+<!-- We'll put this into a seperate folder before publishing, just for my sanity sakes. -->
     <script>
         function openNav() {
             document.getElementById("terminusSide").style.width = "20vh";
         }
         function closeNav() {
             document.getElementById("terminusSide").style.width = "0";
+        }
+        function toggleSearch() {
+            const searchBar = document.getElementById('search-bar');
+            if (searchBar.style.display === 'none') {
+                searchBar.style.display = 'flex';
+            } else {
+                searchBar.style.display = 'none';
+            }
         }
     </script>
 </body>

@@ -24,12 +24,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             
             $_SESSION["user_id"] = $user["id"];
             
-            header("Location: index.php");
+            header("Location: login-success.html");
             exit;
         }
     }
     
     $is_invalid = true;
+    
+
 }
 
 ?>
