@@ -1,7 +1,7 @@
 body {
   margin: 0; /* Stops a weird white border around the page */
   box-sizing: border-box; /* Fixes another bug with horizontal scrolling due to the banner */
-  background-color: rgb(19, 19, 19);;
+  background-color: #161616;
 }
 
 /* Ensures everything is using the border-box sizing + universal font */
@@ -346,93 +346,98 @@ color: #b1b1b1;
 
 
 /* Home Banner Section */
-.home-banner {
-width: 100%;
-height: 100vh;
-}
-
 .banner-box {
-width: 100%;
-height: 100%;
-display: flex;
-align-items: center;
-justify-content: flex-starts; /* Align content to the left */
-padding: 0 7%; /* Adjust horizontal padding */
-position: relative;
-border-radius: 20px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  display: flex; 
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  background-position: center; /* Center the image */
 }
 
 .contents {
-max-width: 35rem;
-color: #ffffff;
-z-index: 1;
-text-align: left;
-}
-
-.contents span {
-font-size: 1.5rem;
-color: #541ae0;
-font-weight: bold;
-text-transform: uppercase;
-letter-spacing: 1px;
-display: block;
-margin-bottom: 0.5rem;
+  max-width: 35rem;
+  color: #ffffff;
+  z-index: 1;
+  text-align: center; /* Center-align text */
 }
 
 .contents h3 {
-font-size: 2rem;
-color: #ffffff;
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-margin-bottom: 1rem;
-line-height: 1.2;
-text-transform: uppercase;
+  color: #d40464;
+  text-shadow: 1px  1px 0 black;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 5px; /* Increased letter spacing for minimalist look */
+  text-transform: uppercase;
 }
 
 .contents p {
-font-size: 1rem;
-color: #d40464;
-margin-bottom: 1.5rem;
-line-height: 1.5;
+  font-size: 1rem;
+  color: white;
+  text-shadow: 1px  1px 0 black;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: ;
 }
 
-/* shop now Buttons */
+/* Shop Now Button */
 .shop-btn {
-display: inline-block;
-padding: 0.8rem 1.5rem;
-background: #d40464;
-color: white;
-text-decoration: none;
-border-radius: 5px;
-font-size: 0.9rem;
-transition: background-color 0.4s ease;
+  display: inline-block;
+  margin-right: 30px;
+  padding: 12px 30px;
+  border-radius: 10px; 
+  color: #333;
+  background-color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition: all 0.3s ease; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); 
 }
 
 .shop-btn:hover {
-background: #541ae0;
-color: #d40464; 
+  background-color: white;
+  color: #d40464; /* Change color on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
 /* Learn More Button */
-.learnmore-btn {
-display: inline-block;
-padding: 0.8rem 1.5rem;
-background: #541ae0;
-color: white;
-text-decoration: none;
-border-radius: 5px;
-font-size: 0.9rem;
-transition: background-color 0.s ease;
+.learn-more-btn {
+  display: inline-block;
+  border: 1px solid #d40464;
+  padding: 12px 30px;
+  border-radius: 10px; 
+  color: white;
+  background-color: #d40464;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition: all 0.3s ease; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
 }
 
-.learnmore-btn:hover {
-background: #d40464;
-color: #541ae0; 
+.learn-more-btn:hover {
+  background-color: #d40464;
+  color: #333; /* Change color on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
+
+
 
 
 
 /* Why Choose Us Section */
+
+.why-choose-us{
+  margin-top: -5%;
+  }
+
 .why-choose-us .reasons {
   display: flex;
   gap: .9rem;
@@ -453,18 +458,14 @@ color: #541ae0;
 
 .section-title{
   text-align: center;
-  font-size: 2.1rem;
+  font-size: 2rem;
   justify-content: space-between;
   color: #d40464;
-  margin-bottom: 1.5rem;
   text-shadow: 1px 1px 1px #541ae0;
 }
 
-
-
 .reason h3 {
-  font-size: 1.3rem;
-  margin: 0.5rem 0;
+  font-size: 1.2rem;
   color: #d40464;
   margin-bottom: 1.5rem;
   text-shadow: 1px 1px 1px #541ae0;
@@ -481,7 +482,7 @@ color: #541ae0;
 
 .categories h1 {
 line-height: 1.2;
-margin-bottom: 3rem;
+margin-bottom: 2rem;
 font-size: 1.7rem; 
 color: #d40464;
 }
@@ -492,7 +493,8 @@ display: grid;
 }
 
 .categories-left p {
-margin: 0.5rem 0 2rem;
+margin: 0.2rem 0 2rem;
+padding: 0 10% 0 10%;
 font-size: 0.9rem;
 line-height: 1.6;
 color: white;
@@ -506,12 +508,14 @@ color: white;
 text-decoration: none;
 border-radius: 5px;
 font-size: 0.9rem;
-transition: background-color 0.3s ease;
+margin-bottom: 25px;
+transition: all 0.3s ease;
 }
 
 .categories-btn:hover {
-background: #541ae0;
-color: #d40464; 
+  background-color: #d40464;
+  color: #333; /* Change color on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
 
@@ -1296,35 +1300,16 @@ transform: scale(1.03);
 .shopping-cart {
   position: relative;
   padding: 50px;
-  background-color: rgba(30, 30, 30, 0.6); /* Darker semi-transparent background */
-  overflow: hidden;
-  border-radius: 15px;
+  background-color: #1e1e1e;
 }
-
-
-/* Blurred background image using pseudo-element */
-.shopping-cart::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('featured1.jpg'); /* Add your image URL */
-  background-size: cover;
-  background-position: center;
-  filter: blur(8px); /* Subtle blur effect */
-  z-index: -1;
-}
-
 
 /* Container for the cart items */
 .cart-container {
   width: 90%;
   margin: 0 auto;
   padding: 20px;
-  background-color: rgba(42, 42, 42, 0.9);
-  border-radius: 15px;
+  background-color: #333333;
+  border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /*shadow to make it look like floating 3d box*/
 }
 
@@ -1448,7 +1433,7 @@ h1 {
   box-shadow: none;
   padding: 15px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   width: 35%;
   text-align: center;
   border-radius: 10px;
@@ -1457,8 +1442,9 @@ h1 {
 
 
 .checkout-btn:hover {
-  background-color: #541ae0;
-  border: none; /* Subtle purple hover effect */
+  background-color: #d40464;
+  color: #333; /* Change color on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
 
@@ -1635,3 +1621,96 @@ h1 {
 
 
 
+
+/* Styling for Blog page*/
+
+/* Banner */
+.blog-page-banner {
+  width: 100%;
+  height: 50vh;
+  background: url('featured2.jpg') center/cover no-repeat;
+  margin-bottom: 5%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.blog-page-banner h1 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 5px; /* Increased letter spacing for minimalist look */
+  text-transform: uppercase;
+}
+
+.blog-page-banner p {
+  color: white;
+  font-size: 1rem;
+}
+
+/* Blog Section */
+.blog-section {
+  width: 80%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.blog-post {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.blog-post .blog-post-image {
+  flex: 1;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+  border-radius: 8px;
+}
+
+.blog-post .blog-post-text {
+  flex: 2;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.blog-post .blog-post-title {
+  font-size: 1.3rem;
+  color: white;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.blog-post .blog-post-description {
+  margin: 10px 0;
+  color: white;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 0.9rem;
+}
+
+.blog-post .read-more-btn {
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: none;
+}
+
+.blog-post .read-more-btn:hover {
+  background-color: white;
+  color: #333; 
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: #505050;
+  margin: 20px 0;
+}
