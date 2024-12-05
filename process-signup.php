@@ -1,4 +1,7 @@
 <?php
+$db_connections = require __DIR__ . "/database.php";
+
+$mysqli1 = $db_connections['mysqli1'];
 include 'header.php';
 if (empty($_POST["name"])) {
     
@@ -61,13 +64,17 @@ if ( ! preg_match("/[0-9]/", $_POST["pswd"])) {
 
 $password_hash = password_hash($_POST["pswd"], PASSWORD_DEFAULT);
 
-$mysqli = require __DIR__ . "/database.php";
-
+if (!$mysqli1) {
+    die("Failed to connect to login_db");
+}
+if (!$conn) {
+    die("Failed to connect to search_db");
+}
 $sql_check = "SELECT * FROM user WHERE email = ?";
-$stmt_check = $mysqli->stmt_init();
+$stmt_check = $mysqli1->stmt_init();
 
 if (!$stmt_check->prepare($sql_check)) {
-    die("SQL error: " . $mysqli->error);
+    die("SQL error: " . $mysqli1->error);
 }
 
 $stmt_check->bind_param("s", $_POST['email']);
@@ -86,10 +93,10 @@ if ($result->num_rows > 0) {
 
 
 $sql = "INSERT INTO user (name, email, password_hash) VALUES (?, ?, ?)";
-$stmt = $mysqli->stmt_init();
+$stmt = $mysqli1->stmt_init();
 
 if (!$stmt->prepare($sql)) {
-    die("SQL error: " . $mysqli->error);
+    die("SQL error: " . $mysqli1->error);
 }
 
 $stmt->bind_param("sss",

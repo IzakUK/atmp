@@ -1,3 +1,16 @@
+<?php
+
+include 'database.php';
+
+
+$sql = "SELECT id, name, description,  price, category, stock FROM products";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+  while ($row = $result->fetch_assoc()) {
+      $products[] = $row;
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -349,13 +362,60 @@
               ★★★★☆ (4.5 / 5) <!-- rating -->
             </div>
             <p class="modal-price" id="modalPrice"></p>
-            <button class="modal-button add-to-cart">Add to Cart</button>
+            <button class="modal-button add-to-cart" id="addToCartButton">Add to Cart</button>
             <button class="modal-button save-later">Save for Later</button>
           </div>
         </div>
       </div>
     </div>
-    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        const addToCartButton = document.getElementById('addToCartButton');
+
+        
+        addToCartButton.addEventListener('click', function() {
+            
+            const productTitle = document.getElementById('modalTitle').innerText;
+            const productPrice = document.getElementById('modalPrice').innerText;
+            const productImage = document.getElementById('modalImage').src;
+
+            
+            const product = {
+                title: productTitle,
+                price: productPrice,
+                image: productImage,
+                quantity: 1
+            };
+
+            
+            addToCart(product);
+        });
+
+        
+        function addToCart(product) {
+           
+            let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+
+            
+            let existingProductIndex = cart.findIndex(item => item.title === product.title);
+
+            if (existingProductIndex !== -1) {
+                
+                cart[existingProductIndex].quantity += 1;
+            } else {
+                
+                cart.push(product);
+            }
+
+           
+            sessionStorage.setItem('cart', JSON.stringify(cart));
+
+            
+            alert('The keyboard has been successfully added to the cart');
+        }
+    });
+</script>
 
     <script>
    document.querySelectorAll('.product-card').forEach(card => {

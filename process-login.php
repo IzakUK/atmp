@@ -4,13 +4,14 @@ $is_invalid = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   
-    $mysqli = require __DIR__ . "/database.php";
+    $db_connections = require __DIR__ . "/database.php";
+    $mysqli1 = $db_connections['mysqli1'];
     
     $sql = sprintf("SELECT * FROM user
                     WHERE email = '%s'",
-                   $mysqli->real_escape_string($_POST["email"]));
+                   $mysqli1->real_escape_string($_POST["email"]));
     
-    $result = $mysqli->query($sql);
+    $result = $mysqli1->query($sql);
     
     $user = $result->fetch_assoc();
     

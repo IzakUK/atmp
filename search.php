@@ -1,15 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "search_db"; 
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("failure in link: " . $conn->connect_error);
-}
-
+$connections = require 'database.php'; 
+$conn = $connections['conn'];
 
 if (isset($_GET['query'])) {
     $query = $_GET['query'];

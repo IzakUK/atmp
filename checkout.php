@@ -10,20 +10,17 @@
   </head>
   <body>
     <div class="terminusTopBanner">
-      <div class="menuOption">☰</div>
+      <div class="menuOption">☞</div>
       <div class="bannerFormat">
         <div class="LBannerLinks">
           <a href="about.php">About</a>
           <a href="keyboards.php">Keyboards</a>
-         
         </div>
         <a href="index.php">
-    
           <img src="TerminusLogo.png" alt="Terminus Logo" class="logo">
         </a>
         <div class="RBannerLinks">
           <a href="misc.php">Misc.</a>
-          <!-- placeholder-->
           <a href="contact.php">Contact</a>
         </div>
       </div>
@@ -96,72 +93,69 @@
           </div>
         </section>
         <section class="payment-section">
-    <h2>Payment</h2>
-    <p class="secure-text">All transactions are secure and encrypted.</p>
+          <h2>Payment</h2>
+          <p class="secure-text">All transactions are secure and encrypted.</p>
 
-    <!-- Apple Pay -->
-    <div class="payment-option">
-        <label for="apple-pay-radio" class="payment-header">
-            <input type="radio" id="apple-pay-radio" name="payment-method" class="payment-radio">
-            <span>Apple Pay</span>
-            <span class="card-icons"><img src="apple.svg" alt="Apple Pay"></span>
-        </label>
-        <div class="payment-form d-none" id="apple-pay-form">
-            <div class="form-group">
+          <!-- Apple Pay -->
+          <div class="payment-option">
+            <label for="apple-pay-radio" class="payment-header">
+              <input type="radio" id="apple-pay-radio" name="payment-method" class="payment-radio">
+              <span>Apple Pay</span>
+              <span class="card-icons"><img src="apple.svg" alt="Apple Pay"></span>
+            </label>
+            <div class="payment-form d-none" id="apple-pay-form">
+              <div class="form-group">
                 <input type="text" placeholder="Card number">
-            </div>
-            <div class="form-row">
+              </div>
+              <div class="form-row">
                 <div class="form-group">
-                    <input type="text" placeholder="Expiration date (MM / YY)">
+                  <input type="text" placeholder="Expiration date (MM / YY)">
                 </div>
                 <div class="form-group">
-                    <input type="text" placeholder="Security code">
+                  <input type="text" placeholder="Security code">
                 </div>
-            </div>
-            <div class="form-group">
+              </div>
+              <div class="form-group">
                 <input type="text" placeholder="Name on card">
-            </div>
-            <div class="checkbox-group">
+              </div>
+              <div class="checkbox-group">
                 <input type="checkbox" id="billing-address-apple">
                 <label for="billing-address-apple">Use shipping address as billing address</label>
+              </div>
             </div>
-        </div>
-    </div>
+          </div>
 
-    <!-- Credit/Debit Card -->
-    <div class="payment-option">
-        <label for="credit-card-radio" class="payment-header">
-            <input type="radio" id="credit-card-radio" name="payment-method" class="payment-radio">
-            <span>Credit/Debit Card</span>
-            <span class="card-icons"><img src="credit-card.svg" alt="Credit Card"></span>
-        </label>
-        <div class="payment-form d-none" id="credit-card-form">
-            <div class="form-group">
+          <!-- Credit/Debit Card -->
+          <div class="payment-option">
+            <label for="credit-card-radio" class="payment-header">
+              <input type="radio" id="credit-card-radio" name="payment-method" class="payment-radio">
+              <span>Credit/Debit Card</span>
+              <span class="card-icons"><img src="credit-card.svg" alt="Credit Card"></span>
+            </label>
+            <div class="payment-form d-none" id="credit-card-form">
+              <div class="form-group">
                 <input type="text" placeholder="Card number">
-            </div>
-            <div class="form-row">
+              </div>
+              <div class="form-row">
                 <div class="form-group">
-                    <input type="text" placeholder="Expiration date (MM / YY)">
+                  <input type="text" placeholder="Expiration date (MM / YY)">
                 </div>
                 <div class="form-group">
-                    <input type="text" placeholder="Security code">
+                  <input type="text" placeholder="Security code">
                 </div>
-            </div>
-            <div class="form-group">
+              </div>
+              <div class="form-group">
                 <input type="text" placeholder="Name on card">
-            </div>
-            <div class="checkbox-group">
+              </div>
+              <div class="checkbox-group">
                 <input type="checkbox" id="billing-address-credit">
                 <label for="billing-address-credit">Use shipping address as billing address</label>
+              </div>
             </div>
-        </div>
-    </div>
+          </div>
 
-    <button class="pay-button">Pay now</button>
-</section>
-
-
-
+          <button class="pay-button">Pay now</button>
+        </section>
       </div>
       <aside class="order-summary">
         <div class="product-list d-none">
@@ -181,7 +175,7 @@
         <div class="summary-details">
           <div class="summary-row">
             <span>Subtotal</span>
-            <span>£0</span>
+            <span id="checkout-subtotal">£0.00</span>
           </div>
           <div class="summary-row">
             <span>Shipping</span>
@@ -191,101 +185,78 @@
             <span>Total</span>
             <div class="total-amount">
               <span class="currency">Pound</span>
-              <span class="amount">£0</span>
+              <span id="checkout-total" class="amount">£0.00</span>
             </div>
           </div>
         </div>
       </aside>
     </main>
-     </footer>
-    <section2 style="padding-top: 0px;">
-      <footer class="top">
-        <div class="links">
-          <div class="first-row">
-            <div class="links-column">
-              <h2>Get Started</h2>
-              <a href="index.php">Home</a>
-              <a href="about.php">About</a>
-              <a href="login.php">Login</a>
-              
-            </div>
-
-            <div class="links-column">
-              <h2>News</h2>
-              <a href="shop.php">Keyboards</a>
-              <a href="#">Accessories</a>
-              <a href="configurator">Configurator</a>
-              <a href="faq.php">FAQs</a>
-            </div>
-            
-            <div class="links-column">
-              <h2>Overview</h2>
-              <a href="#">Terms Of Use</a>
-              <a href="#">Contact</a>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Support</a>
-            </div>
-          </div>
-
-          <div class="second-row">
-            <div class="links-column socials-column">
-              <h2>Social Media</h2>
-              <p>
-                Follow us on:
-              </p>
-              <div class="socials">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-linkedin"></a>
-                <a href="#" class="fa fa-github"></a>
-              </div>
-            </div>
-            <div class="store-logos">
-              <img src="https://cdn.afterdawn.fi/v3/news/original/get-it-on-google-play.png" id="play-store">
-              <img src="https://digitopoly.files.wordpress.com/2016/06/app-store-logo.png" id="apple-store">
-            </div>
-          </div>
-
-        </div>
-      </footer>
-      <footer class="bottom">
-        <p class="copyright">© 2024 All rights reserved</p>
-        <div class="legal">
-          <a> License </a>
-          <a> Terms </a>
-          <a> Privacy </a>
-        </div>
-      </footer>
-    </section2></body></html>
-
-    <script type="text/javascript">
- document.addEventListener('DOMContentLoaded', function () {
-    const paymentRadios = document.querySelectorAll('.payment-radio');
-    const applePayForm = document.getElementById('apple-pay-form');
-    const creditCardForm = document.getElementById('credit-card-form');
-
-    function toggleForms() {
-        // Hide all forms initially
-        applePayForm.classList.add('d-none');
-        creditCardForm.classList.add('d-none');
-
-        // Show the form based on the selected radio button
-        if (document.getElementById('apple-pay-radio').checked) {
-            applePayForm.classList.remove('d-none');
-        } else if (document.getElementById('credit-card-radio').checked) {
-            creditCardForm.classList.remove('d-none');
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+  
+        const subtotalPrice = sessionStorage.getItem('subtotalPrice');
+        const totalPrice = sessionStorage.getItem('totalPrice');
+        
+        if (subtotalPrice) {
+          document.getElementById('checkout-subtotal').innerText = `£${subtotalPrice}`;
         }
-    }
-
-    // Add event listeners to radio buttons
-    paymentRadios.forEach((radio) => {
-        radio.addEventListener('change', toggleForms);
-    });
-
-    // Initial state: ensure the correct form is visible on page load
-    toggleForms();
-});
-
+        if (totalPrice) {
+          document.getElementById('checkout-total').innerText = `£${totalPrice}`;
+        }
+      });
     </script>
+    <footer class="top">
+      <div class="links">
+        <div class="first-row">
+          <div class="links-column">
+            <h2>Get Started</h2>
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="login.php">Login</a>
+          </div>
+          <div class="links-column">
+            <h2>News</h2>
+            <a href="shop.php">Keyboards</a>
+            <a href="#">Accessories</a>
+            <a href="configurator">Configurator</a>
+            <a href="faq.php">FAQs</a>
+          </div>
+          <div class="links-column">
+            <h2>Overview</h2>
+            <a href="#">Terms Of Use</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Support</a>
+          </div>
+        </div>
+
+        <div class="second-row">
+          <div class="links-column socials-column">
+            <h2>Social Media</h2>
+            <p>
+              Follow us on:
+            </p>
+            <div class="socials">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-linkedin"></a>
+              <a href="#" class="fa fa-github"></a>
+            </div>
+          </div>
+          <div class="store-logos">
+            <img src="https://cdn.afterdawn.fi/v3/news/original/get-it-on-google-play.png" id="play-store">
+            <img src="https://digitopoly.files.wordpress.com/2016/06/app-store-logo.png" id="apple-store">
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer class="bottom">
+      <p class="copyright">© 2024 All rights reserved</p>
+      <div class="legal">
+        <a> License </a>
+        <a> Terms </a>
+        <a> Privacy </a>
+      </div>
+    </footer>
   </body>
 </html>
