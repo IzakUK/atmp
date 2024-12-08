@@ -16,8 +16,8 @@
 </head>
 <body> <!-- Top Banner PLEASE BE CAUTIOUS WITH THIS AND THE CSS IF EDITING. -->
     <div class="terminusTopBanner">
-        <div class="right-logos">
-            <div class="menuOption" onclick="openNav()">☰</div>
+        <div class="bannerOptions">
+            <div class="menuOption" onclick="toggleNav()">☰</div>
             <div id="search-icon" onclick="toggleSearch()">🔍</div>
         </div>
         <div class="bannerFormat">
@@ -25,7 +25,6 @@
                 <a href="about.html">About</a>
                 <a href="keyboards.html">Keyboards</a>
             </div>
-
             <a href="index.html">
                 <img src="TerminusLogo.png" alt="Terminus Logo" class="logo">
             </a>
@@ -35,7 +34,7 @@
                 <a href="contactus.html">Contact</a>
             </div>
         </div>
-        <div class="right-logos">
+        <div class="bannerOptions">
             <div class="userIcon">
                 <a href="login.html">
                     <img src="userIcon.png" alt="User Icon">
@@ -51,11 +50,13 @@
         <div class="search-container">
             <input type="text" class="search-input" placeholder="Search">
         </div>
+        <div class="theme-toggle">
+            <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
+        </div>
     </section>
 
     <!-- Sidebar -->
     <div id="terminusSide" class="sidebar">
-        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
         <a href="about.html">About</a>
         <a href="keyboards.html">Keyboards</a>
         <a href="misc.html">Our Mission</a>
@@ -200,11 +201,13 @@
     </footer>
 <!-- We'll put this into a seperate folder before publishing, just for my sanity sakes. -->
     <script>
-        function openNav() {
-            document.getElementById("terminusSide").style.width = "20vh";
-        }
-        function closeNav() {
-            document.getElementById("terminusSide").style.width = "0";
+        function toggleNav() {
+            const sidebar = document.getElementById("terminusSide");
+            if (sidebar.style.width === "20vh") {
+                sidebar.style.width = "0"; // Close the menu
+            } else {
+                sidebar.style.width = "20vh"; // Open the menu
+            }
         }
         function toggleSearch() {
             const searchBar = document.getElementById('search-bar');
@@ -215,5 +218,6 @@
             }
         }
     </script>
+    <script src="darkmode.js"></script>
 </body>
 </html>

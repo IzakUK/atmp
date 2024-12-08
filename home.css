@@ -70,7 +70,7 @@ margin-left: -5vh; /* Centers the logo and text for the website, adjust as neede
 }
 
 /* Links on both sides of the logo */
-.LBannerLinks, .RBannerLinks, .right-logos { /* If you don't wish for things to move on the banner, add them here. */
+.LBannerLinks, .RBannerLinks, .bannerOptions { /* If you don't wish for things to move on the banner, add them here. */
 display: flex; /* Centres the text into the middle of the banner */
 gap: 3vw; /* spacing between hyperlinks */
 font-size: 1vw;
@@ -96,7 +96,7 @@ height: 5vw;
 display: block;
 }
 
-.right-logos {  /* added this to group the icons on the right side*/
+.bannerOptions {  /* added this to group the icons on the right side*/
 display: flex;
 align-items: center;
 flex-direction: row;
@@ -332,6 +332,10 @@ display: flex;
 justify-content: center;
 padding: 8px 0;
 background-color: #333; 
+position: sticky;
+z-index: 1000;
+top: 5.6vw;
+background-color: var(--card-background);
 }
 
 .search-container {
@@ -354,14 +358,14 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 .search-input {
 flex: 1;
 background: none;
-color: white;
+color: var(--text-color);
 font-size: 1.5vw;
 outline: none;
 text-align: center;
 }
 
 .search-input::placeholder {
-color: #b1b1b1; 
+color: var(--text-color);
 }
 
 /* Responsive Design */
@@ -371,7 +375,30 @@ width: 90%;
 }
 }
 
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; /* Use absolute positioning for precise placement */
+  top: 50%; /* Compatability */
+  right: 5vw;
+  transform: translateY(-50%); /* Compatability */
+  z-index: 10; /* Ensure it's clickable and above other everything else */
+}
 
+.theme-toggle-button {
+  background: none; /* Over-rides the regular button's attribute's things */
+  color: var(--text-color); /*Just in case it doesn't load in it's still seeable */
+  border: none; /* Override Button */
+  width: 3vw;
+  height: 3vw;
+  font-size: 1.5vw;
+  cursor: pointer; /* To ensure it shows that it's clickable */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none; /* Overrides the button */
+}
 
 
 /* Home Banner Section */
