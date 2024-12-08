@@ -305,7 +305,7 @@ padding: 8px 0;
 background-color: #333;
 position: sticky;/*This isn't working properly as of yet, but allows z-index to do it's job.*/
 z-index: 1000; /*This allows the search-bar to overlap the hamburger menu.*/
-top: 145px;
+top: 5.6vw;
 }
 
 .search-container {
@@ -315,7 +315,7 @@ border: 0.5px solid #d40464;
 border-radius: 20vw;
  /* Slightly darker than the section */
 width: 32vw; /* Responsive width */
-height: 7vh;
+height: 8vh;
  /* Limit the max width */
 transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
