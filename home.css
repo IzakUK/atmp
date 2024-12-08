@@ -42,7 +42,7 @@ body {
 }
 
 /* Links on both sides of the logo */
-.LBannerLinks, .RBannerLinks, .right-logos { /* If you don't wish for things to move on the banner, add them here. */
+.LBannerLinks, .RBannerLinks, .bannerOptions { /* If you don't wish for things to move on the banner, add them here. */
   display: flex; /* Centres the text into the middle of the banner */
   gap: 3vw; /* spacing between hyperlinks */
   font-size: 1vw;
@@ -68,7 +68,7 @@ body {
   display: block;
 }
 
-.right-logos {  /* added this to group the icons on the right side*/
+.bannerOptions {  /* added this to group the icons on the right side*/
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -302,7 +302,10 @@ display: none;
 display: flex;
 justify-content: center;
 padding: 8px 0;
-background-color: #333; 
+background-color: #333;
+position: sticky;/*This isn't working properly as of yet, but allows z-index to do it's job.*/
+z-index: 1000; /*This allows the search-bar to overlap the hamburger menu.*/
+top: 145px;
 }
 
 .search-container {
