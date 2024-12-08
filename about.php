@@ -24,7 +24,7 @@
         </a>
 
         <div class="RBannerLinks">
-          <a href="misc.php">Misc.</a>
+          <a href="blog.php">Blog.</a>
           <a href="contactus.php">Contact</a>
         </div>
       </div>

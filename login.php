@@ -22,7 +22,7 @@
             </a>
 
             <div class="RBannerLinks">
-                <a href="misc.php">Misc.</a> <!-- placeholder-->
+                <a href="blog.php">Blog.</a> <!-- placeholder-->
                 <a href="contactus.php">Contact</a>
             </div>
 
