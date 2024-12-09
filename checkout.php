@@ -13,20 +13,20 @@
       <div class="menuOption">☞</div>
       <div class="bannerFormat">
         <div class="LBannerLinks">
-          <a href="about.php">About</a>
+          <a href="about.html">About</a>
           <a href="keyboards.php">Keyboards</a>
         </div>
-        <a href="index.php">
+        <a href="index.html">
           <img src="TerminusLogo.png" alt="Terminus Logo" class="logo">
         </a>
         <div class="RBannerLinks">
-          <a href="misc.php">Misc.</a>
+          <a href="blog.html">Blog</a>
           <a href="contact.php">Contact</a>
         </div>
       </div>
       <div class="right-logos">
         <div class="userIcon">
-          <a href="login.php">
+          <a href="login.html">
             <img src="userIcon.png" alt="User Icon">
           </a>
         </div>
@@ -210,9 +210,9 @@
         <div class="first-row">
           <div class="links-column">
             <h2>Get Started</h2>
-            <a href="index.php">Home</a>
-            <a href="about.php">About</a>
-            <a href="login.php">Login</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="login.html">Login</a>
           </div>
           <div class="links-column">
             <h2>News</h2>

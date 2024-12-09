@@ -74,7 +74,7 @@ if ($result->num_rows > 0) {
           <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
           <a href="about.html">About</a>
           <a href="keyboards.html">Keyboards</a>
-          <a href="misc.html">Our Mission</a>
+          <a href="blog.html">Blog</a>
           <a href="contactus.php">Contact</a>
       </div>
 

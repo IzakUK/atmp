@@ -47,20 +47,21 @@
     </div>
     <!-- Search Bar -->
     <section id="search-bar" class="search-bar" style="display: none;">
-        <div class="search-container">
-            <input type="text" name="query"class="search-input" placeholder="Search" required>
-          <button type="submit">search</button>
-        </div>
-        <div class="theme-toggle">
-            <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
-        </div>
+        <form action="search.php" method="GET">
+            <div class="search-container">
+                <input type="text" name="query"class="search-input" placeholder="Search" required>
+            <button type="submit">search</button>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
+            </div>
     </section>
 
     <!-- Sidebar -->
     <div id="terminusSide" class="sidebar">
         <a href="about.html">About</a>
         <a href="keyboards.php">Keyboards</a>
-        <a href="misc.html">Our Mission</a>
+        <a href="blog.html">Blog</a>
         <a href="contactus.php">Contact</a>
     </div>
 
