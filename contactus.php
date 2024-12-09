@@ -7,35 +7,58 @@
     <title>About Us</title>
     <link rel="stylesheet" href="home.css" />
     <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body> <!-- Top Banner PLEASE BE CAUTIOUS WITH THIS AND THE CSS IF EDITING. -->
     <div class="terminusTopBanner">
-      <!-- All the elements for the top banner of the page, it's set to sticky for now. -->
-      <div class="menuOption">☰</div>
-      <div class="bannerFormat">
-        <div class="LBannerLinks">
-          <a href="about.php">About</a>
-          <a href="keyboards.php">Keyboards</a>
+        <div class="bannerOptions">
+            <div class="menuOption" onclick="toggleNav()">☰</div>
+            <div id="search-icon" onclick="toggleSearch()">🔍</div>
         </div>
+        <div class="bannerFormat">
+            <div class="LBannerLinks">
+                <a href="about.html">About</a>
+                <a href="keyboards.php">Keyboards</a>
+            </div>
+            <a href="index.html">
+                <img src="TerminusLogo.png" alt="Terminus Logo" class="logo">
+            </a>
 
-        <a href="index.php">
-          <!-- Link for the logo -->
-          <img src="TerminusLogo.png" alt="Terminus Logo" class="logo" />
-        </a>
+            <div class="RBannerLinks">
+                <a href="blog.html">Blog</a>
+                <a href="contactus.html">Contact</a>
+            </div>
+        </div>
+        <div class="bannerOptions">
+            <div class="userIcon">
+                <a href="login.html">
+                    <img src="userIcon.png" alt="User Icon">
+                </a>
+            </div>
+            <div class="userBasket">
+                <a href="cart.html">🛒</a>
+            </div>
+        </div>
+    </div>
+    <!-- Search Bar -->
+    <section id="search-bar" class="search-bar" style="display: none;">
+        <div class="search-container">
+        <input type="text" name="query"class="search-input" placeholder="Search" required>
+        <button type="submit">search</button>
+        </div>
+        <div class="theme-toggle">
+            <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
+        </div>
+    </section>
 
-        <div class="RBannerLinks">
-          <a href="misc.php">Misc.</a>
-          <a href="contactus.php">Contact</a>
-        </div>
-      </div>
-      <div class="right-logos">
-        <div class="userIcon">
-          <a href="login.php">
-            <img src="userIcon.png" alt="User Icon" />
-          </a>
-        </div>
-        <div class="userBasket">🛒</div>
-      </div>
+    <!-- Sidebar -->
+    <div id="terminusSide" class="sidebar">
+        <a href="about.html">About</a>
+        <a href="keyboards.php">Keyboards</a>
+        <a href="misc.html">Our Mission</a>
+        <a href="contactus.html">Contact</a>
     </div>
 
      
@@ -69,15 +92,14 @@
             echo '<div class="alert alert-danger">'.$Message.'</div>';
             }
             ?>
-            
             <form class="contact-form" action="process-contactform.php" method="post">
                 <div class="form-name">
-                <input type="text" name="FirstName" placeholder="First Name" required>
-                <input type="text" name="LastName" placeholder="Last Name" required>
+                    <input type="text" name="FirstName" placeholder="FirstName" required>
+                    <input type="text" name="LastName" placeholder="LastName" required>
                 </div>
-                <input type="email" name="EmailAddress" placeholder="Email Address" required>
+                <input type="email" name="EmailAddress" placeholder="EmailAddress" required>
                 <textarea name="Message" rows="7" placeholder="Message" required></textarea>
-                <button type="submit" name ="submit"class="btn btn-primary">Send Message</button>
+                <button type="submit" name = "submit" class="btn btn-primary">Send Message</button>
             </form>
         </div>
     </section>
@@ -89,18 +111,18 @@
           <div class="first-row">
             <div class="links-column">
               <h2>Get Started</h2>
-              <a href="index.php">Home</a>
-              <a href="about.php">About</a>
-              <a href="login.php">Login</a>
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="login.html">Login</a>
               
             </div>
 
             <div class="links-column">
               <h2>News</h2>
-              <a href="shop.php">Keyboards</a>
+              <a href="shop.html">Keyboards</a>
               <a href="#">Accessories</a>
               <a href="configurator">Configurator</a>
-              <a href="faq.php">FAQs</a>
+              <a href="faq.html">FAQs</a>
             </div>
             
             <div class="links-column">
@@ -141,5 +163,24 @@
           <a> Privacy </a>
         </div>
       </footer>
+      <script>
+        function toggleNav() {
+            const sidebar = document.getElementById("terminusSide");
+            if (sidebar.style.width === "20vh") {
+                sidebar.style.width = "0"; // Close the menu
+            } else {
+                sidebar.style.width = "20vh"; // Open the menu
+            }
+        }
+        function toggleSearch() {
+            const searchBar = document.getElementById('search-bar');
+            if (searchBar.style.display === 'none') {
+                searchBar.style.display = 'flex';
+            } else {
+                searchBar.style.display = 'none';
+            }
+        }
+    </script>
+    <script src="darkmode.js"></script>
     </section2></body></html>
  

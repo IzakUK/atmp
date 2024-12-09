@@ -42,6 +42,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <title>Login</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <style>
+    body {
+        background-image: url('homebanner.jpg');
+        background-size: cover; 
+        background-repeat: no-repeat;
+         
+    }
+</style>
 </head>
 <body>
     

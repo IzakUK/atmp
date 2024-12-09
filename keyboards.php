@@ -19,7 +19,8 @@ if ($result->num_rows > 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terminus</title>
     <link rel="stylesheet" href="keyboards.css" />
-    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" href="favicon.png" type="image/png">
     <link href="all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
@@ -27,47 +28,55 @@ if ($result->num_rows > 0) {
 
   </head>
   <body>
-    <div class="terminusTopBanner">
-      <!-- All the elements for the top banner of the page, it's set to sticky for now. Does need optimisation to ensure everything is centred-->
-      <div class="menuOption">☰</div>
-      <div class="bannerFormat">
-        <div class="LBannerLinks">
-          <a href="about.php">About</a>
-          <a href="keyboards.php">Keyboards</a>
-          <!-- We probably need a better name, I'm thinking Products, but I will keep it as this just for now.-->
-        </div>
-
-        <a href="index.php">
-          <!-- Link for the logo -->
-          <img src="TerminusLogo.png" alt="Terminus Logo" class="logo" />
-        </a>
-
-        <div class="RBannerLinks">
-          <a href="blog.php">Blog</a>
-          <!-- placeholder-->
-          <a href="contactus.php">Contact</a>
-        </div>
+    <body> <!-- Top Banner PLEASE BE CAUTIOUS WITH THIS AND THE CSS IF EDITING. -->
+      <div class="terminusTopBanner">
+          <div class="right-logos">
+              <div class="menuOption" onclick="openNav()">☰</div>
+              <div id="search-icon" onclick="toggleSearch()">🔍</div>
+          </div>
+          <div class="bannerFormat">
+              <div class="LBannerLinks">
+                  <a href="about.html">About</a>
+                  <a href="keyboards.html">Keyboards</a>
+              </div>
+  
+              <a href="index.html">
+                  <img src="TerminusLogo.png" alt="Terminus Logo" class="logo">
+              </a>
+  
+              <div class="RBannerLinks">
+                  <a href="blog.html">Blog</a>
+                  <a href="contactus.php">Contact</a>
+              </div>
+          </div>
+          <div class="right-logos">
+              <div class="userIcon">
+                  <a href="login.html">
+                      <img src="userIcon.png" alt="User Icon">
+                  </a>
+              </div>
+              <div class="userBasket">
+                  <a href="cart.html">🛒</a>
+              </div>
+          </div>
       </div>
-      <div class="right-logos">
-        <div class="userIcon">
-          <a href="login.php">
-            <img src="userIcon.png" alt="User Icon" />
-          </a>
-        </div>
-        <div class="userBasket">
-          <!-- This will be changed in future to have the green colour implemented-->
-          <a href="cart.php">🛒</a>
-        </div>
-      </div>
-    </div>
- <!--  Search Bar Draft -->
- <section class="search-bar">
+      <!-- Search Bar -->
+      <section class="search-bar">
         <form action="search.php" method="GET">
-            <div class="search-container">
-                <input type="text" name="query"class="search-input" placeholder="Search" required>
-                <button type="submit">search</button>
-            </div>
-    </section>
+          <div class="search-container">
+          <input type="text" name="query"class="search-input" placeholder="Search" required>
+          <button type="submit">search</button>
+          </div>
+      </section>
+  
+      <!-- Sidebar -->
+      <div id="terminusSide" class="sidebar">
+          <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+          <a href="about.html">About</a>
+          <a href="keyboards.html">Keyboards</a>
+          <a href="misc.html">Our Mission</a>
+          <a href="contactus.php">Contact</a>
+      </div>
 
     <!-- Swiper -->
 <div class="swiper-container">
@@ -416,8 +425,23 @@ if ($result->num_rows > 0) {
         }
     });
 </script>
-
     <script>
+          function toggleNav() {
+            const sidebar = document.getElementById("terminusSide");
+            if (sidebar.style.width === "20vh") {
+                sidebar.style.width = "0"; // Close the menu
+            } else {
+                sidebar.style.width = "20vh"; // Open the menu
+            }
+        }
+        function toggleSearch() {
+            const searchBar = document.getElementById('search-bar');
+            if (searchBar.style.display === 'none') {
+                searchBar.style.display = 'flex';
+            } else {
+                searchBar.style.display = 'none';
+            }
+        }
    document.querySelectorAll('.product-card').forEach(card => {
   card.addEventListener('click', function() {
     // Update modal content
@@ -445,5 +469,6 @@ window.onclick = function(event) {
 };
 
     </script>
+    <script src="darkmode.js"></script>
   </body>
 </html>

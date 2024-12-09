@@ -11,6 +11,7 @@ if (isset($_GET['query'])) {
     $result = $conn->query($sql);
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
