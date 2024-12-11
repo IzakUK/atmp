@@ -43,10 +43,10 @@
   </div>
   <!-- Search Bar -->
   <section id="search-bar" class="search-bar" style="display: none;">
-    <form action="search.php" method="GET">
+    
       <div class="search-container">
-        <input type="text" name="query"class="search-input" placeholder="Search" required>
-        <button type="submit">search</button>
+        
+        <button>search</button>
       </div>
       <div class="theme-toggle">
           <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
@@ -67,22 +67,23 @@
             <div class ="sign-up">
                 <form action="process-signup.php" method="post" id="signup" novalidate>
                     <h1> Create Account </h1>
-                    <input type="text" name="name" placeholder="User Name" required="">
-                    <input type="email" name="email" placeholder="Email" required="">
-                    <input type="password" name="pswd" placeholder="Password" required="">
-                    <button>Sign Up</button>
+                    <input type="text" name="name" placeholder="User Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="pswd" placeholder="Password" required>
+                    <button type="submit">Sign Up</button>
                 </form>
             </div>
 
             <div class ="log-in">
                 <form action="process-login.php" method="post" id="login" novalidate>
                     <h1> Log In</h1>
-                    <input type="email" name="email" placeholder="Email" required="">
-                    <input type="password" name="pswd" placeholder="Password" required="">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="pswd" placeholder="Password" required>
                     <div class="passColour">
                         <a href="#">Forgot Password?</a>
                     </div>
-                    <button>Log In</button>
+                    <button type="submit">Log In</button>
+
                 </form>
             </div>
 
