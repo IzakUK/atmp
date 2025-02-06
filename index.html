@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head> <!-- Default things, leave as is. -->
+<html lang="en"><head> <!-- Default things, leave as is. -->
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +8,11 @@
     <link href="all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anta&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&amp;family=SUSE:wght@100..800&amp;display=swap" rel="stylesheet">
 
 </head>
-<body> <!-- Top Banner PLEASE BE CAUTIOUS WITH THIS AND THE CSS IF EDITING. -->
+<body class="dark-mode"> <!-- Top Banner PLEASE BE CAUTIOUS WITH THIS AND THE CSS IF EDITING. -->
     <div class="terminusTopBanner">
         <div class="bannerOptions">
             <div class="menuOption" onclick="toggleNav()">☰</div>
@@ -46,12 +44,12 @@
         </div>
     </div>
     <!-- Search Bar -->
-    <section id="search-bar" class="search-bar" style="display: none;">
+    <section id="search-bar" class="search-bar" style="display: flex;">
         <div class="search-container">
             <input type="text" class="search-input" placeholder="Search">
         </div>
-        <div class="theme-toggle">
-            <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
+        <button type="submit">Go</button><div class="theme-toggle">
+            <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()" aria-label="Switch to light mode">☀️</button>
         </div>
     </section>
 
@@ -82,7 +80,7 @@
                 <h1>Featured Categories</h1>
                 <p>At Terminus, we bring you not only an extensive range of keyboards 
                     for every purpose but also the tools and accessories to enhance your 
-                    typing and gaming experience. <br /> From ergonomic designs to custom mods, 
+                    typing and gaming experience. <br> From ergonomic designs to custom mods, 
                     our collection has something for everyone.
                 </p>
                 <a href="keyboards.html" class="categories-btn">Go to Shop</a>
@@ -105,7 +103,7 @@
                     <h5>Wireless and Multi-Device Keyboards</h5>
                 </div> 
                 <div class="featured-category" style="background: url(featured6.jpg)">
-                    <h5>Keyboard Switches & Mods</h5>
+                    <h5>Keyboard Switches &amp; Mods</h5>
                 </div> 
             </div>
         </div>
@@ -219,5 +217,6 @@
         }
     </script>
     <script src="darkmode.js"></script>
-</body>
-</html>
+
+
+</body></html>

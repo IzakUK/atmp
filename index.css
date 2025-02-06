@@ -162,6 +162,24 @@ body {
   color: var(--text-color);
 }
 
+button{
+  font-family: "SUSE", sans-serif;
+  color: #fff;
+  background: #541ae0;
+  font-size: 12px;
+  /*! font-weight: bold; */
+  /*! padding: 0px 0px 0px 0px; */
+  border-radius: 15vw;
+  border: .5px solid #d40464;
+  outline: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #d40464;
+  padding-left: 1vw;
+  padding-right: 0.9vw;
+  }
+
 .theme-toggle {
   display: flex;
   align-items: center;
