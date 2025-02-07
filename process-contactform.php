@@ -14,9 +14,9 @@ if(isset($_POST["submit"])) {
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
     $mail->Username = '2778967812wyf@gmail.com'; // Your gmail
-    $mail->Password = 'ylgokzxykikorjve'; // Your gmail app password
+    $mail->Password = 'xcvddjpywiozmmfq'; // Your gmail app password
     $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;
+    $mail->Port = 587;
 
     $mail->setFrom('2778967812wyf@gmail.com', 'Website Contact Form');
     $mail->addAddress('2778967812wyf@gmail.com');

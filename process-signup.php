@@ -1,7 +1,8 @@
 <?php
 $db_connections = require __DIR__ . "/database.php";
 
-$mysqli1 = $db_connections['mysqli1'];
+$mysqli1 = $db_connections['mysqli_login'];
+$conn = $db_connections['conn'];
 include 'header.php';
 if (empty($_POST["name"])) {
     

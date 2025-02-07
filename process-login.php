@@ -5,7 +5,7 @@ $is_invalid = false;
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   
     $db_connections = require __DIR__ . "/database.php";
-    $mysqli1 = $db_connections['mysqli1'];
+    $mysqli1 = $db_connections['mysqli_login'];
     
     $sql = sprintf("SELECT * FROM user
                     WHERE email = '%s'",
