@@ -1,14 +1,14 @@
 <?php
-$databases = require 'database.php'; // 获取数据库连接
-$mysqli = $databases['mysqli_login']; // 获取 login_db 的连接
+$databases = require 'database.php'; 
+$mysqli = $databases['mysqli_login']; 
 
 if (!isset($_GET['token'])) {
-    die("无效的请求！");
+    die("Invalid request!");
 }
 
 $token = $_GET['token'];
 
-// 检查 Token 是否有效
+
 $stmt = $mysqli->prepare("SELECT email FROM password_resets WHERE token = ? AND expires_at > NOW()");
 $stmt->bind_param("s", $token);
 $stmt->execute();
@@ -16,7 +16,7 @@ $result = $stmt->get_result();
 $data = $result->fetch_assoc();
 
 if (!$data) {
-    die("链接无效或已过期！");
+    die("Link is invalid or expired!");
 }
 
 $email = $data['email'];
@@ -24,21 +24,32 @@ $email = $data['email'];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $newPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    // 更新用户密码
+    
     $stmt = $mysqli->prepare("UPDATE user SET password_hash = ? WHERE email = ?");
     $stmt->bind_param("ss", $newPassword, $email);
     $stmt->execute();
 
-    // 删除 Token
+    
     $stmt = $mysqli->prepare("DELETE FROM password_resets WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
 
-    echo "密码已重置，请重新登录！";
+    echo "Password has been reset, please login again!";
 }
 ?>
 
+<!--The front-end code is here-->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
 <form method="post">
-    <input type="password" name="password" required placeholder="输入新密码">
-    <button type="submit">重置密码</button>
+    <input type="password" name="password" required placeholder="Enter new password">
+    <button type="submit">reset passwords</button>
 </form>
+</html>
