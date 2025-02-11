@@ -45,11 +45,160 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <title>Forgot Password</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    
+    <style>
+      
+        :root {
+            --background-color: #1a1a1a;
+            --card-background: rgba(0, 0, 0, 0.7); 
+            --text-color: #fff;
+            --highlight-color: #d40464;
+            --button-hover-color: #541ae0;
+        }
+
+        body {
+            margin: 0;
+            font-family: "SUSE", sans-serif;
+            color: var(--text-color);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('egPic.jpg'); 
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px); 
+            z-index: -1; 
+        }
+
+        /* Container for the form */
+        .logIncontainer {
+            z-index: 2; 
+            background: var(--card-background);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 400px;
+            text-align: center; 
+        }
+
+        .log-in {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+
+        h1 {
+            font-family: "Anta", sans-serif;
+            font-weight: bold;
+            padding-bottom: 20px;
+            margin: 0;
+            color: var(--highlight-color);
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        input {
+            font-family: "SUSE", sans-serif;
+            background: var(--card-background);
+            padding: 12px 15px;
+            margin: 8px 0;
+            width: 100%;
+            max-width: 300px; 
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            color: var(--text-color);
+            box-sizing: border-box;
+            transition: background 0.3s ease-in-out;
+        }
+
+        button {
+            font-family: "SUSE", sans-serif;
+            color: #fff;
+            background: var(--highlight-color);
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px 30px; 
+            margin: 20px 0;
+            border-radius: 15px;
+            border: none;
+            outline: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease, transform 80ms ease-in;
+            width: auto; 
+        }
+
+        button:hover {
+            background: var(--button-hover-color);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .passColour a {
+            font-family: "SUSE", sans-serif;
+            font-size: 14px;
+            text-decoration: none;
+            color: var(--highlight-color);
+            text-shadow: 0.5px 0.5px #541ae0;
+            display: block; 
+            text-align: center; 
+            margin: 15px 0;
+        }
+
+        .passColour a:hover {
+            text-decoration: underline;
+        }
+
+        /* Add some responsiveness */
+        @media (max-width: 600px) {
+            .logIncontainer {
+                padding: 20px;
+                width: 80%;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            button {
+                padding: 10px 20px;
+            }
+        }
+    </style>
 </head>
-<form method="post">
-    <input type="password" name="password" required placeholder="Enter new password">
-    <button type="submit">reset passwords</button>
-</form>
+<body class="logInPage_body">
+    <!-- Background Image -->
+    <div class="background-image"></div>
+
+    <!-- Form Container -->
+    <div class="logIncontainer">
+        <div class="log-in">
+            <form method="post">
+                <h1>Forgot Password</h1>
+                <input type="email" name="email" id="email" required placeholder="Please enter your email">
+                <button type="submit">Send Reset Link</button>
+                <p class="passColour">
+                    <a href="login.html">Back to Login</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
 </html>
