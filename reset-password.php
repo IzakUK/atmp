@@ -22,6 +22,25 @@ if (!$data) {
 $email = $data['email'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['confirm-password'];
+
+    
+    if ($password !== $confirmPassword) {
+        die("Passwords do not match. Please try again.");
+    }
+    if (strlen($password) < 8) {
+        die("Password must be at least 8 characters long.");
+    }
+
+    if (!preg_match("/[a-zA-Z]/", $password)) {
+        die("Password must contain at least one letter.");
+    }
+
+    if (!preg_match("/[0-9]/", $password)) {
+        die("Password must contain at least one number.");
+    }
     $newPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     
