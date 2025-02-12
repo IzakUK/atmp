@@ -1,3 +1,4 @@
+
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -15,7 +16,7 @@ if(isset($_POST["submit"])) {
     $mail->SMTPAuth = true;
     $mail->Username = '2778967812wyf@gmail.com'; // Your gmail
     $mail->Password = 'xcvddjpywiozmmfq'; // Your gmail app password
-    $mail->SMTPSecure = 'ssl';
+    $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
 
     $mail->setFrom('2778967812wyf@gmail.com', 'Website Contact Form');
@@ -36,14 +37,20 @@ if(isset($_POST["submit"])) {
         <p><strong>Message：</strong></p>
         <p>' . nl2br($message) . '</p>
     ';
-    $mail->send();
-
-    echo
-    "
-    <script>
-    alert('Sent Successfully');
-    document.location.href = 'contactus.php'
-    </script>
-    ";
+    try {
+        if ($mail->send()) {
+        
+            header("Location: contactus.php?success=1");
+            exit();
+        } else {
+            header("Location: contactus.php?error=1");
+            exit();
+        }
+    } catch (Exception $e) {
+        header("Location: contactus.php?error=" . urlencode($mail->ErrorInfo));
+        exit();
+    }
+    
 
 }
+?>
