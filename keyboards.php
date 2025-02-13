@@ -1,7 +1,7 @@
 <?php
 
-include 'database.php';
-
+$databases = include 'database.php';
+$conn = $databases['conn'];
 
 $sql = "SELECT id, name, description,  price, category, stock FROM products";
 $result = $conn->query($sql);
