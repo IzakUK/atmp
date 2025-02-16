@@ -21,6 +21,27 @@
               <div class="menuOption" onclick="openNav()">☰</div>
               <div id="search-icon" onclick="toggleSearch()">🔍</div>
           </div>
+          
+          <script>
+          function toggleNav() {
+            const sidebar = document.getElementById("terminusSide");
+            if (sidebar.style.width === "20vh") {
+                sidebar.style.width = "0"; // Close the menu
+            } else {
+                sidebar.style.width = "20vh"; // Open the menu
+            }
+        }
+        function toggleSearch() {
+            const searchBar = document.getElementById('search-bar');
+            if (searchBar.style.display === 'none') {
+                searchBar.style.display = 'flex';
+            } else {
+                searchBar.style.display = 'none';
+            }
+        }
+    </script>
+    <script src="darkmode.js"></script>
+    </section2>
           <div class="bannerFormat">
               <div class="LBannerLinks">
                   <a href="about.html">About</a>
@@ -63,351 +84,317 @@
           <a href="contactus.html">Contact</a>
       </div>
 
-    <!-- Swiper -->
-<div class="swiper-container">
-  <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide"><img src="homebanner.jpg" alt="Product 1"></div>
-      <div class="swiper-slide"><img src="aboutus3.jpg" alt="Product 2"></div>
-      <div class="swiper-slide"><img src="featured2.jpg" alt="Product 3"></div>
-      <!-- we can More slides if needed -->
-  </div>
-  <!-- navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
- 
-</div>
-<script>
-  var mySwiper = new Swiper('.swiper-container', {
-    
-      direction: 'horizontal',
-      loop: true,
-      autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-      },
-
-      // Navigation arrows
-      navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-      },
-
-    
-  });
-</script>
-
-
-
-
-    <!-- Product Grid Section -->
-    <div class="product-grid">
-      <!-- Product Card 1 -->
-      <div
-        class="product-card"
-        data-title="Keyboard 1"
-        data-description="Add product information/description"
-        data-price="£99.99"    
-        data-image="featured5.jpg"
-      >
-        <div class="product-image">
-          <img src="featured5.jpg" alt="Mechanical Keyboard 1" />
+      <!-- products filter-->
+      <section class="product-list">
+        <h1 class="product-list-title">Welcome to Terminus Mechanical Keyboards & Accessories</h1>
+        
+        <div class="filter-container">
+            <label for="category-filter">Filter by Category:</label>
+            <select id="category-filter">
+                <option value="all">All</option>
+                <option value="keyboards">Keyboards</option>
+                <option value="switches">Switches</option>
+                <option value="keycaps">Keycaps</option>
+            </select>
+            
+            <label for="sort-filter">Sort by:</label>
+            <select id="sort-filter">
+                <option value="featured">Featured</option>
+                <option value="best-selling">Best selling</option>
+                <option value="az">Alphabetically, A-Z</option>
+                <option value="za">Alphabetically, Z-A</option>
+                <option value="price-low">Price, low to high</option>
+                <option value="price-high">Price, high to low</option>
+                <option value="date-old">Date, old to new</option>
+                <option value="date-new">Date, new to old</option>
+            </select>
         </div>
-        <div class="product-info">
-          <h3 class="product-title">Keyboard 1</h3>
-          <p class="product-description">Add product information/description</p>
-          <div class="product-price">£99.99</div>
-          <button class="buy-button">Buy Now</button>
-        </div>
-      </div>
-
-      <!-- Product Card 2 -->
-      <div
-        class="product-card"
-        data-title="Keyboard 2"
-        data-description="Add product information/description"
-        data-price="£29.99"
-        data-image="featured4.jpg"
-      >
-        <div class="product-image">
-          <img src="featured4.jpg" alt="Mechanical Keyboard 2" />
-        </div>
-        <div class="product-info">
-          <h3 class="product-title">Keyboard 2</h3>
-          <p class="product-description">Add product information/description</p>
-          <div class="product-price">£29.99</div>
-          <button class="buy-button">Buy Now</button>
-        </div>
-      </div>
-      <!-- Product Card 3 -->
-      <div
-        class="product-card"
-        data-title="Keyboard 3"
-        data-description="Add product information/description."
-        data-price="£9.99"
-        data-image="featured1.jpg"
-      >
-        <div class="product-image">
-          <img src="featured1.jpg" alt="Mechanical Keyboard 3" />
-        </div>
-        <div class="product-info">
-          <h3 class="product-title">Keyboard 3</h3>
-          <p class="product-description">Add product information/description</p>
-          <div class="product-price">£9.99</div>
-          <button class="buy-button">Buy Now</button>
-        </div>
-      </div>
-      <!-- Product Card 4 -->
-      <div
-        class="product-card"
-        data-title="Keyboard 4"
-        data-description="Add product information/description"
-        data-price="£85.99"
-        data-image="favicon.png"
-      >
-        <div class="product-image">
-          <img src="favicon.png" alt="Mechanical Keyboard 4" />
-        </div>
-        <div class="product-info">
-          <h3 class="product-title">Keyboard 4</h3>
-          <p class="product-description">
-            Add Product Information/ description
-          </p>
-          <div class="product-price">£85.99</div>
-          <button class="buy-button">Buy Now</button>
-        </div>
-      </div>
-      <!-- Product Card 5 -->
-      <div
-        class="product-card"
-        data-title="Keyboard 5"
-        data-description="Add product information/description."
-        data-price="£69.99"
-        data-image="favicon.png"
-      >
-        <div class="product-image">
-          <img src="favicon.png" alt="Mechanical Keyboard 1" />
-        </div>
-        <div class="product-info">
-          <h3 class="product-title">Keyboard 5</h3>
-          <p class="product-description">
-            RGB backlighting, tactile switches, customizable keycaps.
-          </p>
-          <div class="product-price">£99.99</div>
-          <button class="buy-button">Buy Now</button>
-        </div>
-      </div>
-      <!-- Product Card 6 -->
-      <div
-        class="product-card"
-        data-title="Keyboard 6"
-        data-description="RGB backlighting, tactile switches, customizable keycaps."
-        data-price="£99.99"
-        data-image="favicon.png"
-      >
-        <div class="product-image">
-          <img src="favicon.png" alt="Mechanical Keyboard 1" />
-        </div>
-        <div class="product-info">
-          <h3 class="product-title">Keyboard 6</h3>
-          <p class="product-description">
-            RGB backlighting, tactile switches, customizable keycaps.
-          </p>
-          <div class="product-price">£99.99</div>
-          <button class="buy-button">Buy Now</button>
-        </div>
-      </div>
-      <!-- Product Card 7 -->
-      <div
-        class="product-card"
-        data-title="Keyboard 7"
-        data-description="RGB backlighting, tactile switches, customizable keycaps."
-        data-price="£99.99"
-        data-image="favicon.png"
-      >
-        <div class="product-image">
-          <img src="favicon.png" alt="Mechanical Keyboard 1" />
-        </div>
-        <div class="product-info">
-          <h3 class="product-title">Keyboard 7</h3>
-          <p class="product-description">
-            RGB backlighting, tactile switches, customizable keycaps.
-          </p>
-          <div class="product-price">£99.99</div>
-          <button class="buy-button">Buy Now</button>
-        </div>
-      </div>
-      <!-- Product Card 8 -->
-      <div
-        class="product-card"
-        data-title="Keyboard 8"
-        data-description="RGB backlighting, tactile switches, customizable keycaps."
-        data-price="£99.99"
-        data-image="favicon.png"
-      >
-        <div class="product-image">
-          <img src="favicon.png" alt="Mechanical Keyboard 1" />
-        </div>
-        <div class="product-info">
-          <h3 class="product-title">Keyboard 8</h3>
-          <p class="product-description">
-            RGB backlighting, tactile switches, customizable keycaps.
-          </p>
-          <div class="product-price">£99.99</div>
-          <button class="buy-button">Buy Now</button>
-        </div>
-      </div>
-      <!-- Product Card 9 -->
-      <div
-        class="product-card"
-        data-title="Keyboard 9"
-        data-description="RGB backlighting, tactile switches, customizable keycaps."
-        data-price="£99.99"
-        data-image="favicon.png"
-      >
-        <div class="product-image">
-          <img src="favicon.png" alt="Mechanical Keyboard 1" />
-        </div>
-        <div class="product-info">
-          <h3 class="product-title">Keyboard 9</h3>
-          <p class="product-description">
-            RGB backlighting, tactile switches, customizable keycaps.
-          </p>
-          <div class="product-price">£99.99</div>
-          <button class="buy-button">Buy Now</button>
-        </div>
-      </div>
-      <!-- Product Card 10 -->
-      <div
-        class="product-card"
-        data-title="Keyboard 10"
-        data-description="RGB backlighting, tactile switches, customizable keycaps."
-        data-price="£99.99"
-        data-image="favicon.png"
-      >
-        <div class="product-image">
-          <img src="favicon.png" alt="Mechanical Keyboard 1" />
-        </div>
-        <div class="product-info">
-          <h3 class="product-title">Keyboard 10</h3>
-          <p class="product-description">
-            RGB backlighting, tactile switches, customizable keycaps.
-          </p>
-          <div class="product-price">£99.99</div>
-          <button class="buy-button">Buy Now</button>
-        </div>
-      </div>
-      <!-- Product Card 11 -->
-      <div
-        class="product-card"
-        data-title="Keyboard 11"
-        data-description="RGB backlighting, tactile switches, customizable keycaps."
-        data-price="£99.99"
-        data-image="favicon.png"
-      >
-        <div class="product-image">
-          <img src="favicon.png" alt="Mechanical Keyboard 1" />
-        </div>
-        <div class="product-info">
-          <h3 class="product-title">Keyboard 11</h3>
-          <p class="product-description">
-            RGB backlighting, tactile switches, customizable keycaps.
-          </p>
-          <div class="product-price">£99.99</div>
-          <button class="buy-button">Buy Now</button>
-        </div>
-      </div>
-      <!-- Product Card 12 -->
-  
-      <div
-        class="product-card"
-        data-title="Keyboard 12"
-        data-description="RGB backlighting, tactile switches, customizable keycaps."
-        data-price="£99.99"
-        data-image="favicon.png"
-      >
-        <div class="product-image">
-          <img src="favicon.png" alt="Mechanical Keyboard 1" />
-        </div>
-        <div class="product-info">
-          <h3 class="product-title">Keyboard 12</h3>
-          <p class="product-description">
-            RGB backlighting, tactile switches, customizable keycaps.
-          </p>
-          <div class="product-price">£99.99</div>
-          <button class="buy-button">Buy Now</button>
-        </div>
-      </div>
-
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top">&#8679;</a>
-    <!--pop up display-->
-    <div id="productModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="modal-body">
-          <div class="modal-image">
-            <img src="" alt="Product Image" id="modalImage">
-          </div>
-          <div class="modal-details">
-            <h2 id="modalTitle"></h2>
-            <p id="modalDescription"></p>
-            <div class="modal-rating">
-              ★★★★☆ (4.5 / 5) <!-- rating -->
+         <!-- product listing -->
+        <div class="products-container">
+            <!-- Keyboards -->
+            <div class="product-card" data-category="keyboards" data-price="129.99" data-name="RGB Gaming Keyboard">
+                <img src="mechanical-keybaord4.jpg" alt="RGB Gaming Keyboard" class="product-image">
+                <h2 class="product-name">RGB Gaming Keyboard</h2>
+                <p class="product-price">£129.99</p>
+                <p class="product-description">A high-performance gaming keyboard with customizable RGB lighting.</p>
+                <p class="product-rating">⭐⭐⭐⭐ (4.5)</p>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
-            <p class="modal-price" id="modalPrice"></p>
-            <button class="modal-button add-to-cart">Add to Cart</button>
-            <button class="modal-button save-later">Save for Later</button>
-          </div>
-        </div>
-      </div>
-    </div>
+            <div class="product-card" data-category="keyboards" data-price="149.99" data-name="Wireless Mechanical Keyboard">
+                <img src="mechanical-keybaord-wireless.jpg" alt="Wireless Keyboard" class="product-image">
+                <h2 class="product-name">Wireless Mechanical Keyboard</h2>
+                <p class="product-price">£149.99</p>
+                <p class="product-description">A sleek wireless keyboard with mechanical switches and long battery life.</p>
+                <p class="product-rating">⭐⭐⭐⭐⭐ (4.0)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keyboards" data-price="99.99" data-name="Ducky One 3 Mini">
+                <img src="mechanical-keybaord11.jpg" alt="Ducky One 3 Mini" class="product-image">
+                <h2 class="product-name">Ducky One 3 Mini</h2>
+                <p class="product-price">£99.99</p>
+                <p class="product-description">A 60% keyboard with hot-swappable switches, premium build quality, and vibrant RGB lighting.</p>
+                <p class="product-rating">⭐⭐⭐⭐⭐ (4.9)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keyboards" data-price="179.99" data-name="Keychron K6">
+                <img src="mechanical-keyboard2.jpg" alt="Keychron K6" class="product-image">
+                <h2 class="product-name">Keychron K6</h2>
+                <p class="product-price">£179.99</p>
+                <p class="product-description">A wireless 65% keyboard with Bluetooth connectivity, hot-swappable switches, and macOS compatibility.</p>
+                <p class="product-rating">⭐⭐⭐⭐ (4.7)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keyboards" data-price="89.99" data-name="Leopold FC660M" >
+                <img src="mechanical-keyboard3.jpg" alt="Leopold FC660M" class="product-image">
+                <h2 class="product-name">Leopold FC660M</h2>
+                <p class="product-price">£89.99</p>
+                <p class="product-description">A compact 65% keyboard with high-quality PBT keycaps and an excellent typing feel.</p>
+                <p class="product-rating">⭐⭐⭐⭐ (4)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keyboards" data-price="120.99" data-name="Corsair K95 RGB Platinum">
+                <img src="mechanical-keybaord6.jpg" alt="Corsair K95 RGB Platinum" class="product-image">
+                <h2 class="product-name">Corsair K95 RGB Platinum</h2>
+                <p class="product-price">£120.99</p>
+                <p class="product-description">A full-sized gaming keyboard with dedicated macro keys, per-key RGB, and a robust aluminum frame.</p>
+                <p class="product-rating">⭐⭐⭐⭐ (4.2)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keyboards" data-price="110.99" data-name="Razer Huntsman Mini ">
+                <img src="mechanical-keybaord7.jpg" alt="Razer Huntsman Mini" class="product-image">
+                <h2 class="product-name">Razer Huntsman Mini </h2>
+                <p class="product-price">£110.99</p>
+                <p class="product-description">A 60% keyboard featuring Razer’s optical switches for ultra-fast actuation.</p>
+                <p class="product-rating">⭐⭐⭐⭐ (4.8)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keyboards" data-price="169.99" data-name="Anne Pro 2">
+                <img src="mechanical-keybaord8.jpg" alt="Anne Pro 2" class="product-image">
+                <h2 class="product-name">Anne Pro 2</h2>
+                <p class="product-price">£169.99</p>
+                <p class="product-description">A popular 60% wireless keyboard with customizable firmware and Bluetooth connectivity.</p>
+                <p class="product-rating">⭐⭐⭐⭐ (4.5)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keyboards" data-price="189.99" data-name="SteelSeries Apex Pro">
+                <img src="mechanical-keybaord9.jpg" alt="SteelSeries Apex Pro" class="product-image">
+                <h2 class="product-name">SteelSeries Apex Pro</h2>
+                <p class="product-price">£189.99</p>
+                <p class="product-description"> A wireless mechanical keyboard with a 65% layout and customizable RGB effects.</p>
+                <p class="product-rating">⭐⭐⭐⭐ (4.2)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keyboards" data-price="139.99" data-name="Drop ALT">
+                <img src="mechanical-keybaord10.jpg" alt="Drop ALT" class="product-image">
+                <h2 class="product-name">Drop ALT</h2>
+                <p class="product-price">£139.99</p>
+                <p class="product-description">A 65% premium keyboard with hot-swappable switches, aluminum case, and customizable RGB lighting.</p>
+                <p class="product-rating">⭐⭐⭐⭐ (4.3)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            
+            <!-- Switches -->
+            <div class="product-card" data-category="switches" data-price="29.99" data-name="Cherry MX Red">
+                <img src="mechanical-switches1.jpg" alt="Cherry MX Red" class="product-image">
+                <h2 class="product-name">Cherry MX Red</h2>
+                <p class="product-price">£29.99</p>
+                <p class="product-description">A linear switch with a smooth keystroke and low actuation force (45g), ideal for fast-paced gaming.</p>
+                <p class="product-rating">⭐⭐⭐⭐ (4.2)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="switches" data-price="39.99" data-name="Romer-G Tactile">
+                <img src="mechanical-switches2.jpg" alt="Romer-G Tactile" class="product-image">
+                <h2 class="product-name">Romer-G Tactile</h2>
+                <p class="product-price">£39.99</p>
+                <p class="product-description"> A low-profile switch developed by Logitech with a short actuation distance and a silent, tactile bump.</p>
+                <p class="product-rating">⭐⭐⭐⭐ (4)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="switches" data-price="34.99" data-name="Razer Orange">
+                <img src="mechanical-switches3.jpg" alt="Razer Orange" class="product-image">
+                <h2 class="product-name">Razer Orange</h2>
+                <p class="product-price">£34.99</p>
+                <p class="product-description"> A clicky switch designed for gaming with an optimized actuation point and a distinct tactile feel.</p>
+                <p class="product-rating">⭐⭐⭐⭐ (5)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="switches" data-price="19.99" data-name="Holy Panda">
+                <img src="mechanical-switches4.jpg" alt="Holy Panda " class="product-image">
+                <h2 class="product-name">Holy Panda </h2>
+                <p class="product-price">£19.99</p>
+                <p class="product-description">A hybrid tactile switch known for its deep, satisfying bump and premium feel.</p>
+                <p class="product-rating">⭐⭐⭐⭐(4.1)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="switches" data-price="39.99" data-name="Silent Switch Set">
+                <img src="TerminusLogo.png" alt="Silent Switches" class="product-image">
+                <h2 class="product-name">Silent Switch Set</h2>
+                <p class="product-price">£39.99</p>
+                <p class="product-description">description/info</p>
+                <p class="product-rating">⭐⭐⭐⭐(5/5)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="switches" data-price="30.99" data-name="Silent Switch Set">
+                <img src="TerminusLogo.png" alt="Silent Switches" class="product-image">
+                <h2 class="product-name">Silent Switch Set</h2>
+                <p class="product-price">£30.99</p>
+                <p class="product-description">description/info</p>
+                <p class="product-rating">⭐rating(5/5)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="switches" data-price="27.99" data-name="Silent Switch Set">
+                <img src="TerminusLogo.png" alt="Silent Switches" class="product-image">
+                <h2 class="product-name">Silent Switch Set</h2>
+                <p class="product-price">£27.99</p>
+                <p class="product-description">description/info</p>
+                <p class="product-rating">⭐rating(5/5)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="switches" data-price="14.99" data-name="Silent Switch Set">
+                <img src="TerminusLogo.png" alt="Silent Switches" class="product-image">
+                <h2 class="product-name">Silent Switch Set</h2>
+                <p class="product-price">£14.99</p>
+                <p class="product-description">description/info</p>
+                <p class="product-rating">⭐rating(5/5)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="switches" data-price="24.99" data-name="Silent Switch Set">
+                <img src="TerminusLogo.png" alt="Silent Switches" class="product-image">
+                <h2 class="product-name">Silent Switch Set</h2>
+                <p class="product-price">£24.99</p>
+                <p class="product-description">description/info</p>
+                <p class="product-rating">⭐rating(5/5)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="switches" data-price="44.99" data-name="Silent Switch Set">
+                <img src="TerminusLogo.png" alt="Silent Switches" class="product-image">
+                <h2 class="product-name">Silent Switch Set</h2>
+                <p class="product-price">£44.99</p>
+                <p class="product-description">description/info</p>
+                <p class="product-rating">⭐rating(5/5)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            
+            
+            <!-- Keycaps -->
+            <div class="product-card" data-category="keycaps" data-price="49.99" data-name="Metal Keycaps">
+                <img src="mechanical-keycaps1.jpg" alt="Metal Keycaps" class="product-image">
+                <h2 class="product-name">Metal Keycaps</h2>
+                <p class="product-price">£49.99</p>
+                <p class="product-description">Heavy-duty keycaps made from aluminum or zinc alloy, adding weight and durability to keyboards.</p>
+                <p class="product-rating">⭐⭐⭐⭐(4)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keycaps" data-price="55.99" data-name="PBT Double-Shot Keycaps">
+                <img src="mechanical-keycaps2.jpg" alt="PBT Double-Shot Keycaps" class="product-image">
+                <h2 class="product-name">PBT Double-Shot Keycaps</h2>
+                <p class="product-price">£55.99</p>
+                <p class="product-description">Durable, high-quality keycaps with legends that never fade, offering a textured feel.</p>
+                <p class="product-rating">⭐⭐⭐⭐(4.6)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keycaps" data-price="38.99" data-name="ABS Shine-Through Keycaps">
+                <img src="mechanical-keycaps3.jpg" alt="ABS Shine-Through Keycaps" class="product-image">
+                <h2 class="product-name">ABS Shine-Through Keycaps</h2>
+                <p class="product-price">£38.99</p>
+                <p class="product-description">Smooth and lightweight keycaps with translucent legends, perfect for RGB lighting.</p>
+                <p class="product-rating">⭐⭐⭐⭐(4.8)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keycaps" data-price="57.99" data-name="OEM Profile Keycaps">
+                <img src="mechanical-keycaps4.jpg" alt="OEM Profile Keycaps" class="product-image">
+                <h2 class="product-name">OEM Profile Keycaps</h2>
+                <p class="product-price">£57.99</p>
+                <p class="product-description">Standard keycap shape with a gentle curve, widely used in prebuilt keyboards.</p>
+                <p class="product-rating">⭐⭐⭐⭐(4.9)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keycaps" data-price="74.99" data-name="Glow Keycap Set">
+                <img src="TerminusLogo.png" alt="Glow Keycaps" class="product-image">
+                <h2 class="product-name">Glow Keycap Set</h2>
+                <p class="product-price">£74.99</p>
+                <p class="product-description">description/info</p>
+                <p class="product-rating">⭐rating(5/5)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keycaps" data-price="55.99" data-name="Glow Keycap Set">
+                <img src="TerminusLogo.png" alt="Glow Keycaps" class="product-image">
+                <h2 class="product-name">Glow Keycap Set</h2>
+                <p class="product-price">£55.99</p>
+                <p class="product-description">description/info</p>
+                <p class="product-rating">⭐rating(5/5)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keycaps" data-price="40.00" data-name="Glow Keycap Set">
+                <img src="TerminusLogo.png" alt="Glow Keycaps" class="product-image">
+                <h2 class="product-name">Glow Keycap Set</h2>
+                <p class="product-price">£40.00</p>
+                <p class="product-description">description/info</p>
+                <p class="product-rating">⭐rating(5/5)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keycaps" data-price="64.99" data-name="Glow Keycap Set">
+                <img src="TerminusLogo.png" alt="Glow Keycaps" class="product-image">
+                <h2 class="product-name">Glow Keycap Set</h2>
+                <p class="product-price">£64.99</p>
+                <p class="product-description">description/info</p>
+                <p class="product-rating">⭐rating(5/5)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keycaps" data-price="29.99" data-name="Glow Keycap Set">
+                <img src="TerminusLogo.png" alt="Glow Keycaps" class="product-image">
+                <h2 class="product-name">Glow Keycap Set</h2>
+                <p class="product-price">£29.99</p>
+                <p class="product-description">description/info</p>
+                <p class="product-rating">⭐rating(5/5)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="keycaps" data-price="69.99" data-name="Glow Keycap Set">
+                <img src="TerminusLogo.png" alt="Glow Keycaps" class="product-image">
+                <h2 class="product-name">Glow Keycap Set</h2>
+                <p class="product-price">£69.99</p>
+                <p class="product-description">description/info</p>
+                <p class="product-rating">⭐rating(5/5)</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+          
+    </section>
+
     
+   
 
     <script>
-          function toggleNav() {
-            const sidebar = document.getElementById("terminusSide");
-            if (sidebar.style.width === "20vh") {
-                sidebar.style.width = "0"; // Close the menu
-            } else {
-                sidebar.style.width = "20vh"; // Open the menu
-            }
+
+    document.getElementById("sort-filter").addEventListener("change", function() {
+        let sortValue = this.value;
+        let productsContainer = document.querySelector(".products-container");
+        let products = Array.from(document.querySelectorAll(".product-card"));
+
+        if (sortValue === "az") {
+            products.sort((a, b) => a.dataset.name.localeCompare(b.dataset.name));
+        } else if (sortValue === "za") {
+            products.sort((a, b) => b.dataset.name.localeCompare(a.dataset.name));
+        } else if (sortValue === "price-low") {
+            products.sort((a, b) => parseFloat(a.dataset.price) - parseFloat(b.dataset.price));
+        } else if (sortValue === "price-high") {
+            products.sort((a, b) => parseFloat(b.dataset.price) - parseFloat(a.dataset.price));
         }
-        function toggleSearch() {
-            const searchBar = document.getElementById('search-bar');
-            if (searchBar.style.display === 'none') {
-                searchBar.style.display = 'flex';
+        
+        productsContainer.innerHTML = "";
+        products.forEach(product => productsContainer.appendChild(product));
+    });
+ document.getElementById("category-filter").addEventListener("change", function() {
+        const selectedCategory = this.value;
+        document.querySelectorAll(".product-card").forEach(card => {
+            if (selectedCategory === "all" || card.dataset.category === selectedCategory) {
+                card.style.display = "block";
             } else {
-                searchBar.style.display = 'none';
+                card.style.display = "none";
             }
-        }
-   document.querySelectorAll('.product-card').forEach(card => {
-  card.addEventListener('click', function() {
-    // Update modal content
-    document.getElementById('modalTitle').textContent = this.getAttribute('data-title');
-    document.getElementById('modalDescription').textContent = this.getAttribute('data-description');
-    document.getElementById('modalPrice').textContent = this.getAttribute('data-price');
-    document.getElementById('modalImage').src = this.getAttribute('data-image');
-    document.getElementById('modalImage').alt = this.getAttribute('data-title');
-
-    // Display the modal
-    document.querySelector('.modal').style.display = 'block';
-  });
-});
-
-// Close modal functionality
-document.querySelector('.close').addEventListener('click', function() {
-  document.querySelector('.modal').style.display = 'none';
-});
-
-// Click outside to close
-window.onclick = function(event) {
-  if (event.target == document.querySelector('.modal')) {
-    document.querySelector('.modal').style.display = 'none';
-  }
-};
-
-    </script>
-    <script src="darkmode.js"></script>
+        });
+    });
+</script>
   </body>
 </html>
