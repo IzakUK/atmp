@@ -860,6 +860,32 @@ margin: 15px 0 20px;
 
 }
 
+/* Style for Admin Checkbox Label */
+.admin-checkbox {
+  font-family: "SUSE", sans-serif; 
+  font-size: 1.2rem; 
+  color: #d40464; 
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  cursor: pointer;
+  text-shadow: 0.5px 0.5px #541ae0;
+}
+
+/* Ensure the Checkbox is Styled Properly */
+.admin-checkbox input[type="checkbox"] {
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #d40464; 
+}
+
+/* Hover effect for better interaction */
+.admin-checkbox:hover {
+  color: #ff007f;
+}
+
 input{
   font-family: "SUSE", sans-serif;
   background: var(--card-background);
