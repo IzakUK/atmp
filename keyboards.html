@@ -18,8 +18,8 @@
     <body> <!-- Top Banner PLEASE BE CAUTIOUS WITH THIS AND THE CSS IF EDITING. -->
       <div class="terminusTopBanner">
           <div class="right-logos">
-              <div class="menuOption" onclick="openNav()">☰</div>
-              <div id="search-icon" onclick="toggleSearch()">🔍</div>
+            <div class="menuOption" onclick="toggleNav()">☰</div>
+            <div id="search-icon" onclick="toggleSearch()">🔍</div>
           </div>
           
           <script>
@@ -95,18 +95,21 @@
                 <option value="keyboards">Keyboards</option>
                 <option value="switches">Switches</option>
                 <option value="keycaps">Keycaps</option>
+                <option value="accessories">Accessories</option>
+                <option value="diyKits">Keyboard DIY Kits</option>
+             
+                
             </select>
             
             <label for="sort-filter">Sort by:</label>
             <select id="sort-filter">
-                <option value="featured">Featured</option>
-                <option value="best-selling">Best selling</option>
+                <option value="za">Featured</option>
+                <option value="az">Best selling</option>
                 <option value="az">Alphabetically, A-Z</option>
                 <option value="za">Alphabetically, Z-A</option>
                 <option value="price-low">Price, low to high</option>
                 <option value="price-high">Price, high to low</option>
-                <option value="date-old">Date, old to new</option>
-                <option value="date-new">Date, new to old</option>
+                
             </select>
         </div>
          <!-- product listing -->
@@ -153,7 +156,7 @@
                 <p class="product-rating">⭐⭐⭐⭐ (4)</p>
                 <button class="add-to-cart">Add to Cart</button>
             </div>
-            <div class="product-card" data-category="keycaps" data-price="159.99" data-name="Varmilo Sakura R2 87">
+            <div class="product-card" data-category="keyboards" data-price="159.99" data-name="Varmilo Sakura R2 87">
                 <img src="Images/VarmiloSakura R2 87.jpg" alt="Varmilo Sakura R2 87" class="product-image">
                 <h2 class="product-name">Varmilo Sakura R2 87</h2>
                 <p class="product-price">£159.99</p>
