@@ -82,13 +82,15 @@ if ($result->num_rows > 0) {
       </div>
       <!-- Search Bar -->
        
-      <section class="search-bar">
-        <form action="search.php" method="GET">
-          <div class="search-container">
-          <input type="text" name="query"class="search-input" placeholder="Search" required>
+      <section id="search-bar" class="search-bar" style="display: none;">
+        <div class="search-container">
+            <input type="text" name="query"class="search-input" placeholder="Search" required>
           <button type="submit">search</button>
-          </div>
-      </section>
+        </div>
+        <div class="theme-toggle">
+            <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
+        </div>
+    </section>
  
       <!-- Sidebar -->
       <div id="terminusSide" class="sidebar">
@@ -252,7 +254,7 @@ if ($result->num_rows > 0) {
      data-price="159.99" 
      data-image="Images/VarmiloSakuraR287.jpg">
 
-    <img src="Images/VarmiloSakuraR287.jpg" alt="Varmilo Sakura R2 87" class="product-image">
+    <img src="Images/VarmiloSakura R2 87.jpg" alt="Varmilo Sakura R2 87" class="product-image">
     <h2 class="product-name">Varmilo Sakura R2 87</h2>
     <p class="product-price">£159.99</p>
     <p class="product-description">
@@ -302,7 +304,7 @@ if ($result->num_rows > 0) {
      data-price="149.99" 
      data-image="Images/Drop+RedSunsGMKRedSamuraiKeycapSet.jpg">
 
-    <img src="Images/Drop+RedSunsGMKRedSamuraiKeycapSet.jpg" alt="Drop + RedSuns GMK Red Samurai Keycap Set" class="product-image">
+    <img src="Images/Drop+RedSunsGMKRedSamurai KeycapSet.jpg" alt="Drop + RedSuns GMK Red Samurai Keycap Set" class="product-image">
     <h2 class="product-name">Drop + RedSuns GMK Red Samurai Keycap Set</h2>
     <p class="product-price">£149.99</p>
     <p class="product-description">
@@ -559,7 +561,7 @@ if ($result->num_rows > 0) {
             
 
             <!-- Keyboard DIY Kits -->
-            <!-- DIY Kits -->
+          
 <div class="product-card" 
      data-title="Corgi Fairlady Alice Keycap Set" 
      data-price="99.99" 
@@ -597,7 +599,7 @@ if ($result->num_rows > 0) {
      data-price="159.99" 
      data-image="Images/ACGAMAliceVIAWirelessDIYKit.jpg">
 
-    <img src="Images/ACGAMAliceVIAWirelessDIYKit.jpg" alt="ACGAM Alice VIA Wireless DIY Kit" class="product-image">
+    <img src="Images/ACGAMAliceVIA Wireless DIY Kit.jpg" alt="ACGAM Alice VIA Wireless DIY Kit" class="product-image">
     <h2 class="product-name">ACGAM Alice VIA Wireless DIY Kit</h2>
     <p class="product-price">£159.99</p>
     <p class="product-description">
@@ -613,7 +615,7 @@ if ($result->num_rows > 0) {
      data-price="57.99" 
      data-image="Images/CorneCherryV3SplitErgoDIYKIT.jpg">
 
-    <img src="Images/CorneCherryV3SplitErgoDIYKIT.jpg" alt="Corne Cherry V3 Split Ergo DIY Kit" class="product-image">
+    <img src="Images/CorneCherryV3 SplitErgoDIYKIT.jpg" alt="Corne Cherry V3 Split Ergo DIY Kit" class="product-image">
     <h2 class="product-name">Corne Cherry V3 Split Ergo DIY Kit</h2>
     <p class="product-price">£57.99</p>
     <p class="product-description">
