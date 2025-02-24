@@ -85,8 +85,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-
 <!--The front-end code is here-->
 
 

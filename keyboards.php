@@ -181,7 +181,7 @@ if ($result->num_rows > 0) {
         Compact, high-performance 60% keyboard with hot-swappable switches, vibrant RGB lighting, and a solid build. 
         Perfect for gaming and productivity.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐⭐ (4.0)</p>
+    <p class="product-rating">⭐⭐⭐⭐ (4.0)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -197,7 +197,7 @@ if ($result->num_rows > 0) {
         Compact 65% layout with Bluetooth & wired connectivity, hot-swappable switches, and RGB backlight. 
         Ideal for work and gaming.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐⭐ (4.0)</p>
+    <p class="product-rating">⭐⭐⭐⭐ (4.0)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -229,7 +229,7 @@ if ($result->num_rows > 0) {
         Compact and minimalist with top-tier build quality, PBT keycaps, and reliable Cherry MX switches. 
         Perfect for enthusiasts and professionals.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.7)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.7)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -295,7 +295,7 @@ if ($result->num_rows > 0) {
         Retro-styled keycaps with a sculpted MT3 profile, high-quality PBT material, and dye-sublimated legends. 
         Designed for a comfortable, vintage typing feel.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.6)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.6)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -327,7 +327,7 @@ if ($result->num_rows > 0) {
         High-quality PBT keycaps with a vibrant neon colorway, Cherry profile, and durable dye-sublimated legends. 
         Perfect for adding a bold touch to any keyboard.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.9)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.9)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 <div class="product-card" 
@@ -491,7 +491,7 @@ if ($result->num_rows > 0) {
         Compact and durable tool designed for easy removal of mechanical switches. 
         Essential for hot-swappable keyboards and switch customization.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.6)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.6)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -507,7 +507,7 @@ if ($result->num_rows > 0) {
         Ergonomic and stylish wooden palm rest designed for Keychron keyboards. 
         Provides comfort and wrist support for long typing sessions.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.8)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.8)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -523,7 +523,7 @@ if ($result->num_rows > 0) {
         Sleek, durable display box for organizing and showcasing your keycap sets. 
         Perfect for enthusiasts looking to keep their keycaps safe and accessible.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.9)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.9)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -590,7 +590,7 @@ if ($result->num_rows > 0) {
         Customizable gaming keyboard kit with premium components, including a sturdy PCB and high-quality case. 
         Perfect for enthusiasts who want to build a personalized mechanical keyboard.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.6)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.6)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -606,7 +606,7 @@ if ($result->num_rows > 0) {
         Customizable Alice layout wireless keyboard kit with VIA compatibility for easy key remapping. 
         Perfect for enthusiasts seeking a unique, high-performance setup.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.8)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.8)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -622,7 +622,7 @@ if ($result->num_rows > 0) {
         Split ergonomic keyboard kit featuring a customizable layout and Cherry MX switch compatibility. 
         Perfect for those looking for a personalized, comfortable typing experience.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.9)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.9)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -774,6 +774,5 @@ document.getElementById("category-filter").addEventListener("change", function()
     });
 });
 </script>
-   
   </body>
 </html>

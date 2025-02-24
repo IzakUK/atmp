@@ -13,14 +13,14 @@
       <div class="menuOption">☰</div>
       <div class="bannerFormat">
         <div class="LBannerLinks">
-          <a href="about.php">About</a>
+          <a href="about.html">About</a>
           <a href="keyboards.php">Keyboards</a>
         </div>
-        <a href="index.php">
+        <a href="index.html">
           <img src="TerminusLogo.png" alt="Terminus Logo" class="logo">
         </a>
         <div class="RBannerLinks">
-          <a href="misc.php">Blog</a>
+          <a href="Blog.html">Blog</a>
           <a href="contactus.php">Contact</a>
         </div>
       </div>
@@ -35,6 +35,7 @@
         </div>
       </div>
     </div>
+    
     <main class="checkout-container">
       <div class="checkout-form">
         <section class="contact-section">
@@ -229,7 +230,7 @@
             <a href="#">Support</a>
           </div>
         </div>
-
+        
         <div class="second-row">
           <div class="links-column socials-column">
             <h2>Social Media</h2>
