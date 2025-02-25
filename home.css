@@ -78,6 +78,7 @@ font-size: 1vw;
 
 /* Styling for individual links */
 .LBannerLinks a, .RBannerLinks a {
+font-family: "Anta", sans-serif;
 color: var(--text-color); /* Looks cool in blue, but we can change the colour later depending on what colour scheme we choose. */
 text-decoration: none; /*Part of the animation for hovering. Hides the initial underlining. */
 font-weight: bold; /* BOLD text :D */
@@ -152,6 +153,7 @@ flex-direction: column;
 gap: 0.2rem;
 width: 8rem;
 }
+
 
 footer h2 {
 margin: 0 0 10px;
