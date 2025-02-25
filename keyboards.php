@@ -82,13 +82,15 @@ if ($result->num_rows > 0) {
       </div>
       <!-- Search Bar -->
        
-      <section class="search-bar">
-        <form action="search.php" method="GET">
-          <div class="search-container">
-          <input type="text" name="query"class="search-input" placeholder="Search" required>
+      <section id="search-bar" class="search-bar" style="display: none;">
+        <div class="search-container">
+            <input type="text" name="query"class="search-input" placeholder="Search" required>
           <button type="submit">search</button>
-          </div>
-      </section>
+        </div>
+        <div class="theme-toggle">
+            <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
+        </div>
+    </section>
  
       <!-- Sidebar -->
       <div id="terminusSide" class="sidebar">
@@ -179,7 +181,7 @@ if ($result->num_rows > 0) {
         Compact, high-performance 60% keyboard with hot-swappable switches, vibrant RGB lighting, and a solid build. 
         Perfect for gaming and productivity.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐⭐ (4.0)</p>
+    <p class="product-rating">⭐⭐⭐⭐ (4.0)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -195,7 +197,7 @@ if ($result->num_rows > 0) {
         Compact 65% layout with Bluetooth & wired connectivity, hot-swappable switches, and RGB backlight. 
         Ideal for work and gaming.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐⭐ (4.0)</p>
+    <p class="product-rating">⭐⭐⭐⭐ (4.0)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -227,7 +229,7 @@ if ($result->num_rows > 0) {
         Compact and minimalist with top-tier build quality, PBT keycaps, and reliable Cherry MX switches. 
         Perfect for enthusiasts and professionals.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.7)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.7)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -252,7 +254,7 @@ if ($result->num_rows > 0) {
      data-price="159.99" 
      data-image="Images/VarmiloSakuraR287.jpg">
 
-    <img src="Images/VarmiloSakuraR287.jpg" alt="Varmilo Sakura R2 87" class="product-image">
+    <img src="Images/VarmiloSakura R2 87.jpg" alt="Varmilo Sakura R2 87" class="product-image">
     <h2 class="product-name">Varmilo Sakura R2 87</h2>
     <p class="product-price">£159.99</p>
     <p class="product-description">
@@ -293,7 +295,7 @@ if ($result->num_rows > 0) {
         Retro-styled keycaps with a sculpted MT3 profile, high-quality PBT material, and dye-sublimated legends. 
         Designed for a comfortable, vintage typing feel.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.6)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.6)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -302,7 +304,7 @@ if ($result->num_rows > 0) {
      data-price="149.99" 
      data-image="Images/Drop+RedSunsGMKRedSamuraiKeycapSet.jpg">
 
-    <img src="Images/Drop+RedSunsGMKRedSamuraiKeycapSet.jpg" alt="Drop + RedSuns GMK Red Samurai Keycap Set" class="product-image">
+    <img src="Images/Drop+RedSunsGMKRedSamurai KeycapSet.jpg" alt="Drop + RedSuns GMK Red Samurai Keycap Set" class="product-image">
     <h2 class="product-name">Drop + RedSuns GMK Red Samurai Keycap Set</h2>
     <p class="product-price">£149.99</p>
     <p class="product-description">
@@ -325,7 +327,7 @@ if ($result->num_rows > 0) {
         High-quality PBT keycaps with a vibrant neon colorway, Cherry profile, and durable dye-sublimated legends. 
         Perfect for adding a bold touch to any keyboard.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.9)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.9)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 <div class="product-card" 
@@ -489,7 +491,7 @@ if ($result->num_rows > 0) {
         Compact and durable tool designed for easy removal of mechanical switches. 
         Essential for hot-swappable keyboards and switch customization.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.6)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.6)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -505,7 +507,7 @@ if ($result->num_rows > 0) {
         Ergonomic and stylish wooden palm rest designed for Keychron keyboards. 
         Provides comfort and wrist support for long typing sessions.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.8)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.8)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -521,7 +523,7 @@ if ($result->num_rows > 0) {
         Sleek, durable display box for organizing and showcasing your keycap sets. 
         Perfect for enthusiasts looking to keep their keycaps safe and accessible.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.9)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.9)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -559,7 +561,7 @@ if ($result->num_rows > 0) {
             
 
             <!-- Keyboard DIY Kits -->
-            <!-- DIY Kits -->
+          
 <div class="product-card" 
      data-title="Corgi Fairlady Alice Keycap Set" 
      data-price="99.99" 
@@ -588,7 +590,7 @@ if ($result->num_rows > 0) {
         Customizable gaming keyboard kit with premium components, including a sturdy PCB and high-quality case. 
         Perfect for enthusiasts who want to build a personalized mechanical keyboard.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.6)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.6)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -597,14 +599,14 @@ if ($result->num_rows > 0) {
      data-price="159.99" 
      data-image="Images/ACGAMAliceVIAWirelessDIYKit.jpg">
 
-    <img src="Images/ACGAMAliceVIAWirelessDIYKit.jpg" alt="ACGAM Alice VIA Wireless DIY Kit" class="product-image">
+    <img src="Images/ACGAMAliceVIA Wireless DIY Kit.jpg" alt="ACGAM Alice VIA Wireless DIY Kit" class="product-image">
     <h2 class="product-name">ACGAM Alice VIA Wireless DIY Kit</h2>
     <p class="product-price">£159.99</p>
     <p class="product-description">
         Customizable Alice layout wireless keyboard kit with VIA compatibility for easy key remapping. 
         Perfect for enthusiasts seeking a unique, high-performance setup.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.8)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.8)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -613,14 +615,14 @@ if ($result->num_rows > 0) {
      data-price="57.99" 
      data-image="Images/CorneCherryV3SplitErgoDIYKIT.jpg">
 
-    <img src="Images/CorneCherryV3SplitErgoDIYKIT.jpg" alt="Corne Cherry V3 Split Ergo DIY Kit" class="product-image">
+    <img src="Images/CorneCherryV3 SplitErgoDIYKIT.jpg" alt="Corne Cherry V3 Split Ergo DIY Kit" class="product-image">
     <h2 class="product-name">Corne Cherry V3 Split Ergo DIY Kit</h2>
     <p class="product-price">£57.99</p>
     <p class="product-description">
         Split ergonomic keyboard kit featuring a customizable layout and Cherry MX switch compatibility. 
         Perfect for those looking for a personalized, comfortable typing experience.
     </p>
-    <p class="product-rating">⭐⭐⭐⭐ (4.9)</p>
+    <p class="product-rating">⭐⭐⭐⭐⭐ (4.9)</p>
     <button class="add-to-cart">Add to Cart</button>
 </div>
 
@@ -772,6 +774,5 @@ document.getElementById("category-filter").addEventListener("change", function()
     });
 });
 </script>
-   
   </body>
 </html>
