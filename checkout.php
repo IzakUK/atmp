@@ -234,7 +234,7 @@
             <a href="shop.php">Keyboards</a>
             <a href="#">Accessories</a>
             <a href="configurator">Configurator</a>
-            <a href="faq.php">FAQs</a>
+            <a href="contactus.php">FAQs</a>
           </div>
           <div class="links-column">
             <h2>Overview</h2>
