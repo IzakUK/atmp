@@ -1,41 +1,51 @@
 <?php
+session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Include database connection
+$db_connections = require __DIR__ . "/database.php";
+$mysqli = $db_connections['mysqli_login'];
 
 $is_invalid = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  
-    $db_connections = require __DIR__ . "/database.php";
-    $mysqli1 = $db_connections['mysqli_login'];
-    
-    $sql = sprintf("SELECT * FROM user
-                    WHERE email = '%s'",
-                   $mysqli1->real_escape_string($_POST["email"]));
-    
-    $result = $mysqli1->query($sql);
-    
-    $user = $result->fetch_assoc();
-    
-    if ($user) {
-        
-        if (password_verify($_POST["pswd"], $user["password_hash"])) {
-            
-            session_start();
-            
-            session_regenerate_id();
-            
-            $_SESSION["user_id"] = $user["id"];
-            
-            header("Location: login-success.html");
-            exit;
-        }
+    $email = trim($_POST["email"]);
+    $password = $_POST["pswd"];
+    $is_admin = isset($_POST["admin"]); // Check if "Login as Admin" is selected
+
+    // **Set the correct table name based on user type**
+    $table = $is_admin ? "admin" : "user"; // Your database uses "user", not "users"
+
+    // **Prepare SQL query, ensuring it matches the database structure**
+    $stmt = $mysqli->prepare("SELECT id, name, email, password_hash FROM $table WHERE email = ?");
+    if (!$stmt) {
+        die("SQL Error: " . $mysqli->error);
     }
-    
-    $is_invalid = true;
-    
 
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $user = $result->fetch_assoc();
+
+    // **Check if user exists and verify password**
+    if ($user && password_verify($password, $user["password_hash"])) {
+        session_regenerate_id(true); // Regenerate session ID for security
+
+        // **User login process**
+        $_SESSION["user_logged_in"] = true;
+        $_SESSION["user_id"] = $user["id"];
+        $_SESSION["user_name"] = $user["name"]; // Store username
+        
+        header("Location: login-success.html");
+        exit;
+    } else {
+        $is_invalid = true; // User does not exist or password is incorrect
+    }
 }
-
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,6 +77,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <label for="password">Password</label>
         <input type="password" name="pswd" id="password">
         
+          <!-- Checkbox for Admin Login -->
+          <label class="admin-checkbox">
+            <input type="checkbox" name="admin" value="1"> Login as Admin
+        </label>
         <button>Log in</button>
     </form>
     
