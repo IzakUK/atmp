@@ -2090,3 +2090,52 @@ margin: 20px 0;
   }
 }
 
+/* blog posts styling */
+.blog1 {
+  width: 75%;
+  margin: auto;
+  margin-bottom: 5rem;
+  padding: 30px 50px 10px 50px;
+  border-left: 1px solid white; /* Add left border */
+  border-right: 1px solid white; /* Add right border */
+}
+
+.blog1 h1, .blog1 h3 {
+  text-align: center;
+  padding: 10px 0 15px;
+  font-family: "SUSE", sans-serif;
+}
+
+.blog1 p {
+  font-size: 0.9rem;
+  line-height: 2rem;
+  font-family: "SUSE", sans-serif;
+  text-align: left;
+}
+
+
+.blog1 img {
+  width: 80%;
+  padding: 20px 0 20px;
+  display: block; 
+  margin: 0 auto;
+}
+
+.exploreNow-btn {
+  font-family: "SUSE", sans-serif;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  color: var(--text-color);
+  background: transparent;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: none;
+}
+
+.exploreNow-btn:hover {
+  background-color: white;
+  color: #333; 
+  transform: translateY(-3px); /* Slight lift effect */
+}
