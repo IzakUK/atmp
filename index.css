@@ -49,6 +49,9 @@ body {
   font-size: 2vw;
   cursor: pointer;
   padding: 1vw;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
 }
 
 .toggle-mode {
@@ -65,7 +68,7 @@ body {
   display: inherit;
   gap: 3vw; 
   max-height: 1vw;
-  margin-left: -5vh; 
+  margin-left: -4.75vw; 
 }
 
 .LBannerLinks, .RBannerLinks, .bannerOptions {
@@ -114,8 +117,6 @@ body {
 #search-icon {
   font-size: 2vw;
   cursor: pointer;
-  padding: 1vw;
-  color: white;
   transition: color 0.3s ease;
 }
 
@@ -124,36 +125,32 @@ body {
 }
 
 .search-bar {
-  display: none; 
-  justify-content: center;
   padding: 8px 0;
-  background-color: #333; 
-  position: sticky;
+  position: absolute;
   z-index: 1000;
-  top: 5.6vw;
+  top: 5vw;
   background-color: var(--card-background);
+  bottom: -5vw;
+  width: 100%;
+  overflow: hidden;
+  right: 0.2px;
 }
 
 .search-container {
-  display: flex;
+  display: inline flow-root list-item;
   border: 0.5px solid #d40464;
   border-radius: 20vw;
-  width: 32vw; 
-  height: 7vh;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.search-container:hover {
-  transform: scale(1.01);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 100%; 
+  position: relative;
+  height: 100%;
+  overflow: hidden;
 }
 
 .search-input {
-  flex: 1;
+  display: inline;
   background: none;
   color: var(--text-color);
   font-size: 1.5vw;
-  outline: none;
   text-align: center;
   border: none;
 }
@@ -178,31 +175,44 @@ button{
   box-shadow: 1px 1px 1px #d40464;
   padding-left: 1vw;
   padding-right: 0.9vw;
-  }
-
-.theme-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute; 
-  top: 50%;
-  right: 5vw;
-  transform: translateY(-50%);
-  z-index: 10; 
 }
 
 .theme-toggle-button {
   background: none; 
   color: var(--text-color);
   border: none;
-  width: 3vw;
-  height: 3vw;
-  font-size: 1.5vw;
+  font-size: 2vw;
   cursor: pointer; 
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: none;
+  padding: 1vw 0;
+}
+
+.accessibility-menu {
+  position: sticky;
+  z-index: 9999;
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  margin-top: 0.5vh;
+  padding: 0.25rem;
+  top: 20vh;
+  width: 100%;
+}
+
+.accessibility-menu div {
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  transition: background 0.2s ease;
+}
+
+.accessibility-menu div:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
 }
 
 .sidebar {
@@ -212,7 +222,7 @@ button{
   z-index: 100;
   top: 0;
   left: 0; 
-  background-color: #111;
+  background-color: var(--background-color);
   overflow-x: hidden; 
   transition: 0.5s;
   padding-top: 60px;
@@ -222,7 +232,7 @@ button{
   padding: 1vw 1vw;
   text-decoration: none;
   font-size: 1.5vw;
-  color: #818181;
+  color: var(--text-color);
   display: block;
   transition: 0.3s;
 }
@@ -840,4 +850,3 @@ footer.top .socials > a {
     display: none;
   }
 }
-
