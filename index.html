@@ -16,7 +16,8 @@
     <div class="terminusTopBanner">
         <div class="bannerOptions">
             <div class="menuOption" onclick="toggleNav()">☰</div>
-            <div id="search-icon" onclick="toggleSearch()">🔍</div>
+            <div id="search-icon" class="menuOption" onclick="toggleSearch()">🔍</div>
+            <div id="accessibility-icon" class="menuOption" onclick="toggleAccessibilityMenu()">🔠</div>
         </div>
         <div class="bannerFormat">
             <div class="LBannerLinks">
@@ -33,6 +34,10 @@
             </div>
         </div>
         <div class="bannerOptions">
+            <div id="themeToggle" class="theme-toggle-button menuOption" 
+                 onclick="toggleTheme()" aria-label="Switch to light mode">
+                ☀️
+            </div>
             <div class="userIcon">
                 <a href="login.html">
                     <img src="userIcon.png" alt="User Icon">
@@ -42,16 +47,20 @@
                 <a href="cart.html">🛒</a>
             </div>
         </div>
+        
+        <!-- Search Bar -->
+        <section id="search-bar" class="search-bar" style="display: flex;">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search">
+            </div>
+        </section>
     </div>
-    <!-- Search Bar -->
-    <section id="search-bar" class="search-bar" style="display: flex;">
-        <div class="search-container">
-            <input type="text" class="search-input" placeholder="Search">
-        </div>
-        <button type="submit">Go</button><div class="theme-toggle">
-            <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()" aria-label="Switch to light mode">☀️</button>
-        </div>
-    </section>
+
+    <!-- Accessibility Menu (I'll fix the CSS soon, just wanted to focus on functionality) -->
+    <div id="accessibilityMenu" class="accessibility-menu" style="display:none;">
+        <div onclick="setFontSize('normal')">A (Normal)</div>
+        <div onclick="setFontSize('large')">A+ (Bigger)</div>
+    </div>
 
     <!-- Sidebar -->
     <div id="terminusSide" class="sidebar">
@@ -295,6 +304,27 @@
                 searchBar.style.display = 'flex';
             } else {
                 searchBar.style.display = 'none';
+            }
+        }
+        // Toggle for the accessibility
+        function toggleAccessibilityMenu() {
+            const menu = document.getElementById('accessibilityMenu');
+            if (!menu) return;
+
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+        // Options to change font sizes (You can additionally add more very easily)
+        function setFontSize(size) {
+            const htmlEl = document.querySelector('html');
+            if (size === 'large') { // larger
+                htmlEl.style.fontSize = '120%';
+            } else {
+                // normal sized
+                htmlEl.style.fontSize = '';
             }
         }
     </script>
