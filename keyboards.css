@@ -334,6 +334,7 @@ footer.top .socials > a {
   font-size: 15px;
   outline: none;
   padding: 5px;
+  font-family: "SUSE", sans-serif;
 }
 
 .search-input::placeholder {

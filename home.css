@@ -364,6 +364,7 @@ color: var(--text-color);
 font-size: 1.5vw;
 outline: none;
 text-align: center;
+font-family: "SUSE", sans-serif;
 }
 
 .search-input::placeholder {
