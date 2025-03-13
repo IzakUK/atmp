@@ -1,3 +1,12 @@
+<?php
+if (isset($_GET['success'])) {
+  echo '<script>alert("Email sent successfully!");</script>';
+}
+if (isset($_GET['error'])) {
+  echo '<script>alert("Email sending failed ' . htmlspecialchars($_GET['error']) . '");</script>';
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    
   </head>
   <body> <!-- Top Banner PLEASE BE CAUTIOUS WITH THIS AND THE CSS IF EDITING. -->
     <div class="terminusTopBanner">
@@ -55,33 +65,124 @@
 
     <!-- Sidebar -->
     <div id="terminusSide" class="sidebar">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
         <a href="about.html">About</a>
         <a href="keyboards.php">Keyboards</a>
-        <a href="misc.html">Our Mission</a>
+        <a href="blog.html">Our Mission</a>
         <a href="contactus.html">Contact</a>
     </div>
 
      
-    <!-- Contact Us Page-->
-  
-    <section class="contact">
-        <div class="container contact-container">
-            <!-- Left Section -->
-            <div class="contact-left">
-                <div class="contact-left-image">
-                    <img src="favicon.png" alt="Contact Us">
-                </div>
-                <h2>Contact Us!</h2>
+    <!-- Support Page -->
+    <section class="support">
+      <!-- Support Heading with Background Image -->
+      <div class="support-heading">
+        <div class="heading-overlay">
+          <h1>Support</h1>
+          <p>We're here to help. Find answers to common questions or contact us directly.</p>
+        </div>
+      </div>
+
+      <div class="container support-container">
+        <!-- FAQ Section -->
+        <div class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <!-- FAQ Items with Dropdown -->
+            <div class="faq-item" onclick="toggleFAQ(this)">
+              <h3>How do I track my order? <span class="arrow">▼</span></h3>
+              <div class="faq-content">
                 <p>
-                    We would love to hear from you! Whether you have a question about our products or need help with your order, our team is here to assist you.
+                  Once your order has been shipped, you will receive a tracking number via email. You
+                  can use this number to track your order on our website.
                 </p>
-                <ul class="contact-details">
-                    <li><strong>Address:</strong> Aston, Birmingham</li>
-                    <li><strong>Phone Number:</strong> +1 234 567 890</li>
-                    <li><strong>Email:</strong> support@terminus.com</li>
-                    <li><strong>Opening Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM</li>
-                </ul>
+              </div>
             </div>
+            <div class="faq-item" onclick="toggleFAQ(this)">
+              <h3>What is your return policy? <span class="arrow">▼</span></h3>
+              <div class="faq-content">
+                <p>
+                  We offer a 30-day return policy for unused products. Please contact our support
+                  team to initiate a return.
+                </p>
+              </div>
+            </div>
+            <!-- Add more FAQ items here -->
+            <div class="faq-item" onclick="toggleFAQ(this)">
+              <h3>How do I contact customer service? <span class="arrow">▼</span></h3>
+              <div class="faq-content">
+                <p>
+                  You can reach out to us via the contact form below or email us directly at
+                  support@terminus.com.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" onclick="toggleFAQ(this)">
+              <h3>Do you offer international shipping <span class="arrow">▼</span></h3>
+              <div class="faq-content">
+                <p>
+                  Yes, we ship worldwide. Shipping costs and delivery times vary depending on your
+        location.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" onclick="toggleFAQ(this)">
+              <h3>What payment methods do you accept? <span class="arrow">▼</span></h3>
+              <div class="faq-content">
+                <p>
+                  We accept all major credit cards, PayPal, and bank transfers. All transactions are secure.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" onclick="toggleFAQ(this)">
+              <h3>Can I cancel or modify my order?<span class="arrow">▼</span></h3>
+              <div class="faq-content">
+                <p>
+                  You can cancel or modify your order within 24 hours of placing it. After that, the order
+        will be processed and cannot be changed.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" onclick="toggleFAQ(this)">
+              <h3>Do you offer warranties on your products? <span class="arrow">▼</span></h3>
+              <div class="faq-content">
+                <p>
+                  Yes, all our products come with a 1-year limited warranty. Please refer to the warranty
+        terms for more details.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" onclick="toggleFAQ(this)">
+              <h3>How do I set up my keyboard?<span class="arrow">▼</span></h3>
+              <div class="faq-content">
+                <p>
+                  You can find detailed setup instructions in the user manual included with your purchase or
+        on our website under the "Support" section.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Policies Section -->
+        <div class="policies-section">
+          <h2>Policies</h2>
+          <div class="policy-item">
+            <h3>Contact Policy</h3>
+            <p>
+              Our support team is available Monday to Friday, 9:00 AM to 6:00 PM. We aim to respond
+              to all inquiries within 24 hours.
+            </p>
+          </div>
+          <div class="policy-item">
+            <h3>Return Policy</h3>
+            <p>
+              If you're not satisfied with your purchase, you can return it within 30 days for a full
+              refund. Items must be unused and in their original packaging.
+            </p>
+          </div>
+        </div>
     
             <!-- Right Section (Form) -->
             <?php
@@ -92,6 +193,9 @@
             echo '<div class="alert alert-danger">'.$Message.'</div>';
             }
             ?>
+        <div class="contact-form-section">
+          <h2>Still Have Questions?</h2>
+          
             <form class="contact-form" action="process-contactform.php" method="post">
                 <div class="form-name">
                     <input type="text" name="FirstName" placeholder="FirstName" required>
@@ -101,6 +205,7 @@
                 <textarea name="Message" rows="7" placeholder="Message" required></textarea>
                 <button type="submit" name = "submit" class="btn btn-primary">Send Message</button>
             </form>
+            </div>
         </div>
     </section>
     
@@ -182,5 +287,11 @@
         }
     </script>
     <script src="darkmode.js"></script>
+    <script>
+      // Toggle FAQ dropdown
+      function toggleFAQ(item) {
+        item.classList.toggle('active');
+      }
+    </script>
     </section2></body></html>
  

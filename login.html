@@ -53,9 +53,10 @@
 
   <!-- Sidebar -->
   <div id="terminusSide" class="sidebar">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
       <a href="about.html">About</a>
       <a href="keyboards.php">Keyboards</a>
-      <a href="misc.html">Our Mission</a>
+      <a href="blog.html">Our Mission</a>
       <a href="contactus.php">Contact</a>
   </div>
     
@@ -77,12 +78,17 @@
                     <h1> Log In</h1>
                     <input type="email" name="email" placeholder="Email" required="">
                     <input type="password" name="pswd" placeholder="Password" required="">
+                    <!-- Checkbox for Admin Login -->
+                    <label class="admin-checkbox">
+                        <input type="checkbox" name="admin" value="1"> Login as Admin
+                    </label>
                     <div class="passColour">
-                        <a href="#">Forgot Password?</a>
+                        <a href="forgot-password.php">Forgot Password?</a>
                     </div>
                     <button>Log In</button>
                 </form>
             </div>
+                    
 
             <div class="overlay-container">
                 <div class="overlay-effect">
