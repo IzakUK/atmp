@@ -52,6 +52,7 @@ body {
   color: var(--text-color);
   display: flex;
   align-items: center;
+
 }
 
 .toggle-mode {
@@ -82,6 +83,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   display: block;
+  font-family: "SUSE", sans-serif;
 }
 
 .LBannerLinks a:hover, .RBannerLinks a:hover {
@@ -153,6 +155,7 @@ body {
   font-size: 1.5vw;
   text-align: center;
   border: none;
+  font-family: "SUSE", sans-serif;
 }
 
 .search-input::placeholder {
@@ -235,6 +238,7 @@ button{
   color: var(--text-color);
   display: block;
   transition: 0.3s;
+  font-family: "SUSE", sans-serif;
 }
 
 .sidebar a:hover {
@@ -572,7 +576,7 @@ button{
 /* new boxes here */
 .reasons {
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 2rem;
@@ -580,11 +584,11 @@ button{
 
 .reason {
   background: var(--card-background);
-  border: 3px solid var(--primary-color);
+  border: 1px solid white;
   border-radius: 10px;
   padding: 2rem;
   color: var(--primary-color);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   width: 270px; /* fixed width so each box is uniform */
   text-align: center;
 }
@@ -598,7 +602,7 @@ button{
 .reason h3 {
   font-family: "Anta", sans-serif;
   font-size: 1.4rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
