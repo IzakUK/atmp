@@ -853,4 +853,8 @@ footer.top .socials > a {
     gap: 10px;
     display: none;
   }
+  .search-bar{
+    top: 8vw;
+    bottom: -10vw;
+  }
 }
