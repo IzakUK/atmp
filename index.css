@@ -361,20 +361,24 @@ button{
 .categories-btn {
   font-family: "SUSE", sans-serif;
   display: inline-block;
-  padding: 0.8rem 1.5rem;
+  padding: 12px 30px; /* Adjusted to match the fill button padding */
   background: #d40464;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 0.9rem;
+  border-radius: 10px; 
+  font-size: 0.8rem; 
+  font-weight: bold; 
+  text-transform: uppercase; 
   margin-bottom: 25px;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+  border: 1px solid #d40464; 
 }
 
 .categories-btn:hover {
   background-color: #d40464;
-  color: #333; 
-  transform: translateY(-2px);
+  color: #333; /* Change color on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
 .categories-right {
@@ -656,21 +660,24 @@ button{
 }
 
 #blog-banner-btn {
+  font-family: "SUSE", sans-serif; 
+  display: inline-block; 
   border: 1px solid white;
   padding: 12px 30px;
-  border-radius: 15px; 
+  border-radius: 10px; 
   color: white;
+  background-color: transparent; 
   font-size: 0.8rem;
   font-weight: bold;
   text-transform: uppercase;
-  text-decoration: none; 
-  transition: all 0.3s ease; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); 
 }
 
 #blog-banner-btn:hover {
   background-color: white;
-  color: #333; 
+  color: #d40464; 
   transform: translateY(-2px); 
 }
 

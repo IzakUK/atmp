@@ -1213,25 +1213,30 @@ select:focus {
   color: #00cc66;
   margin: 0.5rem 0;
 }
-
 .add-to-cart {
+  font-family: "SUSE", sans-serif;
+  display: inline-block;
   background-color: #d40464;
   color: white;
-  border: none;
-  padding: 0.5rem 1rem; 
-  border-radius: 6px;
+  border: 1px solid #d40464;
+  padding: 12px 30px;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 0.9rem; 
-  font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  width: auto; 
-  margin-top: auto; 
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  width: auto;
+  margin-top: auto;
+  text-decoration: none;
 }
 
 .add-to-cart:hover {
-  background-color: #541ae0;
-  transform: scale(1.05);
-  box-shadow: none;
+  background-color: #d40464;
+  color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
 }
 
 /* Banner*/

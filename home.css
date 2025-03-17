@@ -888,26 +888,34 @@ text-shadow: .5px  .5px #541ae0;   /*purple bottom-right shadow around text */;
 text-decoration: underline; /* Adds the underline when hovering back */
 }
 
-button{
-font-family: "SUSE", sans-serif;
-color: #fff;
-background: #541ae0;
-font-size: 12px;
-font-weight: bold;
-padding: 12px 55px;
-margin: 20px;
-border-radius: 15px;
-border: .5px solid #d40464;
-outline: none;
-letter-spacing: 1px;
-text-transform: uppercase;
-transition: transform 80ms ease-in;
-cursor: pointer;
-box-shadow: 1px 1px 1px #d40464;
+button {
+  font-family: "SUSE", sans-serif;
+  color: white;
+  background: #d40464;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 12px 30px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 1px solid #d40464;
+  outline: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  display: inline-block;
 }
 
-button:active{
-transform: scale(0.90); /* reduce the button size slightly on click*/
+button:hover {
+  background-color: #d40464;
+  color: white;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.80);
 }
 
 /*this is to style the "log in" and "sign up" buttons*/
@@ -1445,23 +1453,29 @@ width: 100%; /* 1 card per row on very small screens */
 
 /* Submit Button  */
 .submit_btn {
-  width: 50%; 
-  padding: 10px; 
-  margin-top: -50%;
+  font-family: "SUSE", sans-serif;
+  display: inline-block;
+  width: auto;
+  padding: 12px 30px;
   background-color: #d40464;
-  color: #ffffff;
-  font-size: 0.9rem; 
-  font-weight: 600;
-  border: none;
-  border-radius: 5px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: 1px solid #d40464;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  text-decoration: none;
   text-align: center;
-  margin-top: 0.1rem; 
+  margin-top: 0.1rem;
 }
 
 .submit_btn:hover {
-  background-color: #541ae0;
+  background-color: #d40464;
+  color: white;
+  transform: translateY(-2px);
 }
 
 /*Contact Information */
@@ -1960,22 +1974,26 @@ font-size: 0.9rem;
 }
 
 .blog-post .read-more-btn {
-font-family: "SUSE", sans-serif;
-padding: 10px 20px;
-font-size: 0.8rem;
-color: var(--text-color);
-background: transparent;
-border: 1px solid var(--text-color);
-border-radius: 5px;
-cursor: pointer;
-transition: all 0.3s ease-in-out;
-box-shadow: none;
+  font-family: "SUSE", sans-serif;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 0.8rem;
+  color: white;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  text-decoration: none;
 }
 
 .blog-post .read-more-btn:hover {
-background-color: white;
-color: #333; 
-transform: translateY(-2px); /* Slight lift effect */
+  background-color: white;
+  color: #d40464;
+  transform: translateY(-2px);
 }
 
 .divider {
@@ -2124,19 +2142,23 @@ margin: 20px 0;
 
 .exploreNow-btn {
   font-family: "SUSE", sans-serif;
-  padding: 10px 20px;
+  display: inline-block;
+  padding: 12px 30px;
   font-size: 0.8rem;
-  color: var(--text-color);
+  color: white;
   background: transparent;
-  border: 1px solid var(--text-color);
-  border-radius: 5px;
+  border: 1px solid white;
+  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  text-decoration: none;
 }
 
 .exploreNow-btn:hover {
   background-color: white;
-  color: #333; 
-  transform: translateY(-3px); /* Slight lift effect */
+  color: #d40464;
+  transform: translateY(-2px);
 }
