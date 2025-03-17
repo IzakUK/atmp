@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - KeyboardMaster</title>
     <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="home.css">
+    <link href="all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.png" type="image/png">
   </head>
   <body>
     <div class="terminusTopBanner">
-      <div class="menuOption">☰</div>
+      <div class="menuOption">☞</div>
       <div class="bannerFormat">
         <div class="LBannerLinks">
           <a href="about.html">About</a>
@@ -35,7 +40,6 @@
         </div>
       </div>
     </div>
-    
     <main class="checkout-container">
       <div class="checkout-form">
         <section class="contact-section">
@@ -220,14 +224,14 @@
             <a href="shop.php">Keyboards</a>
             <a href="#">Accessories</a>
             <a href="configurator">Configurator</a>
-            <a href="faq.php">FAQs</a>
+            <a href="contactus.php">FAQs</a>
           </div>
           <div class="links-column">
             <h2>Overview</h2>
             <a href="#">Terms Of Use</a>
-            <a href="#">Contact</a>
+            <a href="contactus.php">Contact</a>
             <a href="#">Privacy Policy</a>
-            <a href="#">Support</a>
+            <a href="contactus.php">Support</a>
           </div>
         </div>
         

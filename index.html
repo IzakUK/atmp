@@ -1,24 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head> <!-- Default things, leave as is. -->
+<html lang="en"><head> <!-- Default things, leave as is. -->
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terminus</title>
-    <link rel="stylesheet" href="home.css">
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="Compressed_Images/favicon.png" type="image/png">
     <link href="all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anta&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&amp;family=SUSE:wght@100..800&amp;display=swap" rel="stylesheet">
+
 
 </head>
-<body> <!-- Top Banner PLEASE BE CAUTIOUS WITH THIS AND THE CSS IF EDITING. -->
+<body class="dark-mode"> <!-- Top Banner PLEASE BE CAUTIOUS WITH THIS AND THE CSS IF EDITING. -->
     <div class="terminusTopBanner">
         <div class="bannerOptions">
             <div class="menuOption" onclick="toggleNav()">☰</div>
-            <div id="search-icon" onclick="toggleSearch()">🔍</div>
+            <div id="search-icon" class="menuOption" onclick="toggleSearch()">🔍</div>
+            <div id="accessibility-icon" class="menuOption" onclick="toggleAccessibilityMenu()">🔠</div>
         </div>
         <div class="bannerFormat">
             <div class="LBannerLinks">
@@ -26,7 +26,7 @@
                 <a href="keyboards.php">Keyboards</a>
             </div>
             <a href="index.html">
-                <img src="TerminusLogo.png" alt="Terminus Logo" class="logo">
+                <img src="Compressed_Images/TerminusLogo.png" alt="Terminus Logo" class="logo">
             </a>
 
             <div class="RBannerLinks">
@@ -35,33 +35,41 @@
             </div>
         </div>
         <div class="bannerOptions">
+            <div id="themeToggle" class="theme-toggle-button menuOption" 
+                 onclick="toggleTheme()" aria-label="Switch to light mode">
+                ☀️
+            </div>
             <div class="userIcon">
                 <a href="login.html">
-                    <img src="userIcon.png" alt="User Icon">
+                    <img src="Compressed_Images/userIcon.png" alt="User Icon">
                 </a>
             </div>
             <div class="userBasket">
                 <a href="cart.html">🛒</a>
             </div>
         </div>
+   
+ <!-- Search Bar -->
+ <section id="search-bar" class="search-bar" style="display: flex;">
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search">
     </div>
-    <!-- Search Bar -->
-    <section id="search-bar" class="search-bar" style="display: none;">
-        <div class="search-container">
-            <input type="text" name="query"class="search-input" placeholder="Search" required>
-          <button type="submit">search</button>
-        </div>
-        <div class="theme-toggle">
-            <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
-        </div>
-    </section>
+</section>
+</div>
+   
+
+    <!-- Accessibility Menu (I'll fix the CSS soon, just wanted to focus on functionality) -->
+    <div id="accessibilityMenu" class="accessibility-menu" style="display:none;">
+        <div onclick="setFontSize('normal')">A (Normal)</div>
+        <div onclick="setFontSize('large')">A+ (Bigger)</div>
+    </div>
 
     <!-- Sidebar -->
     <div id="terminusSide" class="sidebar">
         <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
         <a href="about.html">About</a>
         <a href="keyboards.php">Keyboards</a>
-        <a href="blog.html">Our Mission</a>
+        <a href="blog.html">Our Blog</a>
         <a href="contactus.php">Contact</a>
     </div>
 
@@ -71,8 +79,8 @@
                 <h3>Find Your Perfect Click</h3>
                 <p>Mechanical keyboards for precision, style, and unmatched performance.</p>
                 <div class="button-group">
-                    <a href="#" class="shop-btn">Shop Now</a>
-                    <a href="#" class="learn-more-btn">Learn More</a>
+                    <a href="keyboards.html" class="shop-btn">Shop Now</a>
+                    <a href="about.html" class="learn-more-btn">Learn More</a>
                 </div>
             </div>
         </div>
@@ -87,7 +95,7 @@
                     typing and gaming experience. <br /> From ergonomic designs to custom mods, 
                     our collection has something for everyone.
                 </p>
-                <a href="#" class="categories-btn">Go to Shop</a>
+                <a href="keyboards.html" class="categories-btn">Go to Shop</a>
             </div>
             <br>
             <div class="categories-right">
@@ -107,12 +115,94 @@
                     <h5>Wireless and Multi-Device Keyboards</h5>
                 </div> 
                 <div class="featured-category" style="background: url(featured6.jpg)">
-                    <h5>Keyboard Switches & Mods</h5>
+                    <h5>Keyboard Switches &amp; Mods</h5>
                 </div> 
             </div>
         </div>
     </section>
     <br>
+
+      <!-- Featured Products Section -->
+      <section class="featured-products">
+        <h2 class="section-title">Our Featured Products</h2>
+        <div class="product-grid">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+            <div class="image-container">
+                <img src="Compressed_Images/duckyOne3Mini.jpg" alt="Ducky One 3 Mini" class="product-image">
+            </div>
+            <div class="product-details">
+            <h3 class="product-name">Ducky One 3 Mini</h3>
+            <p class="product-description">
+                Compact, high-performance 60% keyboard with hot-swappable switches, vibrant RGB lighting, and a solid build. Perfect for gaming and productivity
+            </p>
+            <a href="keyboards.html" target="_blank">
+            <button class="buy-now-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="product-card">
+            <div class="image-container">
+                <img src="Compressed_Images/Drop+RedSunsGMKRedSamurai KeycapSet.jpg" alt="Drop + RedSuns GMK Red Samurai Keycap Set" class="product-image">
+            </div>
+            <div class="product-details">
+            <h3 class="product-name">Red Samurai Keycaps</h3>
+            <p class="product-description">
+                Bold and striking keycap set with a Red Samurai-inspired design, GMK’s premium ABS plastic, and Cherry profile for a smooth, high-quality typing experience.
+            </p>
+            <a href="keyboards.html" target="_blank">
+            <button class="buy-now-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="product-card">
+            <div class="image-container">
+                <img src="Compressed_Images/CherryMXSwitchSet.jpg" alt="Cherry MX Switch Set" class="product-image">
+            </div>
+            <div class="product-details">
+            <h3 class="product-name">SCherry MX Switch Set</h3>
+            <p class="product-description">
+                Authentic Cherry MX switches available in various types (Red, Blue, Brown, etc.) for a customizable typing and gaming experience. Durable and reliable.
+            </p>
+            <a href="keyboards.html" target="_blank">
+            <button class="buy-now-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="product-card">
+            <div class="image-container">
+                <img src="Compressed_Images/CorgiFairladyAlice.jpg" alt=" Corgi Fairlady Alice Keycap Set" class="product-image">
+            </div>
+            <div class="product-details">
+            <h3 class="product-name">Corgi FairladyDIY Kit</h3>
+            <p class="product-description">
+                Playful, high-quality keycap set inspired by the Fairlady Alice design, made from durable PBT material with vibrant colors  for an enjoyable typing experience.
+            </p>
+            <a href="keyboards.html" target="_blank">
+            <button class="buy-now-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="product-card">
+            <div class="image-container">
+                <img src="Compressed_Images/corsairK95.jpg" alt="Corsair K95 RGB Platinum" class="product-image">
+            </div>
+            <div class="product-details">
+            <h3 class="product-name">Corsair K95 RGB</h3>
+            <p class="product-description">
+                Full-sized keyboard with dedicated macro keys, per-key RGB lighting, and Cherry MX switches. Built for performance and durability.
+            </p>
+            <div>
+            <a href="keyboards.html" target="_blank">
+            <button class="buy-now-btn">Buy Now</button>
+            </div>
+        </div>
+        </div>
+    </section>
 
     <!-- Why Choose Us Section -->
     <section class="why-choose-us" id="why-choose-us">
@@ -161,17 +251,17 @@
                 </div>
                 <div class="links-column">
                     <h2>News</h2>
-                    <a href="shop.html">Keyboards</a>
-                    <a href="#">Accessories</a>
+                    <a href="keyboards.html">Keyboards</a>
+                    <a href="keyboards.html">Accessories</a>
                     <a href="configurator">Configurator</a>
-                    <a href="faq.html">FAQs</a>
+                    <a href="contactus.html">FAQs</a>
                 </div>
                 <div class="links-column">
                     <h2>Overview</h2>
-                    <a href="#">Terms Of Use</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Support</a>
+                    <a href="./terms-and-conditions.html">Terms Of Use</a>
+              <a href="#">Contact</a>
+              <a href="./terms-and-conditions.html">Privacy Policy</a>
+              <a href="#">Support</a>
                 </div>
             </div>
 
@@ -196,30 +286,52 @@
     <footer class="bottom">
         <p class="copyright">© 2024 All rights reserved</p>
         <div class="legal">
-            <a> License </a>
-            <a> Terms </a>
-            <a> Privacy </a>
+            <a href="./terms-and-conditions.html"> License </a>
+            <a href="./terms-and-conditions.html"> Terms </a>
+            <a href="./terms-and-conditions.html"> Privacy </a>
         </div>
     </footer>
 <!-- We'll put this into a seperate folder before publishing, just for my sanity sakes. -->
-    <script>
-        function toggleNav() {
-            const sidebar = document.getElementById("terminusSide");
-            if (sidebar.style.width === "20vh") {
-                sidebar.style.width = "0"; // Close the menu
-            } else {
-                sidebar.style.width = "20vh"; // Open the menu
-            }
+<script>
+    function toggleNav() {
+        const sidebar = document.getElementById("terminusSide");
+        if (sidebar.style.width === "20vh") {
+            sidebar.style.width = "0"; // Close the menu
+        } else {
+            sidebar.style.width = "20vh"; // Open the menu
         }
-        function toggleSearch() {
-            const searchBar = document.getElementById('search-bar');
-            if (searchBar.style.display === 'none') {
-                searchBar.style.display = 'flex';
-            } else {
-                searchBar.style.display = 'none';
-            }
+    }
+    function toggleSearch() {
+        const searchBar = document.getElementById('search-bar');
+        if (searchBar.style.display === 'none') {
+            searchBar.style.display = 'flex';
+        } else {
+            searchBar.style.display = 'none';
         }
-    </script>
-    <script src="darkmode.js"></script>
-</body>
-</html>
+    }
+    // Toggle for the accessibility
+    function toggleAccessibilityMenu() {
+        const menu = document.getElementById('accessibilityMenu');
+        if (!menu) return;
+
+        if (menu.style.display === 'none' || menu.style.display === '') {
+            menu.style.display = 'block';
+        } else {
+            menu.style.display = 'none';
+        }
+    }
+    // Options to change font sizes (You can additionally add more very easily)
+    function setFontSize(size) {
+        const htmlEl = document.querySelector('html');
+        if (size === 'large') { // larger
+            htmlEl.style.fontSize = '120%';
+        } else {
+            // normal sized
+            htmlEl.style.fontSize = '';
+        }
+    }
+</script>
+<script src="darkmode.js"></script>
+
+
+</body></html>
