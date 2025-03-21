@@ -78,6 +78,7 @@ font-size: 1vw;
 
 /* Styling for individual links */
 .LBannerLinks a, .RBannerLinks a {
+font-family: "Anta", sans-serif;
 color: var(--text-color); /* Looks cool in blue, but we can change the colour later depending on what colour scheme we choose. */
 text-decoration: none; /*Part of the animation for hovering. Hides the initial underlining. */
 font-weight: bold; /* BOLD text :D */
@@ -152,6 +153,7 @@ flex-direction: column;
 gap: 0.2rem;
 width: 8rem;
 }
+
 
 footer h2 {
 margin: 0 0 10px;
@@ -362,6 +364,7 @@ color: var(--text-color);
 font-size: 1.5vw;
 outline: none;
 text-align: center;
+font-family: "SUSE", sans-serif;
 }
 
 .search-input::placeholder {
@@ -400,387 +403,6 @@ width: 90%;
   box-shadow: none; /* Overrides the button */
 }
 
-
-/* Home Banner Section */
-.banner-box {
-width: 100%;
-height: 70vh;
-position: relative;
-border-radius: 10px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-display: flex; 
-flex-direction: column; /* Stack items vertically */
-align-items: center; /* Center items horizontally */
-justify-content: center; /* Center items vertically */
-background-position: center; /* Center the image */
-}
-
-.contents {
-max-width: 35rem;
-color: #ffffff;
-z-index: 1;
-text-align: center; /* Center-align text */
-}
-
-.contents h3 {
-font-family: "Anta", sans-serif;
-color: #d40464;
-text-shadow: 1px  1px 0 black;
-font-size: 2rem;
-font-weight: bold;
-letter-spacing: 5px; /* Increased letter spacing for minimalist look */
-text-transform: uppercase;
-}
-
-.contents p {
-font-family: "SUSE", sans-serif;
-font-size: 1rem;
-color: white;
-text-shadow: 1px  1px 0 black;
-margin-bottom: 1.5rem;
-line-height: 1.5;
-}
-
-/* Shop Now Button */
-.shop-btn {
-font-family: "SUSE", sans-serif;
-display: inline-block;
-margin-right: 30px;
-padding: 12px 30px;
-border-radius: 10px; 
-color: #333;
-background-color: white;
-text-decoration: none;
-font-weight: bold;
-text-transform: uppercase;
-font-size: 0.8rem;
-transition: all 0.3s ease; 
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); 
-}
-
-.shop-btn:hover {
-background-color: white;
-color: #d40464; /* Change color on hover */
-transform: translateY(-2px); /* Slight lift effect */
-}
-
-/* Learn More Button */
-.learn-more-btn {
-font-family: "SUSE", sans-serif;
-display: inline-block;
-border: 1px solid #d40464;
-padding: 12px 30px;
-border-radius: 10px; 
-color: white;
-background-color: #d40464;
-text-decoration: none;
-font-weight: bold;
-text-transform: uppercase;
-font-size: 0.8rem;
-transition: all 0.3s ease; 
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-}
-
-.learn-more-btn:hover {
-background-color: #d40464;
-color: #333; /* Change color on hover */
-transform: translateY(-2px); /* Slight lift effect */
-}
-
-
-
-
-
-/* Why Choose Us Section */
-
-.why-choose-us{
-margin-top: -5%;
-}
-
-.why-choose-us .reasons {
-display: flex;
-gap: .9rem;
-}
-
-.reason {
-text-align: center;
-padding: 4rem;
-color: #d40464;
-margin-bottom: 1.5rem;
-}
-
-.reasons {
-padding: 0px 3.5vw 0px 0px;
-overflow: hidden
-} /*Centres the text, please do not adjust this unless essential */
-
-.section-title{
-font-family: "Anta", sans-serif;
-text-align: center;
-font-size: 2rem;
-justify-content: space-between;
-color: #d40464;
-}
-
-.reason h3 {
-font-family: "Anta", sans-serif;
-font-size: 1.2rem;
-color: #541ae0;
-margin-bottom: 1.5rem;
-}
-
-.reasons .reason p {
-font-family: "SUSE", sans-serif;
-font-size: .9rem;
-color: var(--text-color);
-line-height: 2rem;
-}
-
-
-/* Featured Categories section style css*/ 
-
-.categories h1 {
-font-family: "Anta", sans-serif;
-line-height: 1.2;
-margin-bottom: 2rem;
-font-size: 1.7rem; 
-color: #d40464;
-}
-
-.categories-container {
-display: grid;
-/* Left column 25%, right column 75% */
-}
-
-.categories-left p {
-font-family: "SUSE", sans-serif;
-margin: 0.2rem 0 2rem;
-padding: 0 10% 0 10%;
-font-size: 0.9rem;
-line-height: 1.6;
-color: var(--text-color);
-}
-
-.categories-btn {
-font-family: "SUSE", sans-serif;
-display: inline-block;
-padding: 0.8rem 1.5rem;
-background: #d40464;
-color: white;
-text-decoration: none;
-border-radius: 5px;
-font-size: 0.9rem;
-margin-bottom: 25px;
-transition: all 0.3s ease;
-}
-
-.categories-btn:hover {
-background-color: #d40464;
-color: #333; /* Change color on hover */
-transform: translateY(-2px); /* Slight lift effect */
-}
-
-
-br { /* space between the shop button and keyboards */
-display: block;
-margin: 0.5vw auto;
-overflow: hidden; /*not needed, but here just in case for browser compatability */
-}
-
-/* Right grid container for categories */
-.categories-right {
-display: grid;
-grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-gap: 1vw;
-}
-
-.categories-right h5 {
-color: white;
-font-size: 1.1rem;
-line-height: 1.5;
-margin: 0;
-text-shadow: 1px  1px 0 black; 
-}
-
-/* style for category boxes */
-.featured-category {
-background-size: cover; /* to make image covers the entire area */
-background-position: center; 
-height: 13vw;
-width: 100%;
-border-radius: 10px; 
-text-align: center;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
-padding: 20px;  /*padding of text and box*/
-position: relative; 
-overflow: hidden; /* ensures no content overflows */
-transition: transform 0.5s ease, box-shadow 0.3s ease;
-}
-
-/* Hover effect for zooming */
-.featured-category:hover {
-transform: scale(1.01); /* slightly zoom in the entire box */
-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); 
-}
-
-/* Inner image zoom effect */
-.featured-category::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-size: 110%; /* Slightly larger for zoom effect */
-background-position: center;
-background-repeat: no-repeat;
-z-index: 1;
-transition: transform 0.3s ease; 
-background-image: inherit; 
-}
-
-/* Zoom effect on hover */
-.featured-category:hover::before {
-transform: scale(1.2); /* Zoom in on the background image */
-}
-
-/* Ensure text stays on top of the image */
-.featured-category h5, .featured-category p {
-font-family: "SUSE", sans-serif;
-position: relative; /* Ensure text layers above the image */
-z-index: 2;
-}
-
-
-
-@media (max-width:1200px){
-
-section{
-    padding: 3rem 2rem;
-}
-}
-
-
-/*styling for blog banner section on home page*/
-
-.blog-banner {
-margin-top: -200px; /*fixing the banner to move upward because it was too downward*/ 
-height: 100vh;
-padding-top: 10vh;
-}
-
-.blog-banner-container {
-height: 80%;
-width: 100%;
-border-radius: 15px;
-overflow: hidden; 
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center; 
-text-align: center;
-padding: 20px;
-}
-
-.blog-banner-container h2 {
-font-family: "Anta", sans-serif;
-color: white;
-font-size: 1.5rem;
-font-weight: bold;
-letter-spacing: 5px; /* Increased letter spacing for minimalist look */
-margin-bottom: 15px; 
-text-transform: uppercase;
-}
-
-.blog-banner-container p {
-font-family: "SUSE", sans-serif;
-color: white;
-font-size: .8rem;
-padding: 10px 20px;
-letter-spacing: 2px;
-max-width: 700px; 
-margin-bottom: 30px; 
-text-transform: uppercase;
-}
-
-#blog-banner-btn {
-border: 1px solid white;
-padding: 12px 30px;
-border-radius: 15px; 
-color: white;
-font-size: .8rem;
-font-weight: bold;
-text-transform: uppercase;
-text-decoration: none; 
-transition: all 0.3s ease; 
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
-}
-
-#blog-banner-btn:hover {
-background-color: white;
-color: #333; /* Change color on hover */
-transform: translateY(-2px); /* Slight lift effect */
-}
-
-
-/* media queries for blog banner section*/ 
-@media (max-width: 1024px) {
-.blog-banner {
-  padding-top: 5vh;
-  height: 80vh; /* Adjust section height */
-}
-
-.blog-banner-container h2 {
-  font-size: 2rem;
-  letter-spacing: 3px;
-}
-
-.blog-banner-container p {
-  font-size: .7rem;
-}
-
-#blog-banner-btn {
-  padding: 10px 20px;
-  font-size: 0.7rem;
-}
-}
-
-@media (max-width: 768px) {
-.blog-banner {
-  height: auto;
-  padding-top: 3vh;
-}
-
-.blog-banner-container h2 {
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-}
-
-.blog-banner-container p {
-  font-size: 0.6rem;
-}
-
-#blog-banner-btn {
-  padding: 8px 15px;
-  font-size: 0.6rem;
-}
-}
-
-@media (max-width: 480px) {
-.blog-banner-container h2 {
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-}
-
-.blog-banner-container p {
-  font-size: 0.5rem;
-}
-
-#blog-banner-btn {
-  padding: 6px 12px;
-  font-size: 0.5rem;
-}
-}
 
 
 /* for log in and register page */
@@ -858,32 +480,6 @@ line-height: 20px;
 letter-spacing: 0.5px;
 margin: 15px 0 20px;
 
-}
-
-/* Style for Admin Checkbox Label */
-.admin-checkbox {
-  font-family: "SUSE", sans-serif; 
-  font-size: 1.2rem; 
-  color: #d40464; 
-  display: flex;
-  align-items: center;
-  gap: 8px; 
-  cursor: pointer;
-  text-shadow: 0.5px 0.5px #541ae0;
-}
-
-/* Ensure the Checkbox is Styled Properly */
-.admin-checkbox input[type="checkbox"] {
-  margin-right: 5px;
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-  accent-color: #d40464; 
-}
-
-/* Hover effect for better interaction */
-.admin-checkbox:hover {
-  color: #ff007f;
 }
 
 input{
@@ -999,7 +595,7 @@ transition: transform 0.5s ease-in-out;
 
 .overlay-left{
 left: 0;
-background-image: url('egPic.jpg'); 
+background-image: url('Compressed_Images/egPic.jpg'); 
 transform: translateX(0);
 }
 
@@ -1010,8 +606,9 @@ transform: translateX(0%);
 .overlay-right{
 right: 0;
 transform: translateX(0);
-background-image: url('egPic.jpg'); 
+background-image: url('Compressed_Images/egPic.jpg'); 
 }
+
 
 .logIncontainer.right-panel-active .overlay-right{
 transform: translateX(100%);
@@ -1217,45 +814,10 @@ width: 100%; /* 1 card per row on very small screens */
 }
 
 
-
-/* Styling for support page */
+/*  Support Page Styling */
 .support {
-  background-color: #1a1a1a; 
-  color: #fff; 
-  font-family: "SUSE", sans-serif;
-  margin-bottom: 50px;
-  padding: 0;
-}
-
-.support h1{
-  font-family: "Anta", sans-serif;
-  color: #ffffff; 
-}
-
-.support h2, .support h3 {
-  font-family: "SUSE", sans-serif;
-  color: #ffffff; 
-}
-
-.support a {
-  color: #d40464; 
-  text-decoration: none;
-}
-
-.support a:hover {
-  color: #541ae0; /
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-/* Styling for support page */
-.support {
-  background-color: #1a1a1a; 
-  color: #fff; 
+  background-color: #1a1a1a;
+  color: #fff;
   font-family: "SUSE", sans-serif;
   margin-bottom: 50px;
   padding: 0;
@@ -1263,16 +825,17 @@ width: 100%; /* 1 card per row on very small screens */
 
 .support h1 {
   font-family: "Anta", sans-serif;
-  color: #ffffff; 
+  color: #ffffff;
+  font-size: 2rem; 
 }
 
 .support h2, .support h3 {
   font-family: "SUSE", sans-serif;
-  color: #ffffff; 
+  color: #ffffff;
 }
 
 .support a {
-  color: #d40464; 
+  color: #d40464;
   text-decoration: none;
 }
 
@@ -1281,23 +844,24 @@ width: 100%; /* 1 card per row on very small screens */
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 850px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-/* Support Page Styling */
+/* Support Container */
 .support-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
+/* Support Heading */
 .support-heading {
   text-align: center;
-  background: url('featured3.jpg') center/cover no-repeat;
+  background: url('Compressed_Images/featured3.jpg') center/cover no-repeat;
   width: 100%;
-  height: 30vh;
+  height: 30vh; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1305,59 +869,79 @@ width: 100%; /* 1 card per row on very small screens */
 }
 
 .support-heading h1 {
-  font-size: 2.5rem;
+  font-size: 2rem; 
   margin-bottom: 0.5rem;
 }
 
 .support-heading p {
-  font-size: 1.1rem;
+  font-size: 1rem; 
   color: #f0f0f0;
   font-family: "SUSE", sans-serif;
 }
 
-/* FAQ Section */
+/*  FAQ Section */
 .faq-section {
-  background-color: #1f1e1e; 
-  padding: 2rem;
+  background-color: #1f1e1e;
+  padding: 1.5rem; 
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .faq-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.5rem; 
+  margin-bottom: 1.3rem;
   color: #d40464;
 }
 
 .faq-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.5rem; 
 }
 
 .faq-item {
   background-color: #242424;
-  padding: 1.5rem;
-  border-radius: 8px;
+  padding: 1rem; 
+  border-radius: 10px;
   border: 1px solid #444444;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: #2a2a2a; 
 }
 
 .faq-item h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
   color: #ffffff;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  gap: 0.5rem; 
+}
+
+.faq-item h3 .arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active h3 .arrow {
+  transform: rotate(180deg); /* Rotate arrow when active */
 }
 
 .faq-item p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #e4e4e4;
   line-height: 1.5;
-  display: none; /* Hidden by default */
+  display: none;
+  margin-top: 0.5rem;
+  text-align: center; 
 }
 
 .faq-item.active p {
-  display: block; /* Show when active */
+  display: block; 
 }
 
 /* Policies Section */
@@ -1401,111 +985,157 @@ width: 100%; /* 1 card per row on very small screens */
 }
 
 /* Contact Form Section */
-.contact-form-section {
-  background-color: #1f1e1e;
+.contact-section {
+  background-color: #1f1e1e; 
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 790px;
+  height: 100vh;
+  margin: 0 auto; /* Center the section */
 }
 
-.contact-form-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #d40464;
-}
-
-.form-name{
+.contact-container {
   display: flex;
-  width: 105%;
-  margin-top: 20px;
-  
+  gap: 2rem;
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  border-radius: 10px;
-  background-image: url('egPic.jpg');
+  flex: 4;
 }
 
+.contact-info {
+  flex: 2;
+}
+
+.contact-form h2, .contact-info h2 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 3;
+  color: #d40464;
+  margin-bottom: 10px;
+}
+
+.contact-form p, .contact-info p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+/* Form Inputs */
 .form-row {
   display: flex;
-  gap: 1rem;
+  gap: 1rem; 
+  margin-bottom: 0.8rem; 
 }
 
-.form-name input{
-  background-color: #1f1e1e;
-  border: 1px solid #444444;
+.form-group {
+  flex: 1; 
 }
 
-.form-row input {
-  flex: 1;
-  padding: 0.8rem;
-  border: 1px solid #444444;
-  background-color: #1f1e1e;
-  color: #1f1e1e;
-  border-radius: 5px;
-  font-size: 0.95rem;
-  outline: none;
-}
-
-.contact-form input[type="email"],
-.contact-form textarea {
+.form-group input {
   width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #444444;
-  background-color: #1f1e1e;
-  color: white;
+  margin-top: 20px;
+  padding-top: 8px; 
+  border: 2px solid #444444;
   border-radius: 5px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.form-group textarea {
+  width: 205%; 
+  margin-left: -43%;
+  padding: 8px;
+  margin-top: -50px;
+  border: 2px solid #444444;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background-color: #1f1e1e; 
+  transition: border-color 0.3s ease;
+  resize: none;
+  height: 100px; 
+}
+
+/* Focus Effect */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #d40464; 
   outline: none;
 }
 
-.contact-form textarea {
-  resize: none;
-}
-
-.contact-form .btn {
-  align-self: center;
+/* Submit Button  */
+.submit_btn {
+  font-family: "SUSE", sans-serif;
+  display: inline-block;
+  width: auto;
+  padding: 12px 30px;
   background-color: #d40464;
   color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  border: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: 1px solid #d40464;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  text-align: center;
+  margin-top: 0.1rem;
 }
 
-.contact-form .btn:hover {
-  background-color: #541ae0;
+.submit_btn:hover {
+  background-color: #d40464;
+  color: white;
+  transform: translateY(-2px);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/*Contact Information */
+.contact-details .detail {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.contact-details img {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+.contact-details p {
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+/*Social Links Styling  */
+.social-links {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.social-links img {
+  width: 28px;
+  height: 28px;
+}
+
+/* Responsive Fixes*/
+@media(max-width: 768px) {
   .form-row {
     flex-direction: column;
+    gap: 0.5rem;
   }
 
-  .support-container {
-    padding: 1rem;
-  }
-
-  .faq-section,
-  .policies-section,
-  .contact-form-section {
-    padding: 1.5rem;
-  }
-
-  .policy-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .policy-item img {
+  .form-group-full {
     width: 100%;
-    height: auto;
+    margin-left: 0;
   }
 }
 .sidebar {
@@ -2136,4 +1766,160 @@ margin: 20px 0;
   background-color: white;
   color: #333; 
   transform: translateY(-3px); /* Slight lift effect */
+}
+/* Style for Admin Checkbox Label */
+.admin-checkbox {
+  font-family: "SUSE", sans-serif; 
+  font-size: 1.2rem; 
+  color: #d40464; 
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  cursor: pointer;
+  text-shadow: 0.5px 0.5px #541ae0;
+}
+
+/* Ensure the Checkbox is Styled Properly */
+.admin-checkbox input[type="checkbox"] {
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #d40464; 
+}
+
+/* Hover effect for better interaction */
+.admin-checkbox:hover {
+  color: #ff007f;
+}
+
+input{
+  font-family: "SUSE", sans-serif;
+  background: var(--card-background);
+  padding: 12px 15px;
+  margin: 8px 15px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+}
+
+.passColour a { /* Used to be 'a', changed it as it was destroying the banner's optimisation. */
+font-family: "SUSE", sans-serif;
+font-size: 14px;
+text-decoration: none;
+margin: 15px 0;
+color: #d40464;
+text-shadow: .5px  .5px #541ae0;   /*purple bottom-right shadow around text */;
+}
+
+.passColour a:hover {
+text-decoration: underline; /* Adds the underline when hovering back */
+}
+
+button{
+font-family: "SUSE", sans-serif;
+color: #fff;
+background: #541ae0;
+font-size: 12px;
+font-weight: bold;
+padding: 12px 55px;
+margin: 20px;
+border-radius: 15px;
+border: .5px solid #d40464;
+outline: none;
+letter-spacing: 1px;
+text-transform: uppercase;
+transition: transform 80ms ease-in;
+cursor: pointer;
+box-shadow: 1px 1px 1px #d40464;
+}
+
+button:active{
+transform: scale(0.90); /* reduce the button size slightly on click*/
+}
+
+/*this is to style the "log in" and "sign up" buttons*/
+#logIn, #signUp{
+background-color: transparent; /*set the backgroudn to transparent*/
+border: 2px solid #fff;
+}
+
+/* to adjust the position of the .sign-up form when button is clicked */
+.logIncontainer.right-panel-active .sign-up{
+transform: translateX(100%); /* move .sign-up 100% to the right */
+opacity: 1;             /*fully vidible*/
+z-index: 5;
+}
+
+/* added a overlay container to apply the split screen effect*/ 
+.overlay-container{
+
+position: absolute;
+top: 0;
+left: 50%;
+width: 50%;
+height: 100%;
+overflow: hidden;
+transition: transform 0.6s ease-in-out;
+z-index: 100;
+color: #ccc;
+}
+
+/* adjust the overlay to the left when button is clicked */
+.logIncontainer.right-panel-active .overlay-container{
+transform: translateX(-100%)
+}
+
+/* effect container that holds the background for the overlay sides */
+.overlay-effect{
+position :relative;
+color: #fff;
+left: -100%;
+height: 100%;
+width: 200%;
+transform: translateX(0);
+transition: transform 0.6s ease-in-out;
+display: flex;    
+}
+
+.logIncontainer.right-panel-active .overlay-effect{
+transform: translateX(50%)
+}
+
+.overlay-left, .overlay-right{
+position: relative;
+display : flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+padding: 0 40px;
+text-align: center;
+height: 100%;
+width: 100%;
+background-size: cover;       /* to make the image covers the entire background */
+background-position: center;  /* centers the image */
+background-repeat: no-repeat;
+transition: transform 0.5s ease-in-out;
+}
+
+.overlay-left{
+left: 0;
+background-image: url('egPic.jpg'); 
+transform: translateX(0);
+}
+
+.logIncontainer.right-panel-active .overlay-left{
+transform: translateX(0%);
+}
+
+.overlay-right{
+right: 0;
+transform: translateX(0);
+background-image: url('egPic.jpg'); 
+}
+
+.logIncontainer.right-panel-active .overlay-right{
+transform: translateX(100%);
 }

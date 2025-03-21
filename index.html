@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html lang="en"><head> <!-- Default things, leave as is. -->
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terminus</title>
@@ -8,9 +8,8 @@
     <link href="all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Anta&amp;family=SUSE:wght@100..800&amp;display=swap" rel="stylesheet">
-
 
 </head>
 <body class="dark-mode"> <!-- Top Banner PLEASE BE CAUTIOUS WITH THIS AND THE CSS IF EDITING. -->
@@ -31,7 +30,7 @@
 
             <div class="RBannerLinks">
                 <a href="blog.html">Blog</a>
-                <a href="contactus.php">Contact</a>
+                <a href="contactus.html">Contact</a>
             </div>
         </div>
         <div class="bannerOptions">
@@ -48,15 +47,38 @@
                 <a href="cart.html">🛒</a>
             </div>
         </div>
-   
- <!-- Search Bar -->
- <section id="search-bar" class="search-bar" style="display: flex;">
-    <div class="search-container">
-        <input type="text" class="search-input" placeholder="Search">
-    </div>
-</section>
-</div>
-   
+        
+        <!-- Search Bar -->
+        <section id="search-bar" class="search-bar">
+          <form action="keyboards.php" method="GET" style="display: flex;"></form>
+          <div class="search-container">
+            <input 
+              type="text" 
+              name="keyword"
+              id="search-input" 
+              class="search-input" 
+              placeholder="Search"
+              required
+            />
+          </div>
+      
+          <div class="theme-toggle">
+            <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
+          </div>
+          <script>
+            const searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('keydown', function(e) {
+              if (e.key === 'Enter') {
+                e.preventDefault(); 
+                
+                const keyword = encodeURIComponent(searchInput.value);
+                window.location.href = `keyboards.php?keyword=${keyword}`;
+              }
+            });
+          </script>
+        </section>
+      </div>
+        
 
     <!-- Accessibility Menu (I'll fix the CSS soon, just wanted to focus on functionality) -->
     <div id="accessibilityMenu" class="accessibility-menu" style="display:none;">
@@ -67,13 +89,13 @@
     <!-- Sidebar -->
     <div id="terminusSide" class="sidebar">
         <a href="about.html">About</a>
-        <a href="keyboards.php">Keyboards</a>
+        <a href="keyboards.html">Keyboards</a>
         <a href="blog.html">Our Blog</a>
-        <a href="contactus.php">Contact</a>
+        <a href="contactus.html">Support</a>
     </div>
 
     <!-- Homepage Banner Section -->
-        <div class="banner-box" style="background: url('homebanner.jpg') no-repeat; background-size: cover; background-position: center;">
+        <div class="banner-box" style="background: url('Compressed_Images/homebanner.jpg') no-repeat; background-size: cover; background-position: center;">
             <div class="contents">
                 <h3>Find Your Perfect Click</h3>
                 <p>Mechanical keyboards for precision, style, and unmatched performance.</p>
@@ -91,29 +113,29 @@
                 <h1>Featured Categories</h1>
                 <p>At Terminus, we bring you not only an extensive range of keyboards 
                     for every purpose but also the tools and accessories to enhance your 
-                    typing and gaming experience. <br /> From ergonomic designs to custom mods, 
+                    typing and gaming experience. <br> From ergonomic designs to custom mods, 
                     our collection has something for everyone.
                 </p>
                 <a href="keyboards.html" class="categories-btn">Go to Shop</a>
             </div>
             <br>
             <div class="categories-right">
-                <div class="featured-category" style="background: url(featured1.jpg)">
+                <div class="featured-category" style="background: url(Compressed_Images/featured1.jpg)">
                     <h5>Gaming Keyboards</h5>
                 </div> 
-                <div class="featured-category" style="background: url(featured2.jpg)">
+                <div class="featured-category" style="background: url(Compressed_Images/featured2.jpg)">
                     <h5>Keyboard Accessories</h5>
                 </div> 
-                <div class="featured-category"style="background: url(featured3.jpg)">
+                <div class="featured-category" style="background: url(Compressed_Images/featured3.jpg)">
                     <h5>Compact Keyboards</h5>
                 </div> 
-                <div class="featured-category" style="background: url(featured4.jpg)">
+                <div class="featured-category" style="background: url(Compressed_Images/featured4.jpg)">
                     <h5>Custom Keyboard Kits</h5>
                 </div> 
-                <div class="featured-category" style="background: url(featured5.jpg)">
+                <div class="featured-category" style="background: url(Compressed_Images/featured5.jpg)">
                     <h5>Wireless and Multi-Device Keyboards</h5>
                 </div> 
-                <div class="featured-category" style="background: url(featured6.jpg)">
+                <div class="featured-category" style="background: url(Compressed_Images/featured6.jpg)">
                     <h5>Keyboard Switches &amp; Mods</h5>
                 </div> 
             </div>
@@ -121,8 +143,8 @@
     </section>
     <br>
 
-      <!-- Featured Products Section -->
-      <section class="featured-products">
+    <!-- Featured Products Section -->
+    <section class="featured-products">
         <h2 class="section-title">Our Featured Products</h2>
         <div class="product-grid">
         <!-- Product Card 1 -->
@@ -135,7 +157,7 @@
             <p class="product-description">
                 Compact, high-performance 60% keyboard with hot-swappable switches, vibrant RGB lighting, and a solid build. Perfect for gaming and productivity
             </p>
-            <a href="keyboards.html" target="_blank">
+            <a href="keyboards.html" target="_blank"></a>
             <button class="buy-now-btn">Buy Now</button>
             </div>
         </div>
@@ -150,7 +172,7 @@
             <p class="product-description">
                 Bold and striking keycap set with a Red Samurai-inspired design, GMK’s premium ABS plastic, and Cherry profile for a smooth, high-quality typing experience.
             </p>
-            <a href="keyboards.html" target="_blank">
+            <a href="keyboards.html" target="_blank"></a>
             <button class="buy-now-btn">Buy Now</button>
             </div>
         </div>
@@ -165,7 +187,7 @@
             <p class="product-description">
                 Authentic Cherry MX switches available in various types (Red, Blue, Brown, etc.) for a customizable typing and gaming experience. Durable and reliable.
             </p>
-            <a href="keyboards.html" target="_blank">
+            <a href="keyboards.html" target="_blank"></a>
             <button class="buy-now-btn">Buy Now</button>
             </div>
         </div>
@@ -180,7 +202,7 @@
             <p class="product-description">
                 Playful, high-quality keycap set inspired by the Fairlady Alice design, made from durable PBT material with vibrant colors  for an enjoyable typing experience.
             </p>
-            <a href="keyboards.html" target="_blank">
+            <a href="keyboards.html" target="_blank"></a>
             <button class="buy-now-btn">Buy Now</button>
             </div>
         </div>
@@ -196,7 +218,7 @@
                 Full-sized keyboard with dedicated macro keys, per-key RGB lighting, and Cherry MX switches. Built for performance and durability.
             </p>
             <div>
-            <a href="keyboards.html" target="_blank">
+            <a href="keyboards.html" target="_blank"></a>
             <button class="buy-now-btn">Buy Now</button>
             </div>
         </div>
@@ -212,7 +234,7 @@
                     <i class="fas fa-check-circle"></i>
                     <h3>Unmatched Quality</h3>
                     <p>Crafted for durability and precision, our keyboards 
-                        deliver unrivaled performance, trusted by gamers, coders, and creators 
+                        deliver unrivalled performance, trusted by gamers, coders, and creators 
                         alike.
                     </p>
                 </div>
@@ -224,19 +246,153 @@
                 <div class="reason">
                     <i class="fa-solid fa-keyboard"></i>
                     <h3>Tailored to You</h3>
-                    <p>Build a keyboard that's as unique as you are, with endless customization options for style, function, and comfort.</p>
+                    <p>Build a keyboard that's as unique as you are, with endless customisation options for style, function, and comfort.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="blog-banner">
-        <div class="blog-banner-container" style="background: url('blog_banner.jpg') no-repeat; background-size: cover; background-position: center;">
+        <div class="blog-banner-container" style="background: url('Compressed_Images/blog_banner.jpg') no-repeat; background-size: cover; background-position: center;">
             <h2> Mechanical Keyboard 101</h2>
             <p> Everything you need to know before buying a mechanical keyboard</p>
             <a href="blog.html" id="blog-banner-btn">Read More</a>
         </div>
     </section>
+
+
+    <section class="testimonials">
+        <div class="testimonial-heading">
+          <span>Customer Reviews</span>
+          <h4>What Our Customers Say</h4>
+        </div>
+        <div class="testimonial-box-container">
+          <!-- First Row of Reviews -->
+          <div class="testimonial-box">
+            <div class="box-top">
+              <div class="profile">
+                <div class="profile-img">
+                  <img src="https://api.dicebear.com/7.x/pixel-art/svg?seed=Anonymous" alt="Anonymous User">
+                </div>
+                <div class="name-user">
+                  <strong>James Peter</strong>
+                  <span>@jamesp</span>
+                </div>
+              </div>
+              <div class="reviews">
+                ⭐⭐⭐⭐⭐
+              </div>
+            </div>
+            <div class="client-comment">
+              <p>The Terminus keyboards are top-notch! The build quality is incredible, and the typing experience is the best I've had. Definitely worth the price.</p>
+            </div>
+          </div>
+    
+          <div class="testimonial-box">
+            <div class="box-top">
+              <div class="profile">
+                <div class="profile-img">
+                    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Anonymous" alt="Anonymous User">
+                </div>
+                <div class="name-user">
+                  <strong>Emily Carter</strong>
+                  <span>@emilycarter</span>
+                </div>
+              </div>
+              <div class="reviews">
+                ⭐⭐⭐⭐☆
+              </div>
+            </div>
+            <div class="client-comment">
+              <p>Love my new keyboard from Terminus! The RGB lighting is stunning, and the switches feel smooth. The only thing I wish for is faster shipping.</p>
+            </div>
+          </div>
+    
+          <div class="testimonial-box">
+            <div class="box-top">
+              <div class="profile">
+                <div class="profile-img">
+                  <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Anonymous" alt="Anonymous User">
+                </div>
+                <div class="name-user">
+                  <strong>Michael Lee</strong>
+                  <span>@michael_lee</span>
+                </div>
+              </div>
+              <div class="reviews">
+                ⭐⭐⭐⭐⭐
+              </div>
+            </div>
+            <div class="client-comment">
+              <p>Absolutely love my Terminus keyboard! The custom switches feel amazing, and the sound is so satisfying. I’ll definitely buy again!</p>
+            </div>
+          </div>
+    
+          <!-- Second Row of Reviews (Hidden by Default) -->
+          <div class="testimonial-box hidden" id="second-row">
+            <div class="box-top">
+              <div class="profile">
+                <div class="profile-img">
+                  <img src="https://api.dicebear.com/7.x/croodles/svg?seed=Anonymous" alt="Anonymous User">
+                </div>
+                <div class="name-user">
+                  <strong>Sophia Brown</strong>
+                  <span>@sophiebrown</span>
+                </div>
+              </div>
+              <div class="reviews">
+                ⭐⭐⭐⭐☆
+              </div>
+            </div>
+            <div class="client-comment">
+              <p>Great keyboard, amazing feel, and excellent support from the Terminus team. Only giving 4 stars because I wish they had more keycap options!</p>
+            </div>
+          </div>
+    
+          <div class="testimonial-box hidden" id="second-row">
+            <div class="box-top">
+              <div class="profile">
+                <div class="profile-img">
+                  <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Anonymous" alt="Anonymous User">
+                </div>
+                <div class="name-user">
+                  <strong>Harry Johnson</strong>
+                  <span>@harryjohnson</span>
+                </div>
+              </div>
+              <div class="reviews">
+                ⭐⭐⭐⭐☆
+              </div>
+            </div>
+            <div class="client-comment">
+              <p>Solid keyboard with a great design. The keys feel amazing, and the RGB lighting is a nice touch. Would have given 5 stars if it were a bit more affordable.</p>
+            </div>
+          </div>
+    
+          <div class="testimonial-box hidden" id="second-row">
+            <div class="box-top">
+              <div class="profile">
+                <div class="profile-img">
+                  <img src="https://api.dicebear.com/7.x/thumbs/svg?seed=Anonymous" alt="Anonymous User">
+                </div>
+                <div class="name-user">
+                  <strong>Olivia Wilson</strong>
+                  <span>@oliviawilson</span>
+                </div>
+              </div>
+              <div class="reviews">
+                ⭐⭐⭐⭐⭐
+              </div>
+            </div>
+            <div class="client-comment">
+              <p>This keyboard is a game-changer! The tactile feedback is perfect, and the build quality is exceptional. Worth every penny!</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Read More Button -->
+        <button class="read-more-btn" onclick="toggleSecondRow()">Read More</button>
+      </section>
 
     <!-- Footer -->
     <footer class="top">
@@ -252,85 +408,85 @@
                     <h2>News</h2>
                     <a href="keyboards.html">Keyboards</a>
                     <a href="keyboards.html">Accessories</a>
-                    <a href="configurator">Configurator</a>
+                    <a href="blog.html">Blog</a>
                     <a href="contactus.html">FAQs</a>
                 </div>
                 <div class="links-column">
                     <h2>Overview</h2>
                     <a href="./terms-and-conditions.html">Terms Of Use</a>
-              <a href="#">Contact</a>
-              <a href="./terms-and-conditions.html">Privacy Policy</a>
-              <a href="#">Support</a>
-                </div>
-            </div>
-
-            <div class="second-row">
-                <div class="links-column socials-column">
-                    <h2>Social Media</h2>
-                    <p>Follow us on:</p>
-                    <div class="socials">
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-instagram"></a>
-                        <a href="#" class="fa fa-linkedin"></a>
-                        <a href="#" class="fa fa-github"></a>
-                    </div>
-                </div>
-                <div class="store-logos">
-                    <img src="https://cdn.afterdawn.fi/v3/news/original/get-it-on-google-play.png" id="play-store">
-                    <img src="https://digitopoly.files.wordpress.com/2016/06/app-store-logo.png" id="apple-store">
+                    <a href="contactus.html">Contact</a>
+                    <a href="./terms-and-conditions.html">Privacy Policy</a>
+                    <a href="contactus.html">Support</a>
                 </div>
             </div>
         </div>
     </footer>
-    <footer class="bottom">
+     <footer class="bottom">
         <p class="copyright">© 2024 All rights reserved</p>
         <div class="legal">
-            <a href="./terms-and-conditions.html"> License </a>
-            <a href="./terms-and-conditions.html"> Terms </a>
-            <a href="./terms-and-conditions.html"> Privacy </a>
+            <a href="./terms-and-conditions.html"> License, privacy, terms & conditions </a>
         </div>
     </footer>
 <!-- We'll put this into a seperate folder before publishing, just for my sanity sakes. -->
-<script>
-    function toggleNav() {
-        const sidebar = document.getElementById("terminusSide");
-        if (sidebar.style.width === "20vh") {
-            sidebar.style.width = "0"; // Close the menu
-        } else {
-            sidebar.style.width = "20vh"; // Open the menu
+    <script>
+        function toggleNav() {
+            const sidebar = document.getElementById("terminusSide");
+            if (sidebar.style.width === "20vh") {
+                sidebar.style.width = "0"; // Close the menu
+            } else {
+                sidebar.style.width = "20vh"; // Open the menu
+            }
         }
-    }
-    function toggleSearch() {
-        const searchBar = document.getElementById('search-bar');
-        if (searchBar.style.display === 'none') {
-            searchBar.style.display = 'flex';
-        } else {
-            searchBar.style.display = 'none';
+        function toggleSearch() {
+            const searchBar = document.getElementById('search-bar');
+            if (searchBar.style.display === 'none') {
+                searchBar.style.display = 'flex';
+            } else {
+                searchBar.style.display = 'none';
+            }
         }
-    }
-    // Toggle for the accessibility
-    function toggleAccessibilityMenu() {
-        const menu = document.getElementById('accessibilityMenu');
-        if (!menu) return;
+        // Toggle for the accessibility
+        function toggleAccessibilityMenu() {
+            const menu = document.getElementById('accessibilityMenu');
+            if (!menu) return;
 
-        if (menu.style.display === 'none' || menu.style.display === '') {
-            menu.style.display = 'block';
-        } else {
-            menu.style.display = 'none';
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
         }
-    }
-    // Options to change font sizes (You can additionally add more very easily)
-    function setFontSize(size) {
-        const htmlEl = document.querySelector('html');
-        if (size === 'large') { // larger
-            htmlEl.style.fontSize = '120%';
-        } else {
-            // normal sized
-            htmlEl.style.fontSize = '';
+        // Options to change font sizes (You can additionally add more very easily)
+        function setFontSize(size) {
+            const htmlEl = document.querySelector('html');
+            if (size === 'large') { // larger
+                htmlEl.style.fontSize = '120%';
+            } else {
+                // normal sized
+                htmlEl.style.fontSize = '';
+            }
         }
-    }
-</script>
-<script src="darkmode.js"></script>
+    </script>
+    <script src="darkmode.js"></script>
+
+    <!-- script for toggle button of review section--> 
+    <script>
+        function toggleSecondRow() {
+          const secondRow = document.querySelectorAll("#second-row");
+          const readMoreBtn = document.querySelector(".read-more-btn");
+    
+          secondRow.forEach((box) => {
+            box.classList.toggle("hidden");
+            box.classList.toggle("visible");
+          });
+    
+          if (readMoreBtn.textContent === "Read More") {
+            readMoreBtn.textContent = "Read Less";
+          } else {
+            readMoreBtn.textContent = "Read More";
+          }
+        }
+      </script>
 
 
 </body></html>
