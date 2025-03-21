@@ -68,7 +68,9 @@ if (isset($_GET['error'])) {
     <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
         <a href="about.html">About</a>
         <a href="keyboards.php">Keyboards</a>
+
         <a href="blog.html">Our Blog</a>
+
         <a href="contactus.html">Contact</a>
     </div>
 

@@ -4,32 +4,22 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Include database connection
-$db_connections = require __DIR__ . '/database.php';
+$db_connections = require __DIR__ . "/database.php";
 $mysqli = $db_connections['mysqli_login'];
 
-
-if (!$mysqli) {
-    die("Database connection failed: " . mysqli_connect_error());
-}
 
 $is_invalid = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = trim($_POST["email"]);
-    $password = $_POST["pswd"] ?? "";
-    $is_admin = isset($_POST["admin"]) ? true : false;
-    $table = $is_admin ? "admin" : "user"; 
+    $password = $_POST["pswd"];
+    $is_admin = isset($_POST["admin"]); // Check if "Login as Admin" is selected
 
-    
-    var_dump("Table selected: ", $table);
+    // **Set the correct table name based on user type**
+    $table = $is_admin ? "admin" : "user"; // Your database uses "user", not "users"
 
-   
-$nameField = ($table === "admin") ? "full_name" : "name";
-
-
-$stmt = $mysqli->prepare("SELECT id, $nameField, email, password_hash FROM $table WHERE email = ?");
-
-    
+    // **Prepare SQL query, ensuring it matches the database structure**
+    $stmt = $mysqli->prepare("SELECT id, name, email, password_hash FROM $table WHERE email = ?");
     if (!$stmt) {
         die("SQL Error: " . $mysqli->error);
     }
@@ -39,32 +29,22 @@ $stmt = $mysqli->prepare("SELECT id, $nameField, email, password_hash FROM $tabl
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
 
-    var_dump("User Data: ", $user);
+    // **Check if user exists and verify password**
+    if ($user && password_verify($password, $user["password_hash"])) {
+        session_regenerate_id(true); // Regenerate session ID for security
 
-    if ($user) {
-        var_dump("User Input Password: ", $password);
-        var_dump("Database Stored Hash: ", $user["password_hash"]);
-
-        if (password_verify($password, $user["password_hash"])) {
-            session_regenerate_id(true); 
-
-            $_SESSION["user_logged_in"] = true;
-            $_SESSION["user_id"] = $user["id"];
-            $_SESSION["user_name"] = $user[$nameField];
-
-
-            header("Location: login-success.html");
-            exit;
-        } else {
-            $is_invalid = true; 
-        }
+        // **User login process**
+        $_SESSION["user_logged_in"] = true;
+        $_SESSION["user_id"] = $user["id"];
+        $_SESSION["user_name"] = $user["name"]; // Store username
+        
+        header("Location: login-success.html");
+        exit;
     } else {
-        $is_invalid = true; 
+        $is_invalid = true; // User does not exist or password is incorrect
     }
 }
-
 ?>
-
 
 
 <!DOCTYPE html>
