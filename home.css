@@ -507,26 +507,34 @@ text-shadow: .5px  .5px #541ae0;   /*purple bottom-right shadow around text */;
 text-decoration: underline; /* Adds the underline when hovering back */
 }
 
-button{
-font-family: "SUSE", sans-serif;
-color: #fff;
-background: #541ae0;
-font-size: 12px;
-font-weight: bold;
-padding: 12px 55px;
-margin: 20px;
-border-radius: 15px;
-border: .5px solid #d40464;
-outline: none;
-letter-spacing: 1px;
-text-transform: uppercase;
-transition: transform 80ms ease-in;
-cursor: pointer;
-box-shadow: 1px 1px 1px #d40464;
+button {
+  font-family: "SUSE", sans-serif;
+  color: white;
+  background: #d40464;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 12px 30px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 1px solid #d40464;
+  outline: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  display: inline-block;
 }
 
-button:active{
-transform: scale(0.90); /* reduce the button size slightly on click*/
+button:hover {
+  background-color: #d40464;
+  color: white;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.80);
 }
 
 /*this is to style the "log in" and "sign up" buttons*/
@@ -608,7 +616,6 @@ right: 0;
 transform: translateX(0);
 background-image: url('Compressed_Images/egPic.jpg'); 
 }
-
 
 .logIncontainer.right-panel-active .overlay-right{
 transform: translateX(100%);
@@ -814,6 +821,7 @@ width: 100%; /* 1 card per row on very small screens */
 }
 
 
+
 /*  Support Page Styling */
 .support {
   background-color: #1a1a1a;
@@ -944,42 +952,38 @@ width: 100%; /* 1 card per row on very small screens */
   display: block; 
 }
 
-/* Policies Section */
+/*  Policies Section  */
 .policies-section {
   background-color: #1f1e1e;
-  padding: 2rem;
+  padding: 1.5rem; 
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1rem; 
 }
 
 .policies-section h2 {
-  font-size: 2rem;
+  font-size: 1.5rem; 
   margin-bottom: 1rem;
   color: #d40464;
 }
 
 .policy-item {
   background-color: #242424;
-  padding: 1.5rem;
+  padding: 1rem; 
   border-radius: 8px;
   border: 1px solid #444444;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
 }
 
-
 .policy-item h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1rem; 
+  margin-bottom: 0.5rem; 
   color: #ffffff;
 }
 
 .policy-item p {
-  font-size: 0.95rem;
+  font-size: 0.9rem; 
   color: #e4e4e4;
   line-height: 1.5;
 }
@@ -1138,6 +1142,7 @@ width: 100%; /* 1 card per row on very small screens */
     margin-left: 0;
   }
 }
+
 .sidebar {
   height: 100%;
   width: 0; /* just in case */
@@ -1521,7 +1526,7 @@ h1 {
 .blog-page-banner {
 width: 100%;
 height: 30vh;
-background: url('featured2.jpg') center/cover no-repeat;
+background: url('Compressed_Images/featured2.jpg') center/cover no-repeat;
 margin-bottom: 5%;
 box-sizing: border-box;
 padding: 20px;
@@ -1553,6 +1558,7 @@ margin: 30px auto;
 display: flex;
 align-items: center;
 padding: 10px;
+
 }
 
 .blog-post .blog-post-image {
@@ -1588,22 +1594,26 @@ font-size: 0.9rem;
 }
 
 .blog-post .read-more-btn {
-font-family: "SUSE", sans-serif;
-padding: 10px 20px;
-font-size: 0.8rem;
-color: var(--text-color);
-background: transparent;
-border: 1px solid var(--text-color);
-border-radius: 5px;
-cursor: pointer;
-transition: all 0.3s ease-in-out;
-box-shadow: none;
+  font-family: "SUSE", sans-serif;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 0.8rem;
+  color: white;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  text-decoration: none;
 }
 
 .blog-post .read-more-btn:hover {
-background-color: white;
-color: #333; 
-transform: translateY(-2px); /* Slight lift effect */
+  background-color: white;
+  color: #d40464;
+  transform: translateY(-2px);
 }
 
 .divider {
@@ -1612,6 +1622,7 @@ height: 1px;
 background: #505050;
 margin: 20px 0;
 }
+
 /* termsAndCondition */
 .termsAndCondition {
   width: 100%;
@@ -1751,21 +1762,25 @@ margin: 20px 0;
 
 .exploreNow-btn {
   font-family: "SUSE", sans-serif;
-  padding: 10px 20px;
+  display: inline-block;
+  padding: 12px 30px;
   font-size: 0.8rem;
-  color: var(--text-color);
+  color: white;
   background: transparent;
-  border: 1px solid var(--text-color);
-  border-radius: 5px;
+  border: 1px solid white;
+  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  text-decoration: none;
 }
 
 .exploreNow-btn:hover {
   background-color: white;
-  color: #333; 
-  transform: translateY(-3px); /* Slight lift effect */
+  color: #d40464;
+  transform: translateY(-2px);
 }
 /* Style for Admin Checkbox Label */
 .admin-checkbox {
@@ -1791,135 +1806,4 @@ margin: 20px 0;
 /* Hover effect for better interaction */
 .admin-checkbox:hover {
   color: #ff007f;
-}
-
-input{
-  font-family: "SUSE", sans-serif;
-  background: var(--card-background);
-  padding: 12px 15px;
-  margin: 8px 15px;
-  width: 100%;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  color: var(--text-color);
-}
-
-.passColour a { /* Used to be 'a', changed it as it was destroying the banner's optimisation. */
-font-family: "SUSE", sans-serif;
-font-size: 14px;
-text-decoration: none;
-margin: 15px 0;
-color: #d40464;
-text-shadow: .5px  .5px #541ae0;   /*purple bottom-right shadow around text */;
-}
-
-.passColour a:hover {
-text-decoration: underline; /* Adds the underline when hovering back */
-}
-
-button{
-font-family: "SUSE", sans-serif;
-color: #fff;
-background: #541ae0;
-font-size: 12px;
-font-weight: bold;
-padding: 12px 55px;
-margin: 20px;
-border-radius: 15px;
-border: .5px solid #d40464;
-outline: none;
-letter-spacing: 1px;
-text-transform: uppercase;
-transition: transform 80ms ease-in;
-cursor: pointer;
-box-shadow: 1px 1px 1px #d40464;
-}
-
-button:active{
-transform: scale(0.90); /* reduce the button size slightly on click*/
-}
-
-/*this is to style the "log in" and "sign up" buttons*/
-#logIn, #signUp{
-background-color: transparent; /*set the backgroudn to transparent*/
-border: 2px solid #fff;
-}
-
-/* to adjust the position of the .sign-up form when button is clicked */
-.logIncontainer.right-panel-active .sign-up{
-transform: translateX(100%); /* move .sign-up 100% to the right */
-opacity: 1;             /*fully vidible*/
-z-index: 5;
-}
-
-/* added a overlay container to apply the split screen effect*/ 
-.overlay-container{
-
-position: absolute;
-top: 0;
-left: 50%;
-width: 50%;
-height: 100%;
-overflow: hidden;
-transition: transform 0.6s ease-in-out;
-z-index: 100;
-color: #ccc;
-}
-
-/* adjust the overlay to the left when button is clicked */
-.logIncontainer.right-panel-active .overlay-container{
-transform: translateX(-100%)
-}
-
-/* effect container that holds the background for the overlay sides */
-.overlay-effect{
-position :relative;
-color: #fff;
-left: -100%;
-height: 100%;
-width: 200%;
-transform: translateX(0);
-transition: transform 0.6s ease-in-out;
-display: flex;    
-}
-
-.logIncontainer.right-panel-active .overlay-effect{
-transform: translateX(50%)
-}
-
-.overlay-left, .overlay-right{
-position: relative;
-display : flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-padding: 0 40px;
-text-align: center;
-height: 100%;
-width: 100%;
-background-size: cover;       /* to make the image covers the entire background */
-background-position: center;  /* centers the image */
-background-repeat: no-repeat;
-transition: transform 0.5s ease-in-out;
-}
-
-.overlay-left{
-left: 0;
-background-image: url('egPic.jpg'); 
-transform: translateX(0);
-}
-
-.logIncontainer.right-panel-active .overlay-left{
-transform: translateX(0%);
-}
-
-.overlay-right{
-right: 0;
-transform: translateX(0);
-background-image: url('egPic.jpg'); 
-}
-
-.logIncontainer.right-panel-active .overlay-right{
-transform: translateX(100%);
 }
