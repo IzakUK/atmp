@@ -38,7 +38,7 @@ if (isset($_GET['error'])) {
 
             <div class="RBannerLinks">
                 <a href="blog.html">Blog</a>
-                <a href="contactus.html">Contact</a>
+                <a href="contactus.php">Contact</a>
             </div>
         </div>
         <div class="bannerOptions">
@@ -53,15 +53,38 @@ if (isset($_GET['error'])) {
         </div>
     </div>
     <!-- Search Bar -->
-    <section id="search-bar" class="search-bar" style="display: none;">
-        <div class="search-container">
-        <input type="text" name="query"class="search-input" placeholder="Search" required>
-        <button type="submit">search</button>
-        </div>
-        <div class="theme-toggle">
+    <section id="search-bar" class="search-bar">
+          <form action="keyboards.php" method="GET" style="display: contents;">
+          <div class="search-container">
+            <input 
+              type="text" 
+              name="keyword"
+              id="search-input" 
+              class="search-input" 
+              placeholder="Search"
+              required
+            />
+          </div>
+        </form>
+          <div class="theme-toggle">
             <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
-        </div>
-    </section>
+          </div>
+        
+        </section>
+         
+          <script>
+            const searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('keydown', function(e) {
+              if (e.key === 'Enter') {
+                e.preventDefault(); 
+                
+                const keyword = encodeURIComponent(searchInput.value);
+                window.location.href = `keyboards.php?keyword=${keyword}`;
+              }
+            });
+          </script>
+       
+      </div>
 
     <!-- Sidebar -->
     <div id="terminusSide" class="sidebar">

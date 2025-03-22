@@ -16,6 +16,7 @@
         <div class="bannerOptions">
             <div class="menuOption" onclick="toggleNav()">☰</div>
             <div id="search-icon" onclick="toggleSearch()">🔍</div>
+            
         </div>
         <div class="bannerFormat">
             <div class="LBannerLinks">
@@ -23,7 +24,7 @@
                 <a href="keyboards.php">Keyboards</a>
             </div>
             <a href="index.html">
-                <img src="TerminusLogo.png" alt="Terminus Logo" class="logo">
+                <img src="Compressed_Images/TerminusLogo.png" alt="Terminus Logo" class="logo">
             </a>
 
             <div class="RBannerLinks">
@@ -34,7 +35,7 @@
         <div class="bannerOptions">
             <div class="userIcon">
                 <a href="login.html">
-                    <img src="userIcon.png" alt="User Icon">
+                    <img src="Compressed_Images/userIcon.png" alt="User Icon">
                 </a>
             </div>
             <div class="userBasket">
@@ -43,22 +44,46 @@
         </div>
     </div>
     <!-- Search Bar -->
-    <section id="search-bar" class="search-bar" style="display: none;">
-        <div class="search-container">
-            <input type="text" name="query"class="search-input" placeholder="Search" required>
-          <button type="submit">search</button>
-        </div>
-        <div class="theme-toggle">
+        <section id="search-bar" class="search-bar">
+          <form action="keyboards.php" method="GET" style="display: contents;">
+          <div class="search-container">
+            <input 
+              type="text" 
+              name="keyword"
+              id="search-input" 
+              class="search-input" 
+              placeholder="Search"
+              required
+            />
+          </div>
+        </form>
+          <div class="theme-toggle">
             <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
-        </div>
-    </section>
+          </div>
+        
+        </section>
+         
+          <script>
+            const searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('keydown', function(e) {
+              if (e.key === 'Enter') {
+                e.preventDefault(); 
+                
+                const keyword = encodeURIComponent(searchInput.value);
+                window.location.href = `keyboards.php?keyword=${keyword}`;
+              }
+            });
+          </script>
+       
+      </div>
 
+</div>
     <!-- Sidebar -->
     <div id="terminusSide" class="sidebar">
         <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
         <a href="about.html">About</a>
         <a href="keyboards.php">Keyboards</a>
-        <a href="blog.html">Our Mission</a>
+        <a href="blog.html">Our Blog</a>
         <a href="contactus.php">Contact</a>
     </div>
 
