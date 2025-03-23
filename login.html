@@ -1,41 +1,64 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="en">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminus</title>
-    <link rel="stylesheet" href="home.css">
+    <title>About Us</title>
+    <link rel="stylesheet" href="home.css" >
     <link rel="icon" href="favicon.png" type="image/png">
-</head>
-<body>
-    <div class="terminusTopBanner"> <!-- All the elements for the top banner of the page, it's set to sticky for now. Does need optimisation to ensure everything is centred-->
-        <div class="menuOption">☰</div>
-        <div class="bannerFormat">
-            
-            <div class="LBannerLinks">
-                <a href="about.html">About</a>
-                <a href="keyboards.html">Keyboards</a> <!-- We probably need a better name, I'm thinking Products, but I will keep it as this just for now.-->
-            </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+  </head>
+<body> <!-- Top Banner PLEASE BE CAUTIOUS WITH THIS AND THE CSS IF EDITING. -->
+  <div class="terminusTopBanner">
+      <div class="bannerOptions">
+          <div class="menuOption" onclick="toggleNav()">☰</div>
+          <div id="search-icon" onclick="toggleSearch()">🔍</div>
+      </div>
+      <div class="bannerFormat">
+          <div class="LBannerLinks">
+              <a href="about.html">About</a>
+              <a href="keyboards.html">Keyboards</a>
+          </div>
+          <a href="index.html">
+              <img src="Compressed_Images/TerminusLogo.png" alt="Terminus Logo" class="logo">
+          </a>
 
-            <a href="index.html"> <!-- Link for the logo -->
-                <img src="TerminusLogo.png" alt="Terminus Logo" class="logo">
-            </a>
-
-            <div class="RBannerLinks">
-                <a href="misc.html">Misc.</a> <!-- placeholder-->
-                <a href="contact.html">Contact</a>
-            </div>
-
-        </div>
-        <div class = "right-logos">
-            <div class="userIcon">
-                <a href="login.html">
-                    <img src="userIcon.png" alt="User Icon">
-                </a>
-            </div>
-            <div class="userBasket">🛒</div> <!-- This will be changed in future to have the green colour implemented-->
-        </div>
+          <div class="RBannerLinks">
+              <a href="blog.html">Blog</a>
+              <a href="contactus.html">Contact</a>
+          </div>
+      </div>
+      <div class="bannerOptions">
+          <div class="userIcon">
+              <a href="login.html">
+                  <img src="Compressed_Images/userIcon.png" alt="User Icon">
+              </a>
+          </div>
+          <div class="userBasket">
+              <a href="cart.html">🛒</a>
+          </div>
+      </div>
+  </div>
+  <!-- Search Bar -->
+  <section id="search-bar" class="search-bar" style="display: none;">
+    <h2 class="visually-hidden">Search Bar</h2>  <!-- Hidden heading for accessibility -->
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search">
     </div>
+    <div class="theme-toggle">
+        <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
+    </div>
+</section>
+
+  <!-- Sidebar -->
+  <div id="terminusSide" class="sidebar">
+      <a href="about.html">About</a>
+      <a href="keyboards.html">Keyboards</a>
+      <a href="blog.html">Our Blog</a>
+      <a href="contactus.html">Support</a>
+  </div>
     
     
     <div class= "logInPage_body">
@@ -80,10 +103,61 @@
         </div>
     </div>
 
-    <div class="terminusFooter">
-        <p><b>I want a footer here! &gt;:(</b></p>
-    </div>
-
     <script src="app.js"></script>
 
-</body></html>
+
+        <!-- Footer -->
+        <footer class="top">
+            <div class="links">
+                <div class="first-row">
+                    <div class="links-column">
+                        <h2>Get Started</h2>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="login.html">Login</a>
+                    </div>
+                    <div class="links-column">
+                        <h2>News</h2>
+                        <a href="keyboards.html">Keyboards</a>
+                        <a href="keyboards.html">Accessories</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contactus.html">FAQs</a>
+                    </div>
+                    <div class="links-column">
+                        <h2>Overview</h2>
+                        <a href="./terms-and-conditions.html">Terms Of Use</a>
+                        <a href="contactus.html">Contact</a>
+                        <a href="./terms-and-conditions.html">Privacy Policy</a>
+                        <a href="contactus.html">Support</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <footer class="bottom">
+            <p class="copyright">© 2024 All rights reserved</p>
+            <div class="legal">
+                <a href="./terms-and-conditions.html"> License, privacy, terms & conditions </a>
+            </div>
+        </footer>
+
+
+        <script>
+          function toggleNav() {
+              const sidebar = document.getElementById("terminusSide");
+              if (sidebar.style.width === "20vh") {
+                  sidebar.style.width = "0"; // Close the menu
+              } else {
+                  sidebar.style.width = "20vh"; // Open the menu
+              }
+          }
+          function toggleSearch() {
+              const searchBar = document.getElementById('search-bar');
+              if (searchBar.style.display === 'none') {
+                  searchBar.style.display = 'flex';
+              } else {
+                  searchBar.style.display = 'none';
+              }
+          }
+      </script>
+      <script src="darkmode.js"></script>
+    </body></html>

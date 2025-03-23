@@ -1,14 +1,23 @@
 :root {
     --primary-color: #FF00FF;
     --secondary-color: #9D00FF;
+    --background-color: #FFFFFF;
+    --card-background: #F5F5F5;
+    --border-color: #E0E0E0;
+    --text-color: #333333;
+    --secondary-text: #666666;
+    --success-color: #00FF00;
+    --input-background: #FFFFFF;
+    --button-gradient: linear-gradient(135deg, #FF00FF, #9D00FF);
+}
+
+.dark-mode {
     --background-color: #1E1E1E;
     --card-background: #2A2A2A;
     --border-color: #333333;
     --text-color: #FFFFFF;
     --secondary-text: #AAAAAA;
-    --success-color: #00FF00;
     --input-background: #333333;
-    --button-gradient: linear-gradient(135deg, #FF00FF, #9D00FF);
 }
 
 * {
@@ -22,31 +31,80 @@ body {
     line-height: 1.5;
     color: var(--text-color);
     background-color: var(--background-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Header Styles */
-header {
+.terminusTopBanner {
+    display: flex;
+    justify-content: space-between;
     background-color: var(--card-background);
-    padding: 1rem 0;
+    color: var(--text-color);
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    padding: 1vh;
     border-bottom: 1px solid var(--border-color);
 }
 
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    justify-content: space-between;
+.menuOption {
+    font-size: 2vw;
+    cursor: not-allowed;
+    padding: 1vw;
+}
+
+.bannerFormat {
     align-items: center;
+    display: inherit;
+    gap: 3vw;
+    max-height: 1vw;
+    margin-left: 6vh;
 }
 
-h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-color);
+.LBannerLinks, .RBannerLinks, .right-logos {
+    display: flex;
+    gap: 3vw;
+    font-size: 1vw;
 }
 
-/* Main Container */
+.LBannerLinks a, .RBannerLinks a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+.LBannerLinks a:hover, .RBannerLinks a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    width: 5vw;
+    height: 5vw;
+    display: block;
+}
+
+.right-logos {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1vw;
+}
+
+.userBasket {
+    font-size: 2vw;
+    cursor: pointer;
+    padding: 1vw;
+    padding-top: 3px;
+}
+
+.userIcon img {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 .checkout-container {
     max-width: 1200px;
     margin: 2rem auto;
@@ -56,7 +114,6 @@ h1 {
     gap: 2rem;
 }
 
-/* Form Styles */
 .checkout-form {
     background-color: var(--card-background);
     border-radius: 8px;
@@ -110,7 +167,6 @@ select:focus {
     color: var(--secondary-text);
 }
 
-/* Shipping Option */
 .shipping-option {
     border: 1px solid var(--border-color);
     border-radius: 4px;
@@ -129,15 +185,16 @@ select:focus {
     font-weight: 500;
 }
 
-/* Payment Section */
 .secure-text {
     color: var(--secondary-text);
     font-size: 0.875rem;
     margin-bottom: 1rem;
 }
-.d-none{
+
+.d-none {
     display: none;
 }
+
 .payment-option {
     border: 1px solid var(--border-color);
     border-radius: 4px;
@@ -159,33 +216,23 @@ select:focus {
 }
 
 .payment-header:hover {
-    background-color: var(--hover-background);
+    background-color: var(--card-background);
 }
 
 .payment-radio {
-    display: none; /* Hide the actual radio button */
+    display: none;
 }
 
 .payment-header input[type="radio"]:checked + span {
     font-weight: bold;
-    color: var(--primary-color); /* Optional: Highlight the selected option */
+    color: var(--primary-color);
 }
 
 .payment-form {
     margin-top: 10px;
-    padding: 10px;
-    border: 1px solid var(--border-color);
+    padding: 15px;
     border-radius: 5px;
     background-color: var(--card-background);
-}
-
-.d-none {
-    display: none;
-}
-
-
-.payment-form {
-    padding: 1rem;
 }
 
 .pay-button {
@@ -205,7 +252,6 @@ select:focus {
     opacity: 0.9;
 }
 
-/* Order Summary */
 .order-summary {
     background-color: var(--card-background);
     border-radius: 8px;
@@ -226,11 +272,13 @@ select:focus {
 .product-image {
     position: relative;
 }
-.product-image img{
+
+.product-image img {
     width: 70px;
     height: 70px;
     border-radius: 6px;
 }
+
 .quantity {
     position: absolute;
     top: -8px;
@@ -291,16 +339,23 @@ select:focus {
     font-size: 0.875rem;
 }
 
-/* Footer */
-footer {
+.terminusFooter {
     text-align: center;
-    animation: fadeIn ease-in 5s both;
     padding: 1rem;
-    color: var(--input-background);
+    background-color: var(--card-background);
+    color: var(--text-color);
     font-size: 0.875rem;
+    border-top: 1px solid var(--border-color);
 }
 
-/* Responsive Design */
+#themeToggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
 @media (max-width: 1024px) {
     .checkout-container {
         grid-template-columns: 1fr 350px;
@@ -320,88 +375,205 @@ footer {
     .form-row {
         grid-template-columns: 1fr;
     }
+
+    .LBannerLinks, .RBannerLinks {
+        display: none;
+    }
+
+    .bannerFormat {
+        justify-content: center;
+    }
+
+    .logo {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .menuOption {
+        font-size: 4vw;
+    }
+
+    .userBasket {
+        font-size: 4vw;
+    }
+
+    .userIcon img {
+        width: 5vw;
+        height: 5vw;
+    }
 }
-
-
-
-.terminusTopBanner {
-    display: flex;
-    justify-content: space-between; /* Keeps it centred correctly */
-    background-color: #333;
-    color: white; /*Changes the colour of the menu button, adding this just in case the colour scheme we pick changes */
-    align-items: center; /* Centres everything */
-    position: sticky; /* From here... */
-    top: 0;
-    z-index: 10000; /* Down to here, it allows for the sticky banner to follow the user along the page */
-    padding: 1vh; /* Adds more height and width of the banner and icons */
-}
-
-/* Menu icon on the left */
-.menuOption {
-    font-size: 2vw;
-    cursor: not-allowed; /* Shows the user a crossed out cursor, reason is because we haven't added the implentation in as of yet. */
-    padding: 1vw;
-}
-
-/* Centred banner content */
-.bannerFormat {
-    align-items: center; /* Centres hyperlinks */
-    display: inherit; /* Holds everything together */
-    gap: 3vw; /* Gap between the web pages and the centre logo. */
-    max-height: 1vw;
-    margin-left: 6vh; /* Centers the logo and text for the website, adjust as needed using vh or maybe vw */
-}
-
-/* Links on both sides of the logo */
-.LBannerLinks, .RBannerLinks, .right-logos { /* If you don't wish for things to move on the banner, add them here. */
-    display: flex; /* Centres the text into the middle of the banner */
-    gap: 3vw; /* spacing between hyperlinks */
-    font-size: 1vw;
-}
-
-/* Styling for individual links */
-.LBannerLinks a, .RBannerLinks a {
-    color: white; /* Looks cool in blue, but we can change the colour later depending on what colour scheme we choose. */
-    text-decoration: none; /*Part of the animation for hovering. Hides the initial underlining. */
-    font-weight: bold; /* BOLD text :D */
-    display: block;
-}
-
-.LBannerLinks a:hover, .RBannerLinks a:hover {
-    text-decoration: underline; /* Small animation for when hovering over each other page choice on the banner */
-}
-
-/* Logo styling */
-.logo {
-     /* Restrains the logo from being crazy large. */
-    width: 5vw; /* May remove this line, unsure if it's changing anything */
-    height: 5vw;
-    display: block;
-}
-
-.right-logos {  /* added this to group the icons on the right side*/
+  footer.top > img {
+    height: 50px;
+    margin: 0 auto 50px;
+  }
+  
+  footer {
+    position: relative;
+    margin: 0 30px;
+    color: rgb(255 255 255 / 50%);
+  }
+  
+  footer.bottom {
     display: flex;
     align-items: center;
-    flex-direction: row;
-    gap: 1vw;  /* space between basket and user icon */
-}
-
-/* Basket icon on the right of the banner. Only a placeholder as the icon will be replaced in the near future with an image instead of an emoji */
-.userBasket {
-    font-size: 2.25vw;
-    padding: 1vw;
-    padding-top: 3px; /*i added this to fix the alignment of two icons*/ 
-}
-
-.userIcon img {
-    width: 2.5vw;
-    height: 2.5vw;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.terminusFooter {
-    animation: fadeIn ease-in 5s both; /* Delayed fade in for dramatic, temporary effect. */
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    gap: 8px;
+    padding: 20px 0;
     text-align: center;
-    color: #FFF;
-    background-color: #2A2A2A;
-}
+  }
+  
+  .links-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    width: 8rem;
+  }
+  
+  footer h2 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(255 255 255 / 96%);
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  .legal > a {
+    margin: 0 0 0 4px;
+  }
+  
+  .legal,
+  .copyright {
+    font-size: 12px;
+  }
+  
+  .legal > span {
+    margin-right: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #aaa8a8;
+  }
+  
+  a:hover {
+    color: purple;
+  }
+  
+  footer.top .socials {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    translate: -50% 0;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 56px;
+  }
+  
+  footer.top .socials > a {
+    font-size: 24px;
+  }
+  
+  .socials a:hover {
+    color: blue;
+  }
+  
+  .socials-column :is(h2, p) {
+    display: none;
+  }
+  
+  #play-store {
+    width: 180px;
+    height: 70px;
+  }
+  
+  #apple-store {
+    width: 180px;
+    height: 60px;
+  }
+  
+  .store-logos {
+    display: flex;
+  }
+  
+  .second-row, .first-row {
+    display: flex;
+    gap: 1.4rem;
+  }
+  
+  .second-row {
+    align-items: center;
+  }
+  
+  .first-row {
+    gap: 4rem;
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    margin-right: auto;
+  }
+  
+  @media (width > 400px) {
+    .links-column {
+      text-align: left;
+    }
+  
+    footer.top .links {
+      grid-template-columns: repeat(2, 1fr);
+      margin-right: 50px;
+    }
+  
+    footer.bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      gap: 20px;
+      text-align: left;
+    }
+  
+    footer.top .socials {
+      left: 0;
+      translate: 0;
+    }
+  
+    footer.top > img {
+      margin: 0 0 50px;
+    }
+  }
+  
+  @media (width >= 640px) {
+    footer {
+      margin: 0 auto;
+      max-width: 580px;
+      padding: 0;
+    }
+  
+    footer.top .links {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    footer.top .socials {
+      position: static;
+    }
+  
+    footer.bottom {
+      justify-content: flex-start;
+    }
+  
+    .socials-column :is(h2, p) {
+      display: block;
+    }
+  }
+
+
