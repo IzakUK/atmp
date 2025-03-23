@@ -22,7 +22,7 @@
         <div class="RBannerLinks">
           <a href="blog.html">Blog</a>
           <!-- placeholder-->
-          <a href="contact.php">Contact</a>
+          <a href="contactus.php">Contact</a>
         </div>
       </div>
       <div class="right-logos">
