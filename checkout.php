@@ -28,8 +28,13 @@
           <img src="TerminusLogo.png" alt="Terminus Logo" class="logo">
         </a>
         <div class="RBannerLinks">
+<<<<<<< HEAD
           <a href="Blog.html">Blog</a>
           <a href="contactus.php">Contact</a>
+=======
+          <a href="blog.html">Blog</a>
+          <a href="contact.php">Contact</a>
+>>>>>>> origin/master-final-version
         </div>
       </div>
       <div class="right-logos">
@@ -225,8 +230,13 @@
         <div class="first-row">
           <div class="links-column">
             <h2>Get Started</h2>
+<<<<<<< HEAD
             <a href="index.php">Home</a>
             <a href="about.php">About</a>
+=======
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+>>>>>>> origin/master-final-version
             <a href="login.html">Login</a>
           </div>
           <div class="links-column">

@@ -130,8 +130,13 @@ if ($result->num_rows > 0) {
       <div id="terminusSide" class="sidebar">
           <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
           <a href="about.html">About</a>
+<<<<<<< HEAD
           <a href="keyboards.php">Keyboards</a>
           <a href="blog.html">Our Blog</a>
+=======
+          <a href="keyboards.html">Keyboards</a>
+          <a href="blog.html">Blog</a>
+>>>>>>> origin/master-final-version
           <a href="contactus.php">Contact</a>
       </div>
       
