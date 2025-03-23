@@ -19,7 +19,7 @@
       <div class="bannerFormat">
           <div class="LBannerLinks">
               <a href="about.html">About</a>
-              <a href="keyboards.html">Keyboards</a>
+              <a href="keyboards.php">Keyboards</a>
           </div>
           <a href="index.html">
               <img src="Compressed_Images/TerminusLogo.png" alt="Terminus Logo" class="logo">
@@ -27,7 +27,7 @@
 
           <div class="RBannerLinks">
               <a href="blog.html">Blog</a>
-              <a href="contactus.html">Contact</a>
+              <a href="contactus.php">Contact</a>
           </div>
       </div>
       <div class="bannerOptions">
@@ -41,23 +41,44 @@
           </div>
       </div>
   </div>
-  <!-- Search Bar -->
-    <section id="search-bar" class="search-bar" style="display: none;">
-        <h2 class="visually-hidden">Search Bar</h2>  <!-- Hidden heading for accessibility -->
-        <div class="search-container">
-            <input type="text" class="search-input" placeholder="Search">
-        </div>
-        <div class="theme-toggle">
-            <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
-        </div>
-    </section>
+ <!-- Search Bar -->
+  <section id="search-bar" class="search-bar">
+    <form action="keyboards.php" method="GET" style="display: contents;">
+    <div class="search-container">
+      <input 
+        type="text" 
+        name="keyword"
+        id="search-input" 
+        class="search-input" 
+        placeholder="Search"
+        required
+      />
+    </div>
+  </form>
+    <div class="theme-toggle">
+      <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
+    </div>
+  
+  </section>
+   
+    <script>
+      const searchInput = document.getElementById('search-input');
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault(); 
+          
+          const keyword = encodeURIComponent(searchInput.value);
+          window.location.href = `keyboards.php?keyword=${keyword}`;
+        }
+      });
+    </script>
 
   <!-- Sidebar -->
   <div id="terminusSide" class="sidebar">
       <a href="about.html">About</a>
-      <a href="keyboards.html">Keyboards</a>
+      <a href="keyboards.php">Keyboards</a>
       <a href="blog.html">Our Blog</a>
-      <a href="contactus.html">Support</a>
+      <a href="contactus.php">Support</a>
   </div>
     
     <!-- Blog Post Page 3 -->
@@ -143,14 +164,14 @@
         <p>Ready to explore your options? Check out our collection of mechanical keyboards and switch testers to find your ideal match.</p>
 
         
-        <a href="keyboards.html" class="exploreNow-btn">Shop Now and Discover the Switch That Fits Your Style!</a>
+        <a href="keyboards.php" class="exploreNow-btn">Shop Now and Discover the Switch That Fits Your Style!</a>
 
     </section>
 
 
     
 
-    <!-- Footer -->
+     <!-- Footer -->
     <footer class="top">
         <div class="links">
             <div class="first-row">
@@ -162,25 +183,19 @@
                 </div>
                 <div class="links-column">
                     <h2>News</h2>
-                    <a href="keyboards.html">Keyboards</a>
-                    <a href="keyboards.html">Accessories</a>
+                    <a href="keyboards.php">Keyboards</a>
+                    <a href="keyboards.php">Accessories</a>
                     <a href="blog.html">Blog</a>
-                    <a href="contactus.html">FAQs</a>
+                    <a href="contactus.php">FAQs</a>
                 </div>
                 <div class="links-column">
                     <h2>Overview</h2>
                     <a href="./terms-and-conditions.html">Terms Of Use</a>
-                    <a href="contactus.html">Contact</a>
+                    <a href="contactus.php">Contact</a>
                     <a href="./terms-and-conditions.html">Privacy Policy</a>
-                    <a href="contactus.html">Support</a>
+                    <a href="contactus.php">Support</a>
                 </div>
             </div>
-        </div>
-    </footer>
-    <footer class="bottom">
-        <p class="copyright">© 2024 All rights reserved</p>
-        <div class="legal">
-            <a href="./terms-and-conditions.html"> License, privacy, terms & conditions </a>
         </div>
     </footer>
 
