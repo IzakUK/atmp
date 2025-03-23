@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="home.css" >
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+  </head>
+<body> <!-- Top Banner PLEASE BE CAUTIOUS WITH THIS AND THE CSS IF EDITING. -->
+  <div class="terminusTopBanner">
+      <div class="bannerOptions">
+          <div class="menuOption" onclick="toggleNav()">☰</div>
+          <div id="search-icon" onclick="toggleSearch()">🔍</div>
+      </div>
+      <div class="bannerFormat">
+          <div class="LBannerLinks">
+              <a href="about.html">About</a>
+              <a href="keyboards.php">Keyboards</a>
+          </div>
+          <a href="index.html">
+              <img src="Compressed_Images/TerminusLogo.png" alt="Terminus Logo" class="logo">
+          </a>
+
+          <div class="RBannerLinks">
+              <a href="blog.html">Blog</a>
+              <a href="contactus.php">Contact</a>
+          </div>
+      </div>
+      <div class="bannerOptions">
+          <div class="userIcon">
+              <a href="login.html">
+                  <img src="Compressed_Images/userIcon.png" alt="User Icon">
+              </a>
+          </div>
+          <div class="userBasket">
+              <a href="cart.html">🛒</a>
+          </div>
+      </div>
+  </div>
+   <!-- Search Bar -->
+   <section id="search-bar" class="search-bar">
+    <form action="keyboards.php" method="GET" style="display: contents;">
+    <div class="search-container">
+      <input 
+        type="text" 
+        name="keyword"
+        id="search-input" 
+        class="search-input" 
+        placeholder="Search"
+        required
+      />
+    </div>
+  </form>
+    <div class="theme-toggle">
+      <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
+    </div>
+  
+  </section>
+   
+    <script>
+      const searchInput = document.getElementById('search-input');
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault(); 
+          
+          const keyword = encodeURIComponent(searchInput.value);
+          window.location.href = `keyboards.php?keyword=${keyword}`;
+        }
+      });
+    </script>
+
+  <!-- Sidebar -->
+  <div id="terminusSide" class="sidebar">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+      <a href="about.html">About</a>
+      <a href="keyboards.php">Keyboards</a>
+      <a href="blog.html">Our Blog</a>
+      <a href="contactus.php">Contact</a>
+  </div>
+    
+    
+    <div class= "logInPage_body">
+        <div class = "logIncontainer" id="main">
+            <div class ="sign-up">
+                <form action="process-signup.php" method="post" id="signup" novalidate>
+                    <h1> Create Account </h1>
+                    <input type="text" name="name" placeholder="User Name" required="">
+                    <input type="email" name="email" placeholder="Email" required="">
+                    <input type="password" name="pswd" placeholder="Password" required="">
+                    <button>Sign Up</button>
+                </form>
+            </div>
+
+            <div class ="log-in">
+                <form action="process-login.php" method="post" id="login" novalidate>
+                    <h1> Log In</h1>
+                    <input type="email" name="email" placeholder="Email" required="">
+                    <input type="password" name="pswd" placeholder="Password" required="">
+                    <!-- Checkbox for Admin Login -->
+                    <label class="admin-checkbox">
+                        <input type="checkbox" name="admin" value="1"> Login as Admin
+                    </label>
+                    <div class="passColour">
+                        <a href="forgot-password.php">Forgot Password?</a>
+                    </div>
+                    <button>Log In</button>
+                </form>
+            </div>
+                    
+
+            <div class="overlay-container">
+                <div class="overlay-effect">
+                    <div class="overlay-left">
+                        <h1> Already a Member? </h1>
+                        <p> Click here to Log In!</p>
+                        <button id="logIn">Log In</button>
+                    </div>
+                    <div class="overlay-right">
+                        <h1>Welcome to Terminus!</h1>
+                        <p> Discover the best in mechanical keyboards.
+                            Sign up now to enjoy exclusive offers! </p>
+                        <button id="signUp">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+    <!-- Footer -->
+        <footer class="top">
+          <div class="links">
+            <div class="first-row">
+              <div class="links-column">
+                <h2>Get Started</h2>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="login.html">Login</a>
+                
+              </div>
+  
+              <div class="links-column">
+                <h2>News</h2>
+                <a href="keyboards.php">Keyboards</a>
+                <a href="keyboards.php">Accessories</a>
+                <a href="blog.html">Blog</a>
+                <a href="contactus.php">FAQs</a>
+            </div>
+              
+              <div class="links-column">
+                <div class="links-column">
+                    <h2>Overview</h2>
+                    <a href="./terms-and-conditions.html">Terms Of Use</a>
+                    <a href="contactus.php">Contact</a>
+                    <a href="./terms-and-conditions.html">Privacy Policy</a>
+                    <a href="contactus.php">Support</a>
+                </div>
+            </div>
+          </div>
+        </footer>
+        <footer class="bottom">
+          <p class="copyright">© 2024 All rights reserved</p>
+          <div class="legal">
+            <a href="./terms-and-conditions.html"> License, privacy, terms & conditions </a>
+        </div>
+        </footer>
+        <script>
+          function toggleNav() {
+              const sidebar = document.getElementById("terminusSide");
+              if (sidebar.style.width === "20vh") {
+                  sidebar.style.width = "0"; // Close the menu
+              } else {
+                  sidebar.style.width = "20vh"; // Open the menu
+              }
+          }
+          function toggleSearch() {
+              const searchBar = document.getElementById('search-bar');
+              if (searchBar.style.display === 'none') {
+                  searchBar.style.display = 'flex';
+              } else {
+                  searchBar.style.display = 'none';
+              }
+          }
+      </script>
+      <script src="darkmode.js"></script>
+      </body></html>
