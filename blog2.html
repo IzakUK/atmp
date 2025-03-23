@@ -19,7 +19,7 @@
       <div class="bannerFormat">
           <div class="LBannerLinks">
               <a href="about.html">About</a>
-              <a href="keyboards.html">Keyboards</a>
+              <a href="keyboards.php">Keyboards</a>
           </div>
           <a href="index.html">
               <img src="Compressed_Images/TerminusLogo.png" alt="Terminus Logo" class="logo">
@@ -27,7 +27,7 @@
 
           <div class="RBannerLinks">
               <a href="blog.html">Blog</a>
-              <a href="contactus.html">Contact</a>
+              <a href="contactus.php">Contact</a>
           </div>
       </div>
       <div class="bannerOptions">
@@ -52,13 +52,37 @@
             </div>
     </section>
 
-  <!-- Sidebar -->
-  <div id="terminusSide" class="sidebar">
-      <a href="about.html">About</a>
-      <a href="keyboards.html">Keyboards</a>
-      <a href="blog.html">Our Blog</a>
-      <a href="contactus.html">Support</a>
-  </div>
+  <!-- Search Bar -->
+  <section id="search-bar" class="search-bar">
+    <form action="keyboards.php" method="GET" style="display: contents;">
+    <div class="search-container">
+      <input 
+        type="text" 
+        name="keyword"
+        id="search-input" 
+        class="search-input" 
+        placeholder="Search"
+        required
+      />
+    </div>
+  </form>
+    <div class="theme-toggle">
+      <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
+    </div>
+  
+  </section>
+   
+    <script>
+      const searchInput = document.getElementById('search-input');
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault(); 
+          
+          const keyword = encodeURIComponent(searchInput.value);
+          window.location.href = `keyboards.php?keyword=${keyword}`;
+        }
+      });
+    </script>
     
     <!-- Blog Post Page 2 -->
 
@@ -147,7 +171,7 @@
         <p>Choosing the right mechanical keyboard doesn’t have to be complicated. By considering your use case, switch type, layout, build quality, and budget, you can find a keyboard that fits your needs and enhances your typing or gaming experience.</p>
         <p>Ready to upgrade? Explore our curated selection of mechanical keyboards and find the one that’s perfect for you. Whether you’re a gamer, programmer, or casual typist, there’s a mechanical keyboard out there that’s just right for you.</p>
 
-        <a href="keyboards.html" class="exploreNow-btn">Shop Now and Discover Your Ideal Mechanical Keyboard!</a>
+        <a href="keyboards.php" class="exploreNow-btn">Shop Now and Discover Your Ideal Mechanical Keyboard!</a>
     </section>
 
     <!-- Footer -->
@@ -162,17 +186,17 @@
                 </div>
                 <div class="links-column">
                     <h2>News</h2>
-                    <a href="keyboards.html">Keyboards</a>
-                    <a href="keyboards.html">Accessories</a>
+                    <a href="keyboards.php">Keyboards</a>
+                    <a href="keyboards.php">Accessories</a>
                     <a href="blog.html">Blog</a>
-                    <a href="contactus.html">FAQs</a>
+                    <a href="contactus.php">FAQs</a>
                 </div>
                 <div class="links-column">
                     <h2>Overview</h2>
                     <a href="./terms-and-conditions.html">Terms Of Use</a>
-                    <a href="contactus.html">Contact</a>
+                    <a href="contactus.php">Contact</a>
                     <a href="./terms-and-conditions.html">Privacy Policy</a>
-                    <a href="contactus.html">Support</a>
+                    <a href="contactus.php">Support</a>
                 </div>
             </div>
         </div>
