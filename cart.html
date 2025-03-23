@@ -55,6 +55,7 @@
 
     <!-- Sidebar -->
     <div id="terminusSide" class="sidebar">
+      <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
         <a href="about.html">About</a>
         <a href="keyboards.php">Keyboards</a>
         <a href="misc.html">Our Mission</a>
@@ -114,9 +115,9 @@
           
                     const cartItemHTML = `
                       <div class="cart-item" data-index="${index}">
-                        <div class="item-name">${product.title}</div>
+                        <div class="item-name">${product.name}</div>
                         <div class="item-image">
-                          <img src="${product.image}" alt="Product Image" class="product-img" />
+                          <img src="${product.image}" alt="${product.name}" class="product-img" />
                         </div>
                         <div class="item-price">£<span class="price-value">${product.price}</span></div>
                         <div class="item-quantity">

@@ -1,5 +1,9 @@
 <?php
-
+session_start();
+if (isset($_SESSION['reset_error'])) {
+    echo "<p style='color: red;'>" . $_SESSION['reset_error'] . "</p>";
+    unset($_SESSION['reset_error']); 
+}
 require 'database.php';
 require 'sendemail/phpmailer/src/Exception.php';
 require 'sendemail/phpmailer/src/PHPMailer.php';
@@ -16,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //check email
     $email = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL);
     if (!$email) {
-        echo "请输入有效的邮箱地址！";
+        echo "Please enter a valid email address!";
         exit();
     }
 
@@ -60,18 +64,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
             
-            $mail->send();
-            echo "Reset link has been sent to your email, please check.";
+            if ($mail->send()) {
+                $_SESSION['reset_success'] = "Reset link has been sent to your email.";
+                header("Location: login.html"); 
+                exit();
+            }
+        
         } catch (Exception $e) {
-            echo "e-mail sending failed :" . $mail->ErrorInfo;
+            $_SESSION['reset_error'] = "E-mail sending failed: " . $mail->ErrorInfo;
+            header("Location: forgot-password.php"); 
+            exit();
         }
-    } else {
-        echo "This email is not registered!";
+        
+        
+        if (!$user) {
+            $_SESSION['reset_error'] = "This email is not registered!";
+            header("Location: forgot-password.php");
+            exit();
+        }
     }
 }
 ?>
-
-
 <!--The front-end code is here-->
 
 

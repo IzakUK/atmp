@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - KeyboardMaster</title>
     <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="home.css">
+    <link href="all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.png" type="image/png">
   </head>
   <body>
     <div class="terminusTopBanner">
-      <div class="menuOption">☞</div>
+    <div class="bannerOptions">
+            <div class="menuOption" onclick="toggleNav()">☰</div>
+            <div id="search-icon" onclick="toggleSearch()">🔍</div>
+        </div>
       <div class="bannerFormat">
         <div class="LBannerLinks">
-          <a href="about.php">About</a>
+          <a href="about.html">About</a>
           <a href="keyboards.php">Keyboards</a>
         </div>
-        <a href="index.php">
+        <a href="index.html">
           <img src="TerminusLogo.png" alt="Terminus Logo" class="logo">
         </a>
         <div class="RBannerLinks">
-          <a href="misc.php">Misc.</a>
-          <a href="contact.php">Contact</a>
+          <a href="Blog.html">Blog</a>
+          <a href="contactus.php">Contact</a>
         </div>
       </div>
       <div class="right-logos">
         <div class="userIcon">
-          <a href="login.php">
+          <a href="login.html">
             <img src="userIcon.png" alt="User Icon">
           </a>
         </div>
@@ -35,6 +43,13 @@
         </div>
       </div>
     </div>
+    <div id="terminusSide" class="sidebar">
+          <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+          <a href="about.html">About</a>
+          <a href="keyboards.php">Keyboards</a>
+          <a href="blog.html">Our Mission</a>
+          <a href="contactus.php">Contact</a>
+      </div>
     <main class="checkout-container">
       <div class="checkout-form">
         <section class="contact-section">
@@ -212,24 +227,24 @@
             <h2>Get Started</h2>
             <a href="index.php">Home</a>
             <a href="about.php">About</a>
-            <a href="login.php">Login</a>
+            <a href="login.html">Login</a>
           </div>
           <div class="links-column">
             <h2>News</h2>
             <a href="shop.php">Keyboards</a>
             <a href="#">Accessories</a>
             <a href="configurator">Configurator</a>
-            <a href="faq.php">FAQs</a>
+            <a href="contactus.php">FAQs</a>
           </div>
           <div class="links-column">
             <h2>Overview</h2>
             <a href="#">Terms Of Use</a>
-            <a href="#">Contact</a>
+            <a href="contactus.php">Contact</a>
             <a href="#">Privacy Policy</a>
-            <a href="#">Support</a>
+            <a href="contactus.php">Support</a>
           </div>
         </div>
-
+        
         <div class="second-row">
           <div class="links-column socials-column">
             <h2>Social Media</h2>
@@ -258,5 +273,6 @@
         <a> Privacy </a>
       </div>
     </footer>
+    <script src="darkmode.js"></script>
   </body>
 </html>
