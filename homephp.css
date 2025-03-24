@@ -328,41 +328,43 @@ color: #d40464; /* Optional hover effect */
 }
 
 
+/* Styling for Search Bar Section */
 .search-bar {
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1000;
-  top: 5vw;
-  background-color: var(--card-background);
-  bottom: -5vw;
-  width: 100%;
-  overflow: hidden;
-  right: 0.2px;
+display: flex;
+justify-content: center;
+padding: 8px 0;
+background-color: #333; 
+position: sticky;
+z-index: 1000;
+top: 5.6vw;
+background-color: var(--card-background);
 }
 
 .search-container {
-  display: inline flow-root list-item;
-  border: 0.5px solid #d40464;
-  border-radius: 20vw;
-  width: 100%; 
-  position: relative;
-  height: 100%;
-  overflow: hidden;
-}
-
-.search-input {
-  display: inline;
-  background: none;
-  color: var(--text-color);
-  font-size: 1.5vw;
-  text-align: center;
-  border: none;
-  font-family: "SUSE", sans-serif;
+display: flex;
+align-items: center;
+border: 0.5px solid #d40464; 
+border-radius: 20vw;
+/* Slightly darker than the section */
+width: 32vw; /* Responsive width */
+height: 7vh;
+/* Limit the max width */
+transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .search-container:hover {
 transform: scale(1.01); /* Subtle hover effect */
 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.search-input {
+flex: 1;
+background: none;
+color: var(--text-color);
+font-size: 1.5vw;
+outline: none;
+text-align: center;
+font-family: "SUSE", sans-serif;
 }
 
 .search-input::placeholder {
@@ -1148,7 +1150,7 @@ width: 100%; /* 1 card per row on very small screens */
   z-index: 100;
   top: 0;
   left: 0; /* Stops the sidebar automatically appearing when the page is first loaded. */
-  background-color: var(--background-color);
+  background-color: #111;
   overflow-x: hidden; /* stops the text going over the sidebar */
   transition: 0.5s;
   padding-top: 60px;

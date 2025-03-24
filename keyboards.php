@@ -18,7 +18,7 @@ if ($result->num_rows > 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Terminus</title>
     <link rel="stylesheet" href="keyboards.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="homephp.css">
     <link rel="icon" href="Compressed_Images/favicon.png" type="image/png">
     <link href="all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="swiper-bundle.min.css" >

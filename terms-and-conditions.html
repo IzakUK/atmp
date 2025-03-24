@@ -10,77 +10,83 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <!-- Top Banner PLEASE BE CAUTIOUS WITH THIS AND THE CSS IF EDITING. -->
+  <body class="dark-mode"> <!-- Top Banner PLEASE BE CAUTIOUS WITH THIS AND THE CSS IF EDITING. -->
     <div class="terminusTopBanner">
-      <div class="bannerOptions">
-        <div class="menuOption" onclick="toggleNav()">☰</div>
-        <div id="search-icon" onclick="toggleSearch()">🔍</div>
-      </div>
-      <div class="bannerFormat">
-        <div class="LBannerLinks">
-          <a href="about.html">About</a>
-          <a href="keyboards.php">Keyboards</a>
+        <div class="bannerOptions">
+            <div class="menuOption" onclick="toggleNav()">☰</div>
+            <div id="search-icon" class="menuOption" onclick="toggleSearch()">🔍</div>
+            <div id="accessibility-icon" class="menuOption" onclick="toggleAccessibilityMenu()">🔠</div>
         </div>
-        <a href="index.html">
-          <img src="TerminusLogo.png" alt="Terminus Logo" class="logo">
-        </a>
+        <div class="bannerFormat">
+            <div class="LBannerLinks">
+                <a href="about.html">About</a>
+                <a href="keyboards.php">Keyboards</a>
+            </div>
+            <a href="index.html">
+                <img src="Compressed_Images/TerminusLogo.png" alt="Terminus Logo" class="logo">
+            </a>
 
-        <div class="RBannerLinks">
-          <a href="blog.html">Blog</a>
-          <a href="contactus.php">Contact</a>
+            <div class="RBannerLinks">
+                <a href="blog.html">Blog</a>
+                <a href="contactus.php">Contact</a>
+            </div>
         </div>
+        <div class="bannerOptions">
+            <div id="themeToggle" class="theme-toggle-button menuOption" 
+                 onclick="toggleTheme()" aria-label="Switch to light mode">
+                ☀️
+            </div>
+            <div class="userIcon">
+                <a href="login.html">
+                    <img src="Compressed_Images/userIcon.png" alt="User Icon">
+                </a>
+            </div>
+            <div class="userBasket">
+                <a href="cart.html">🛒</a>
+            </div>
+        </div>
+        
+        <!-- Search Bar -->
+        <section id="search-bar" class="search-bar">
+            <!-- Accessibility Menu (I'll fix the CSS soon, just wanted to focus on functionality) -->
+            <div id="accessibilityMenu" class="accessibility-menu" style="display:none;">
+                <div onclick="setFontSize('normal')">A (Normal)</div>
+                <div onclick="setFontSize('large')">A+ (Bigger)</div>
+            </div>
+          <div class="search-container">
+            <input 
+              type="text" 
+              name="keyword"
+              id="search-input" 
+              class="search-input" 
+              placeholder="Search"
+              required
+            />
+          </div>
+          <form action="keyboards.php" method="GET" style="display: flex;"></form>
+      
+         
+          <script>
+            const searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('keydown', function(e) {
+              if (e.key === 'Enter') {
+                e.preventDefault(); 
+                
+                const keyword = encodeURIComponent(searchInput.value);
+                window.location.href = `keyboards.php?keyword=${keyword}`;
+              }
+            });
+          </script>
+        </section>
       </div>
-      <div class="bannerOptions">
-        <div class="userIcon">
-          <a href="login.html">
-            <img src="userIcon.png" alt="User Icon" >
-          </a>
-        </div>
-        <div class="userBasket">
-          <a href="cart.html">🛒</a>
-        </div>
-      </div>
-    </div>
-
-       <!-- Search Bar -->
-  <section id="search-bar" class="search-bar">
-    <form action="keyboards.php" method="GET" style="display: contents;">
-    <div class="search-container">
-      <input 
-        type="text" 
-        name="keyword"
-        id="search-input" 
-        class="search-input" 
-        placeholder="Search"
-        required
-      />
-    </div>
-  </form>
-    <div class="theme-toggle">
-      <button id="themeToggle" class="theme-toggle-button" onclick="toggleTheme()">🌙</button>
-    </div>
-  
-  </section>
-   
-    <script>
-      const searchInput = document.getElementById('search-input');
-      searchInput.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') {
-          e.preventDefault(); 
-          
-          const keyword = encodeURIComponent(searchInput.value);
-          window.location.href = `keyboards.php?keyword=${keyword}`;
-        }
-      });
-    </script>
 
     <!-- Sidebar -->
     <div id="terminusSide" class="sidebar">
-      <a href="about.html">About</a>
-      <a href="keyboards.php">Keyboards</a>
-      <a href="blog.html">Our Blog</a>
-      <a href="contactus.php">Contact</a>
+      <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+        <a href="about.html">About</a>
+        <a href="keyboards.php">Keyboards</a>
+        <a href="blog.html">Our Blog</a>
+        <a href="contactus.php">Support</a>
     </div>
 
     <!-- Terms and conditions -->
