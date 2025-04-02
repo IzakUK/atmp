@@ -96,9 +96,9 @@ if (isset($_GET['error'])) {
     </div>
 
      
-   <!-- Support Page -->
+   <!-- Support -->
 <section class="support">
-  <!-- Support Heading with Background Image -->
+  <!-- Support Heading (Background Image) -->
   <div class="support-heading">
     <div class="heading-overlay">
       <h1>Support</h1>
@@ -216,7 +216,7 @@ if (isset($_GET['error'])) {
       </div>
     </div>
 
-      <!-- Policies Section -->
+      <!-- Policies -->
       <div class="policies-section">
         <h2>Policies</h2>
         <div class="policy-item">
@@ -288,7 +288,7 @@ if (isset($_GET['error'])) {
         
     
  
- <!-- Contact Information -->
+ <!-- Contact Info -->
  <div class="contact-info">
             <h2>Contact Information</h2>
             <p>For any inquiries, reach out to us at:</p>
@@ -358,9 +358,9 @@ if (isset($_GET['error'])) {
         function toggleNav() {
             const sidebar = document.getElementById("terminusSide");
             if (sidebar.style.width === "20vh") {
-                sidebar.style.width = "0"; // Close the menu
+                sidebar.style.width = "0"; // Close menu
             } else {
-                sidebar.style.width = "20vh"; // Open the menu
+                sidebar.style.width = "20vh"; // Open menu
             }
         }
         function toggleSearch() {
